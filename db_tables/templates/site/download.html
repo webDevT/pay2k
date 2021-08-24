@@ -1,0 +1,257 @@
+{% load staticfiles i18n thumbnail %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "site/title.html" %}
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script type="text/javascript">
+        (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+        ;r.type="text/javascript"
+        ;r.integrity="sha384-RsEu4WZflrqYcEacpfoGSib3qaSvdYwT4D+DrWqeBuDarSzjwUQR1jO8gDiXZd0E"
+        ;r.crossOrigin="anonymous";r.async=true
+        ;r.src="https://cdn.amplitude.com/libs/amplitude-6.2.0-min.gz.js"
+        ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+        console.log("[Amplitude] Error: could not load SDK")}}
+        ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+        ;function s(e,t){e.prototype[t]=function(){
+        this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+        var o=function(){this._q=[];return this}
+        ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+        ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+        ;return this}
+        ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+        ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+        ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+        ;function v(e){function t(t){e[t]=function(){
+        e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+        for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+        e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+        ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+        ;e.amplitude=n})(window,document);
+
+
+        amplitude.getInstance().onInit(function () {
+            amplitude.getInstance().logEvent('download_page_visited');
+        });
+        amplitude.getInstance().init("1e25a2a13411cb11e387d08e9311c1d6")
+        </script>
+    <link rel="icon"
+      type="image/png"
+      href="{% static 'img/favicon.png' %}">
+</head>
+<body class="download-page">
+
+    <header class="download-header">
+<!-- <img src="img/download_bg2.png" alt="" class="download__header-bg"> -->
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="/">
+                    Pay2k
+                </a>
+                </div>
+                {% include 'site/menu.html' %}
+            </div>
+             </div>
+            <div class="download-content ">
+                <div class="container">
+                      <div class="download-content__title">
+            {% trans 'Thanks for downloading Pay2K' %}
+             </div>
+             <div class="download-content__sub-title">
+                {% trans 'Not working after 10 second?' %} <a class="retry" href="/static/Pay2k-2.0.5_8.apk">{% trans 'Retry Download' %}</a>
+                 <div class="download__button-wrapper-fixed fixed">
+                     <div class="download__button ">
+                    <a href="/static/Pay2k-2.0.5_8.apk">{% trans 'Retry Download' %}</a>
+                </div>
+                </div>
+                <div class="download__button-wrapper">
+                     <div class="download__button ">
+                    <a href="/static/Pay2k-2.0.5_8.apk">{% trans 'Retry Download' %}</a>
+                </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="col-4">
+                    <div class="download-content__item">
+                        <div class="download-content__number">
+                            1
+                        </div>
+                        <div class="download-content__item-title">
+                            {% trans 'Open SETTINGS' %}
+                        </div>
+                        <div class="download-content__item-img-wrapper">
+                            <div class="download-content__item-icon">
+                        <img src="{% static 'img/unlock.svg' %}" alt="">
+                    </div>
+                            <img src="{% static 'img/11s.png' %}" alt="" class="download__screen-image download__screen-image-left" >
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="download-content__item">
+                        <div class="download-content__number">
+                            2
+                        </div>
+                        <div class="download-content__item-title">
+                            {% trans 'Open SECURITY' %}
+                        </div>
+                        <div class="download-content__item-img-wrapper">
+                            <div class="download-content__item-icon download-content__item-icon--center">
+                        <img src="{% static 'img/toggle.svg' %}" alt="" class="">
+                    </div>
+                            <img src="{% static 'img/22s.png' %}" alt=""  class="download__screen-image download__screen-image-center" >
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="download-content__item">
+                        <div class="download-content__number">
+                            3
+                        </div>
+                        <div class="download-content__item-title">
+                            {% trans 'Turn on UNKNOWN SOURCES' %}
+
+                        </div>
+                        <div class="download-content__item-img-wrapper">
+                            <div class="download-content__item-icon">
+                        <img src="{% static 'img/check.svg' %}" alt="">
+                    </div>
+                                <img src="{% static 'img/33s.png' %}" alt="" class="download__screen-image download__screen-image-right">
+                        </div>
+                    </div>
+                </div>
+             </div>
+                </div>
+            </div>
+
+    </header>
+    <div class="mobil-download__item-list">
+        <div class="item">
+            <div class="item_number">
+                1
+            </div>
+            <div class="item_title">
+                {% trans 'Open SETTINGS' %}
+            </div>
+            <div class="item_img-wrapper">
+                <div class="item-icon">
+                    <img src="{% static 'img/unlock-w.svg' %}" alt="">
+                </div>
+                <img src="{% static 'img/mobil-screen.svg' %}" alt="" class="mobil-screen-image">
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_number">
+                2
+            </div>
+            <div class="item_title">
+                {% trans 'Open SECURITY' %}
+            </div>
+            <div class="item_img-wrapper">
+                <div class="item-icon">
+                    <img src="{% static 'img/toggle-w.svg' %}" alt="">
+                </div>
+                <img src="{% static 'img/mobil-screen-2.svg' %}" alt="" class="mobil-screen-image">
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_number">
+                3
+            </div>
+            <div class="item_title">
+                {% trans 'Turn on UNKNOWN SOURCES' %}
+            </div>
+            <div class="item_img-wrapper">
+                <div class="item-icon">
+                    <img src="{% static 'img/check-w.svg' %}" alt="">
+                </div>
+                <img src="{% static 'img/mobil-screen-3.svg' %}" alt="" class="mobil-screen-image">
+            </div>
+        </div>
+    </div>
+
+    <section class="download-page-description">
+        <div class="container-fluid">
+            <div class="download-page-description__title download-page-description__title--desktop">
+                {% blocktrans %}How Just in 30 min and 100% for Free<br>
+                You can Earn Starting from $10 <br>
+                Playing Mobile Games{% endblocktrans %}
+            </div>
+             <div class="download-page-description__title download-page-description__title--mobil">
+                {% blocktrans %}<i></i>How Just in 30 min and 100% for Free<br>
+                You can Earn Starting from $10 <br>
+                Playing Mobile Games{% endblocktrans %}
+            </div>
+            <p>
+                {% blocktrans %}Stop waisting your time by playing mobile games without any goal! Today, because of Pay2K app, you can start to earn real money playing educational and fun trivia games!{% endblocktrans %}
+            <p>
+            <ul>
+                <li>{% trans 'Receive payouts on a daily basis' %}</li>
+                <li>{% trans '100% for FREE! You came to earn money & not to spent it. Right?' %}</li>
+                <li>{% trans 'More then 3,000 fun entertainment triva games' %}</li>
+                <li>{% trans 'Daily top leader receive $10!' %}</li>
+                <li>{% trans 'Weekly raffle - winner get $100 (Winner guaranteed)' %}</li>
+                <li>{% trans 'Monthly raffle - winner get $300 (Winner guaranteed)' %}</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="scroll-position">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>{% trans 'Need help?' %}</h2>
+                <div class="text">
+                    <p>{% trans 'We are ready to help you any time!!' %}</p>
+                    <a href="contact/">{% trans 'Contact us' %}</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="/company/">{% trans 'Company' %}</a></li>
+                        <li><a href="/terms/">{% trans 'Terms' %}</a></li>
+                        <li><a href="/policy/">{% trans 'Privacy Policy' %}</a></li>
+                        <li><a href="/contact/">{% trans 'Contact Us' %}</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="logo">
+                    <a href="">
+                        Pay2k
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="follow-us">
+                    <span>{% trans 'Follow us' %}</span>
+                        <a href="https://www.facebook.com/pay2k/"><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                        <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}"><img src="{% static 'img/instagram.svg' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js"></script>
+    <script src="{% static 'js/libs.min.js' %}"></script>
+    <script src="{% static 'js/download.js' %}"></script>
+    <script>
+        let force_download = new Event('force_download');
+        window.dispatchEvent(force_download);
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

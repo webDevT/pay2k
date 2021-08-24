@@ -1,0 +1,18 @@
+{% load thumbnail %}
+<!doctype html>
+<html>
+<body>
+<form action="." method="POST">
+    {% csrf_token %}
+    <label for="ticket">Ticket: </label>
+    <input type="text" name="ticket" id="ticket">
+    <input type="submit" value="GO!">
+</form>
+{% if winner %}
+    <h2>Winner is : {{ winner.username }} (id - {{ winner.id }})!!!</h2>
+    {% thumbnail winner.userpic "250x250" as im %}
+        <img src="{{ im.url }}">
+    {% endthumbnail %}
+{% endif %}
+</body>
+</html>

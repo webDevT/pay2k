@@ -1,0 +1,496 @@
+{% load staticfiles i18n thumbnail %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pay2k</title>
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="">
+                    Pay2k
+                </a>
+            </div>
+            {% include 'site/menu.html' %}
+        </div>
+        <div class="header-content">
+            <h1>
+                {% trans 'Play Free Android Games and Earn Real Cash' %}
+            </h1>
+            <p>{% trans 'Pay2K - is a game platform where you can find free games in which you can earn real money!' %}</p>
+        </div>
+    </div>
+</header>
+<section class="download-page-description download-page-description--hompage">
+        <div class="container-fluid">
+            <div class="download-page-description__title download-page-description__title--desktop">
+                Как буквально за 30 минут и 100% бесплатно вы сможете
+зарабатывать от 10 долларов ежедневно <br>
+играя в мобильные игры
+
+            </div>
+              <div class="download-page-description__title download-page-description__title--mobil">
+                Как за 30 минут и 100% бесплатно <br> вы сможете легко
+ежедневно <br> от 10 долларов, ежедневно <br> играя в мобильные игры
+
+            </div>
+            <p>
+                      Хватит бесцельно играть в мобильные игры и попусту тратить своё время! Благодаря приложению Pay2K вы сможете уже сегодня начать зарабатывать реальные деньги играя в развивающие ВИКТОРИНЫ!
+
+            <p>
+                <ul>
+                    <li>Получайте выплаты ежедневно по вашему требованию</li>
+                    <li>100% Бесплатно! Вы же пришли зарабатывать, а не тратить?
+</li>
+                    <li>Более 3,000 развлекательных викторин на любой вкус</li>
+                    <li>Ежедневно лидер топа получает $10!</li>
+                    <li>Еженедельно разыгрываем в лотерею $100 (победитель гарантирован)</li>
+                    <li>Ежемесячно разыгрываем в лотерею $300 (победитель гарантирован)</li>
+                </ul>
+        </div>
+    </section>
+<section class="download-page-description download-page-description--hompage">
+        <div class="container-fluid">
+            <div class="download-page-description__title">
+                Все это выглядит нереально?<br>
+Где “подводные камни”?
+
+
+            </div>
+            <p>
+               Сервис Pay2K дает Вам возможность зарабатывать играя в викторины, благодаря партнерству с конструктором игр - QuickAppNinja.
+
+
+            </p>
+            <p>
+               QuickAppNinja это конструктор игр - викторин. За 4 года работы, сервисом пользуется более чем 170,000+ создателей викторин!
+
+
+            <p>
+
+            <div class="download-page-description__sub-title">
+              Почему Pay2K выплачивает деньги?
+            </div>
+
+                <ul class="list-item">
+                    <li>Пользователи конструктора QuickAppNinja заинтересованы, чтобы в их викторины - играли, т.к. они зарабатывают на показах рекламы внутри своих игр.</li>
+                    <li>Вы играете в викторины и смотрите там рекламу.
+</li>
+                    <li>Pay2K выплачивает Вам деньги и зарабатывает развивая сервис QuickAppNinja.</li>
+
+                </ul>
+        </div>
+    </section>
+
+<section class="recend_payouts">
+    <h2>{% trans 'Recent Payouts' %}</h2>
+    <div class="container-fluid">
+        {% for x in payouts %}
+            <div class="row item{% if forloop.last %} last{% endif %}"
+                 data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
+                <div class="col-md-4 col-sm-4 col-3">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <img style="border-radius: 83px;" src="{{ x.account.userpic.url }}"
+                                 alt="{{ x.account.username }}">
+                            {#                    {% thumbnail x.account.userpic "85x85" as im %}#}
+                            {#                        <img src="{{ im.url }}" alt="{{ x.account.username }}">#}
+                            {#                    {% endthumbnail %}#}
+
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="title">
+                                {% trans 'Name' %}
+                            </div>
+                            <div class="value">
+                                {{ x.account.username }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-8 col-9">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-6">
+                            <div class="title">
+                                {% trans 'Date' %}
+                            </div>
+                            <div class="value">
+                                {{ x.timestamp|date:'Y-m-d' }}
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <div class="title">
+                                {% trans 'Type' %}
+                            </div>
+                            <div class="value">
+                                {{ x.get_reward_type_display }}
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-6">
+                            <div class="title">
+                                {% trans 'Sum' %}
+                            </div>
+                            <div class="value">
+                                $ {{ x.amount }}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        {% endfor %}
+
+        {% if has_more_payouts %}
+            <a href="javascript://" class="arrow loader-1">
+                <img src="{% static 'img/arrow.svg' %}" alt="">
+            </a>
+        {% endif %}
+    </div>
+
+</section>
+
+<section class="play-earn">
+
+    <div class="wrapper">
+        <h2>{% trans 'Earn more gems by playing this games' %}</h2>
+        <img class="ellips" src="{% static 'img/ellips.svg' %}" alt="">
+        <div class="container-fluid">
+            <div class="row">
+                {% for x in popular_games %}
+                    <div class="col-md-3" data-installs="{{ x.installs }}" data-id="{{ x.id }}">
+                        <div class="wrap">
+                            <img src="{{ x.picture.url }}" alt="">
+                            <h3>{{ x.name }}</h3>
+                            <br>
+                            {#						<p>#}
+                            {#							{{ x.short_description }}#}
+                            {#						</p>#}
+                            <div class="btn">
+                                <a href="https://play.google.com/store/apps/details?id={{ x.namespace }}"
+                                   target="_blank">Play</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% if has_more_payouts %}
+                    <a href="javascript://" class="more loader-2">
+                        {% trans 'Show more games' %}
+                        <img src="{% static 'img/arrow.svg' %}" alt="">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="mobil-container">
+            <div class="slider_box">
+
+                <div class="slider">
+                    {% for x in popular_games %}
+                        <div class="items_slider">
+                            <div class="wrap">
+                                <img src="{{ x.picture.url }}" alt="">
+                                <h3>{{ x.name }}</h3>
+                                <div class="btn">
+                                    <a href="https://play.google.com/store/apps/details?id={{ x.namespace }}"
+                                       target="_blank">Play</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="about">
+    <div class="container-fluid">
+        <h2>{% trans 'What you need to do?' %}</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="img">
+                    <img src="{% static 'img/icon1.png' %}" alt="">
+                </div>
+                <h3>{% trans 'Download & Install Pay2K app' %}</h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="img">
+                    <img src="{% static 'img/icon2.png' %}" alt="">
+                </div>
+                <h3>
+                    {% trans 'Register Account for FREE' %}
+                </h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="img">
+                    <img src="{% static 'img/icon3.png' %}" alt="">
+                </div>
+                <h3>
+                    {% trans 'Play Games and Earn Gems' %}
+                </h3>
+
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="img">
+                    <img src="{% static 'img/icon4.png' %}" alt=""></div>
+                <h3>
+                    {% trans 'Convert Gems on Real Money and Gift Cards' %}
+                </h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="download-section">
+    <h2>Download Pay2K App for Android Now</h2>
+    <div class="download-links__wrapper">
+        <a href="/download/" class="download-link__item">
+            <img src="{% static 'img/googlplay.svg' %}" alt="">
+            <div class="download-links__title">
+                Google Play
+            </div>
+        </a>
+        <a href="/download/"  class="download-link__item">
+            <img src="{% static 'img/aptoide.svg' %}" alt="">
+            <div class="download-links__title">
+                Aptoide
+            </div>
+        </a>
+    </div>
+    <img src="{% static 'img/left-bg.png' %}" class="download__left-background" alt="">
+    <picture>
+    <source srcset="{% static 'img/mobil-bg-download.png' %}" media="(max-width: 768px)">
+    <img src="{% static 'img/right-bg.png' %}" srcset="" alt="image1" class="download__right-background">
+    </picture>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="download-text-wrapper">
+                    <div class="download-title">
+                    Or Download Pay2K directly
+                </div>
+                <div class="download-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="download__button">
+                    <a href="/download/">Get Pay2K for Android</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/download-screens.png' %}" class="download-img" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="question">
+    <h2>{% trans 'FAQ' %}</h2>
+    <div class="wrapper">
+        <div class="question-item">
+            <div class="title">
+                {% trans 'How much can I earn?' %}
+            </div>
+            <p>
+                {% trans 'Your income is not limited at all! The more you play, the more money you will make!' %}
+            </p>
+            <div class="btn-close">
+                <div class="colse">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+        <div class="question-item">
+            <div class="title">
+                {% trans 'How can I receive payment for #1 leaderboard position?' %}
+            </div>
+            <p>
+                {% trans 'You need to open Pay2K app and proceed to PAYMENT section.' %}
+            </p>
+            <div class="btn-close">
+                <div class="colse">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+        <div class="question-item">
+            <div class="title">
+                {% trans 'Pay2K is really free?' %}
+            </div>
+            <p>
+                {% trans "Yes, absolutly! You don't need to spend anything at all! All you need to do is to play games and EARN MONEY!" %}
+            </p>
+            <div class="btn-close">
+                <div class="colse">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>{% trans 'Need help?' %}</h2>
+                <div class="text">
+                    <p>{% trans 'We are ready to help you any time!' %}</p>
+                    <a href="contact/">{% trans 'Contact us' %}</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <nav class="footer-menu">
+
+                    <ul>
+                        <li><a href="/company/">{% trans 'Company' %}</a></li>
+                        <li><a href="/terms/">{% trans 'Terms' %}</a></li>
+                        <li><a href="/policy/">{% trans 'Privacy Policy' %}</a></li>
+                        <li><a href="/contact/">{% trans 'Contact Us' %}</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="logo">
+                    <a href="">
+                        Pay2k
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="follow-us">
+                    <span>{% trans 'Follow us' %}</span>
+                    <a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                    <a href=""><img src="{% static 'img/instagram.svg' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</footer>
+{% include 'site/scripts.html' %}
+<script>
+    $('.loader-2').click(function (event) {
+        _this = this;
+        var last = $(this).parents('.row').children('.col-md-3').last().data();
+        console.log(last)
+        $.ajax({
+            url: '/load/games/',
+            data: last,
+            success: function (response) {
+                if (!response.has_more_games) {
+                    $('.loader-2').hide();
+                }
+                for (var i = 0; i < response.popular_games.length; i++) {
+                    var item = response.popular_games[i];
+                    div = $('<div/>', {class: 'col-md-3', 'data-id': item.id, 'data-installs': item.installs});
+                    wrap = $('<div/>', {class: 'wrap'});
+                    wrap.appendTo(div);
+                    img = $('<img/>', {src: item.picture});
+                    img.appendTo(wrap);
+                    h3 = $('<h3/>').text(item.name);
+                    h3.appendTo(wrap);
+                    br = $('<br/>');
+                    br.appendTo(wrap);
+                    div_btn = $('<div/>', {class: 'btn'});
+                    div_btn.appendTo(wrap);
+                    a = $('<a/>', {
+                        href: 'https://play.google.com/store/apps/details?id=' + item.namespace,
+                        target: '_blank'
+                    }).text('Play');
+                    a.appendTo(div_btn);
+                    div.insertBefore($('.loader-2'));
+                }
+            }
+        });
+    });
+
+    $('.loader-1').click(function (event) {
+        _this = this;
+        var last = $(this).parents('.container-fluid').children('.row').last().data();
+        console.log(last)
+        $.ajax({
+            url: '/load/rewards/',
+            data: last,
+            success: function (response) {
+                if (!response.has_more_rewards) {
+                    $('.loader-1').hide();
+                }
+                $(_this).parents('.container-fluid').find('.row.last').removeClass('last');
+                for (var i = 0; i < response.rewards.length; i++) {
+                    var item = response.rewards[i];
+                    div_row = $('<div/>', {class: 'row item', 'data-timestamp': item.timestamp});
+                    if (i == response.rewards.length - 1) div_row.addClass('last');
+                    div_inner_1 = $('<div/>', {class: 'col-md-4 col-sm-4 col-3', 'data-timestamp': item.timestamp});
+                    div_inner_1.appendTo(div_row);
+                    div_inner_1_row = $('<div/>', {class: 'row'});
+                    div_inner_1_row.appendTo(div_inner_1);
+                    img_wrapper = $('<div/>', {class: 'col-md-6 col-sm-6'});
+                    img_wrapper.appendTo(div_inner_1_row);
+                    img = $('<img/>', {src: item.userpic, style: 'border-radius: 83px;', alt: item.username});
+                    img.appendTo(img_wrapper);
+                    name_wrapper = $('<div/>', {class: 'col-md-6 col-sm-6'});
+                    name_wrapper.appendTo(div_inner_1_row);
+                    div_title_header = $('<div/>', {class: 'title'}).text("{% trans 'Name' %}");
+                    div_title_header.appendTo(name_wrapper);
+                    div_name = $('<div/>', {class: 'value'}).text(item.username);
+                    div_name.appendTo(name_wrapper);
+
+                    div_inner_2 = $('<div/>', {class: 'col-md-8 col-sm-8 col-9'});
+                    div_inner_2.appendTo(div_row);
+                    div_inner_2_row = $('<div/>', {class: 'row'});
+                    div_inner_2_row.appendTo(div_inner_2);
+
+                    date_wrapper = $('<div/>', {class: 'col-md-3 col-sm-3 col-6'});
+                    date_wrapper.appendTo(div_inner_2_row);
+                    div_title_date_header = $('<div/>', {class: 'title'}).text("{% trans 'Date' %}");
+                    div_title_date_header.appendTo(date_wrapper);
+                    div_date_value = $('<div/>', {class: 'value'}).text(item.date);
+                    div_date_value.appendTo(date_wrapper);
+
+                    type_wrapper = $('<div/>', {class: 'col-md-6 col-sm-6 col-12'});
+                    type_wrapper.appendTo(div_inner_2_row);
+                    div_title_type_header = $('<div/>', {class: 'title'}).text("{% trans 'Type' %}");
+                    div_title_type_header.appendTo(type_wrapper);
+                    div_type_value = $('<div/>', {class: 'value'}).text(item.type);
+                    div_type_value.appendTo(type_wrapper);
+
+                    sum_wrapper = $('<div/>', {class: 'col-md-3 col-sm-3 col-6'});
+                    sum_wrapper.appendTo(div_inner_2_row);
+                    div_title_sum_header = $('<div/>', {class: 'title'}).text("{% trans 'Sum' %}");
+                    div_title_sum_header.appendTo(sum_wrapper);
+                    div_sum_value = $('<div/>', {class: 'value'}).text(item.amount);
+                    div_sum_value.appendTo(sum_wrapper);
+                    div_row.insertBefore($('.loader-1'));
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

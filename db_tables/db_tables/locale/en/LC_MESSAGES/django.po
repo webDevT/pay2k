@@ -1,0 +1,820 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-27 18:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/site/company.html:7 templates/site/contact.html:7
+#: templates/site/download.html:7 templates/site/index.html:7
+#: templates/site/policy.html:7 templates/site/terms.html:7
+msgid "Pay2K - Make Money Playing Games"
+msgstr ""
+
+#: templates/site/company.html:35
+msgid "Changing the way how people play games!"
+msgstr ""
+
+#: templates/site/company.html:36
+msgid "We give opportunity to earn real money by playing favorite games!"
+msgstr ""
+
+#: templates/site/company.html:52
+msgid "Who we are?"
+msgstr ""
+
+#: templates/site/company.html:54
+msgid "created in partnership with"
+msgstr ""
+
+#: templates/site/company.html:56
+msgid ""
+"QuickAppNinja - is free mobile game builder, where you can just in 10 "
+"minutes without any coding and special skills create you unique mobile game "
+"and make money from ads inside this game."
+msgstr ""
+
+#: templates/site/company.html:68 templates/site/contact.html:64
+#: templates/site/download.html:210 templates/site/index.html:382
+#: templates/site/index_old.html:355 templates/site/policy.html:152
+msgid "Need help?"
+msgstr ""
+
+#: templates/site/company.html:70 templates/site/contact.html:66
+#: templates/site/index.html:384 templates/site/index_old.html:357
+msgid "We are ready to help you any time!"
+msgstr ""
+
+#: templates/site/company.html:71 templates/site/contact.html:35
+#: templates/site/contact.html:67 templates/site/download.html:213
+#: templates/site/index.html:385 templates/site/index_old.html:358
+#: templates/site/policy.html:155
+msgid "Contact us"
+msgstr ""
+
+#: templates/site/company.html:79 templates/site/contact.html:75
+#: templates/site/download.html:219 templates/site/index.html:391
+#: templates/site/index_old.html:366 templates/site/policy.html:163
+msgid "Company"
+msgstr ""
+
+#: templates/site/company.html:80 templates/site/contact.html:76
+#: templates/site/download.html:220 templates/site/index.html:392
+#: templates/site/index_old.html:367 templates/site/policy.html:164
+msgid "Terms"
+msgstr ""
+
+#: templates/site/company.html:81 templates/site/contact.html:77
+#: templates/site/download.html:221 templates/site/index.html:393
+#: templates/site/index_old.html:368 templates/site/policy.html:25
+#: templates/site/policy.html:165
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/site/company.html:82 templates/site/contact.html:78
+#: templates/site/download.html:222 templates/site/index.html:394
+#: templates/site/index_old.html:369 templates/site/policy.html:166
+msgid "Contact Us"
+msgstr ""
+
+#: templates/site/company.html:98 templates/site/contact.html:94
+#: templates/site/download.html:236 templates/site/index.html:407
+#: templates/site/index_old.html:385 templates/site/policy.html:182
+#: templates/site/terms.html:231
+msgid "Follow us"
+msgstr ""
+
+#: templates/site/company.html:100 templates/site/contact.html:96
+#: templates/site/download.html:238 templates/site/index.html:409
+#: templates/site/policy.html:184 templates/site/terms.html:233
+msgid "https://www.instagram.com/pay2k.mobile/"
+msgstr ""
+
+#: templates/site/contact.html:38
+msgid "Need help or tech support?"
+msgstr ""
+
+#: templates/site/contact.html:42
+msgid "Interested in advertising on Pay2k?"
+msgstr ""
+
+#: templates/site/contact.html:46
+msgid "Interested in including Pay2k in your next article or blog?"
+msgstr ""
+
+#: templates/site/contact.html:50
+msgid "Interested in partnering with Pay2k?"
+msgstr ""
+
+#: templates/site/download.html:59
+msgid "Thanks for downloading Pay2K"
+msgstr ""
+
+#: templates/site/download.html:62
+msgid "Not working after 10 second?"
+msgstr ""
+
+#: templates/site/download.html:62 templates/site/download.html:65
+#: templates/site/download.html:70
+msgid "Retry Download"
+msgstr ""
+
+#: templates/site/download.html:82 templates/site/download.html:141
+msgid "Open SETTINGS"
+msgstr ""
+
+#: templates/site/download.html:102 templates/site/download.html:155
+msgid "Open SECURITY"
+msgstr ""
+
+#: templates/site/download.html:119 templates/site/download.html:169
+msgid "Turn on UNKNOWN SOURCES"
+msgstr ""
+
+#: templates/site/download.html:183
+#, python-format
+msgid ""
+"How Just in 30 min and 100%% for Free<br>\n"
+"                You can Earn Starting from $10 <br>\n"
+"                Playing Mobile Games"
+msgstr ""
+
+#: templates/site/download.html:188
+#, python-format
+msgid ""
+"<i></i>How Just in 30 min and 100%% for Free<br>\n"
+"                You can Earn Starting from $10 <br>\n"
+"                Playing Mobile Games"
+msgstr ""
+
+#: templates/site/download.html:193
+msgid ""
+"Stop waisting your time by playing mobile games without any goal! Today, "
+"because of Pay2K app, you can start to earn real money playing educational "
+"and fun trivia games!"
+msgstr ""
+
+#: templates/site/download.html:196 templates/site/index.html:83
+msgid "Receive payouts on a daily basis"
+msgstr ""
+
+#: templates/site/download.html:197 templates/site/index.html:84
+#, python-format
+msgid "100%% for FREE! You came to earn money & not to spent it. Right?"
+msgstr ""
+
+#: templates/site/download.html:198 templates/site/index.html:85
+msgid "More then 3,000 fun entertainment triva games"
+msgstr ""
+
+#: templates/site/download.html:199 templates/site/index.html:86
+msgid "Daily top leader receive $10!"
+msgstr ""
+
+#: templates/site/download.html:200 templates/site/index.html:87
+msgid "Weekly raffle - winner get $100 (Winner guaranteed)"
+msgstr ""
+
+#: templates/site/download.html:201 templates/site/index.html:88
+msgid "Monthly raffle - winner get $300 (Winner guaranteed)"
+msgstr ""
+
+#: templates/site/download.html:212 templates/site/policy.html:154
+msgid "We are ready to help you any time!!"
+msgstr ""
+
+#: templates/site/index.html:26 templates/site/index.html:29
+msgid "Play Free Quiz Games<br>and Earn Real Cash"
+msgstr ""
+
+#: templates/site/index.html:31 templates/site/index_old.html:27
+msgid ""
+"Pay2K - is a game platform where you can find free games in which you can "
+"earn real money!"
+msgstr ""
+
+#: templates/site/index.html:32
+msgid ""
+"Pay2K - is a game platform where<br>you can find free games in which<br>you "
+"can earn real money!"
+msgstr ""
+
+#: templates/site/index.html:69
+#, python-format
+msgid ""
+"How Just in 30 min and 100%% for Free<br>\n"
+"                You can Earn Starting from $10 <br>\n"
+"                Playing Quiz Games"
+msgstr ""
+
+#: templates/site/index.html:74
+#, python-format
+msgid ""
+"<i></i>How Just in 30 min and 100%% for Free<br>\n"
+"                You can Earn Starting from $10 <br>\n"
+"                Playing Quiz Games"
+msgstr ""
+
+#: templates/site/index.html:79
+msgid ""
+"Stop wasting your time by playing quiz games without any goal! Today, "
+"because of Pay2K platform, you can start to earn real money playing "
+"educational and fun trivia games!"
+msgstr ""
+
+#: templates/site/index.html:89
+#, python-format
+msgid "All payments are 100%% real and recorded in the blockchain"
+msgstr ""
+
+#: templates/site/index.html:96
+msgid ""
+"Does all this look unreal?<br>\n"
+"                    Where are the \"pitfalls\"?"
+msgstr ""
+
+#: templates/site/index.html:102
+msgid ""
+"Pay2K app gives you such a great opportunity to make money playing trivia "
+"games because of amazing partnership with QuickAppNinja (Android game "
+"builder platform) & Free TON (Fast, secure and scalable blockchain)."
+msgstr ""
+
+#: templates/site/index.html:105
+msgid ""
+"QuickAppNinjna is free Android game builder that allows any person without "
+"any special skills make their own unique trivia games for Google Play. For "
+"last 4 years more than 170,000 users already made their trivia games! "
+msgstr ""
+
+#: templates/site/index.html:108
+msgid ""
+"Free TON is based on a flexible multi-blockchain platform called TON "
+"Blockchain, which is capable of processing millions of transactions per "
+"second, with Turing-complete smart contracts, upgradable formal blockchain "
+"specifications, multi-cryptocurrency value transfer, support for "
+"micropayment channels and off-chain payment networks."
+msgstr ""
+
+#: templates/site/index.html:112
+msgid "Why Pay2K can pay money?"
+msgstr ""
+
+#: templates/site/index.html:116
+msgid ""
+"QuickAppNinja users are very interested that gamers play their created "
+"games, because game developers are making money from ads inside the games."
+msgstr ""
+
+#: templates/site/index.html:117
+msgid "You play games and watch ads inside it."
+msgstr ""
+
+#: templates/site/index.html:118
+msgid ""
+"Pay2K pay you money and earn revenue from promoting QuickAppNinja service"
+msgstr ""
+
+#: templates/site/index.html:124 templates/site/index_old.html:222
+msgid "What you need to do?"
+msgstr ""
+
+#: templates/site/index.html:130
+msgid "Launch any game from the game store"
+msgstr ""
+
+#: templates/site/index.html:137 templates/site/index_old.html:235
+msgid "Register Account for FREE"
+msgstr ""
+
+#: templates/site/index.html:145
+msgid "Play Games and Earn Crystals"
+msgstr ""
+
+#: templates/site/index.html:152
+msgid "Convert Crystals on Real Money and Gift Cards"
+msgstr ""
+
+#: templates/site/index.html:159
+msgid "Recent payouts"
+msgstr ""
+
+#: templates/site/index.html:176
+msgid "Username"
+msgstr ""
+
+#: templates/site/index.html:189 templates/site/index.html:490
+#: templates/site/index_old.html:123 templates/site/index_old.html:471
+msgid "Date"
+msgstr ""
+
+#: templates/site/index.html:197 templates/site/index.html:497
+#: templates/site/index_old.html:131 templates/site/index_old.html:478
+msgid "Type"
+msgstr ""
+
+#: templates/site/index.html:205 templates/site/index.html:504
+#: templates/site/index_old.html:139 templates/site/index_old.html:485
+msgid "Sum"
+msgstr ""
+
+#: templates/site/index.html:229
+msgid "Play these games & Earn Money"
+msgstr ""
+
+#: templates/site/index.html:244
+msgid "Play now"
+msgstr ""
+
+#: templates/site/index.html:251 templates/site/index_old.html:187
+msgid "Show more games"
+msgstr ""
+
+#: templates/site/index.html:268
+msgid "Play"
+msgstr ""
+
+#: templates/site/index.html:284
+msgid "Play Quiz Games on any device"
+msgstr ""
+
+#: templates/site/index.html:303
+msgid "One Account for all games"
+msgstr ""
+
+#: templates/site/index.html:306
+msgid ""
+"Collect crystals by playing any game presented in the store. Stuck in one "
+"game? No problem - open another one and continue collect crystals."
+msgstr ""
+
+#: templates/site/index.html:310 templates/site/index.html:315
+msgid "Open Game Store"
+msgstr ""
+
+#: templates/site/index.html:330 templates/site/index_old.html:303
+msgid "FAQ"
+msgstr ""
+
+#: templates/site/index.html:334 templates/site/index_old.html:307
+msgid "How much can I earn?"
+msgstr ""
+
+#: templates/site/index.html:337 templates/site/index_old.html:310
+msgid ""
+"Your income is not limited at all! The more you play, the more money you "
+"will make!"
+msgstr ""
+
+#: templates/site/index.html:348 templates/site/index_old.html:321
+msgid "How can I receive payment for #1 leaderboard position?"
+msgstr ""
+
+#: templates/site/index.html:351
+msgid "You need to open any Pay2K game and proceed to PAYMENT section."
+msgstr ""
+
+#: templates/site/index.html:362 templates/site/index_old.html:335
+msgid "Pay2K is really free?"
+msgstr ""
+
+#: templates/site/index.html:365 templates/site/index_old.html:338
+msgid ""
+"Yes, absolutly! You don't need to spend anything at all! All you need to do "
+"is to play games and EARN MONEY!"
+msgstr ""
+
+#: templates/site/index.html:478 templates/site/index_old.html:110
+#: templates/site/index_old.html:459
+msgid "Name"
+msgstr ""
+
+#: templates/site/index_old.html:25
+msgid "Play Free Android Games and Earn Real Cash"
+msgstr ""
+
+#: templates/site/index_old.html:93
+msgid "Recent Payouts"
+msgstr ""
+
+#: templates/site/index_old.html:165
+msgid "Earn more gems by playing this games"
+msgstr ""
+
+#: templates/site/index_old.html:228
+msgid "Download & Install Pay2K app"
+msgstr ""
+
+#: templates/site/index_old.html:243
+msgid "Play Games and Earn Gems"
+msgstr ""
+
+#: templates/site/index_old.html:251
+msgid "Convert Gems on Real Money and Gift Cards"
+msgstr ""
+
+#: templates/site/index_old.html:324
+msgid "You need to open Pay2K app and proceed to PAYMENT section."
+msgstr ""
+
+#: templates/site/menu.html:10
+msgid "Home"
+msgstr ""
+
+#: templates/site/menu.html:11
+msgid "About us"
+msgstr ""
+
+#: templates/site/menu.html:12
+msgid "Contacts"
+msgstr ""
+
+#: templates/site/policy.html:34
+msgid "SCOPE"
+msgstr ""
+
+#: templates/site/policy.html:36 templates/site/policy.html:43
+msgid ""
+"This privacy policy applies to Pay2K, Inc., a Latvian corporation with an "
+"address at 21 Kr. Valdemara str. 45, Riga, LV1010, Latvia (“Pay2K” or “We”) "
+"with respect to providing your access to the Pay2K app (the “App”) on the "
+"iOS or Android platforms (the “Services”). We will refer to our users as "
+"“you” in this privacy policy. If you are a resident of North America, the "
+"privacy laws of California and the United States will apply, which is "
+"designated as the “North America” portion of this privacy policy. If you "
+"reside outside of North America, the “Everywhere Else” provisions of this "
+"privacy policy will apply to you (which are GDPR compliant).Please note that "
+"in order to use our App and Services, you authorize Pay2K to transfer your "
+"personal data across national borders and to other countries where Pay2K and "
+"its partners operate, including within the United States. The privacy "
+"protections and rights of authorities to access your information in these "
+"countries may not be equivalent to those in your country. We will only "
+"transfer your personal data to countries where permitted to do so by law and "
+"we will take steps intended to ensure that your personal data continues to "
+"receive appropriate protections. For more information, please see the "
+"section “Transferring your information outside of Europe.”"
+msgstr ""
+
+#: templates/site/policy.html:41
+msgid "a. North America"
+msgstr ""
+
+#: templates/site/policy.html:45
+msgid ""
+"NOTE: This App is not intended for children. We do not knowingly collect, "
+"use or disclose Personal Information about visitors under 13 years of age. "
+"For more information, please see Section 9, “What About Children,” below."
+msgstr ""
+
+#: templates/site/policy.html:46
+msgid ""
+"However, no Internet, mobile or e-mail transmission is ever fully secure or "
+"error-free. In particular, e-mail or SMS message sent or any other "
+"information or data sent to or from our servers over the public Internet may "
+"not be secure. Therefore, users should therefore take special care in "
+"deciding what information they send to Company through an Internet "
+"connection or mobile network. You can help us to protect your Personal "
+"Information by:"
+msgstr ""
+
+#: templates/site/policy.html:49
+msgid "ensuring your handset device is locked."
+msgstr ""
+
+#: templates/site/policy.html:50
+msgid "not sharing any password or log-in data with others."
+msgstr ""
+
+#: templates/site/policy.html:51
+msgid ""
+"changing your password frequently. Company is not responsible for any "
+"breaches of a user’s profile and access to their Personal Information, which "
+"is attributed to lost or stolen usernames user names and passwords. In the "
+"event of an inadvertent disclosure of a user’s username user name and "
+"password, users are advised to change their password as soon as they become "
+"aware of such disclosure."
+msgstr ""
+
+#: templates/site/policy.html:53
+msgid ""
+"1. How do we use your Personal Information? The Personal Information you "
+"provide to the Company will allow us to do the following:"
+msgstr ""
+
+#: templates/site/policy.html:56
+msgid "fulfill your orders for virtual goods and services."
+msgstr ""
+
+#: templates/site/policy.html:57
+msgid "award you any prizes you may have won."
+msgstr ""
+
+#: templates/site/policy.html:58
+msgid ""
+"alert you of new products or services, features, updates and enhancements."
+msgstr ""
+
+#: templates/site/policy.html:59
+msgid ""
+"identify you by your when we publish your wins on the in-App leaderboard."
+msgstr ""
+
+#: templates/site/policy.html:60
+msgid "publish your location to other App users when you win."
+msgstr ""
+
+#: templates/site/policy.html:61
+msgid "handle your customer service or technical support questions or issues."
+msgstr ""
+
+#: templates/site/policy.html:62
+msgid "personalize your experience while using our App."
+msgstr ""
+
+#: templates/site/policy.html:63
+msgid ""
+"deliver the type of content and product offerings in which we think you will "
+"be most interested."
+msgstr ""
+
+#: templates/site/policy.html:64
+msgid ""
+"notify you of upgrade opportunities, in-app purchases, contests, promotions, "
+"gaming, drawings or special events and offers. We may enhance or merge the "
+"Personal Information collected on the App with data provided to us by others "
+"or aggregated from other Company properties. We may share your Personal "
+"Information among our marketing partners. They may use your Personal "
+"Information to offer you products and services that we think may be of "
+"interest to you. We may also use your Personal Information for internal "
+"marketing, profiling or demographic purposes, so we can adapt our products "
+"and services, the better to suit your anticipated needs. Finally, will "
+"publish your name and winnings on our leaderboard."
+msgstr ""
+
+#: templates/site/policy.html:66
+msgid ""
+"2. Does Company disclose Personal Information it collects to outside parties?"
+msgstr ""
+
+#: templates/site/policy.html:67
+msgid ""
+"In addition to other disclosures set forth in Section 1 above, the Company "
+"may need to disclose items of your Personal Information to third-party "
+"vendors to fulfill product orders or prizes, to process mailings, or to "
+"process, analyze, or store data on the Company’s behalf without requiring "
+"further notice or consent from you. Those third parties are not authorized "
+"by the Company to use or disclose your Personal Information for any purpose "
+"other than for use in connection with the provision of services designated "
+"by us or the delivery and processing of transactions or services. We will "
+"take reasonable measures to have those third parties maintain the "
+"confidentiality, security, and integrity of the Personal Information they "
+"obtain from us."
+msgstr ""
+
+#: templates/site/policy.html:68
+msgid ""
+"We reserve the right to disclose your Personal Information as required or "
+"permitted by law. For example, we may disclose it to respond to a subpoena, "
+"court order or other legal process, or in special cases when we have reason "
+"to believe that disclosing Personal Information is necessary to identify, "
+"contact, or bring legal action against you if we believe that you may be "
+"violating your agreements with us (including, without limitation, any "
+"applicable terms of use), or may be causing injury to, or interference with, "
+"the Company, any other user of this App or any service, the general public "
+"or other third parties. We may also disclose your Personal Information to "
+"protect the Company from legal liability."
+msgstr ""
+
+#: templates/site/policy.html:69
+msgid ""
+"You may also receive information from third parties. By using the App, the "
+"Company and those third parties may use your Personal Information to contact "
+"you. However, please be aware that Company cannot control the activities of "
+"third parties to whom we provide data; we therefore cannot guarantee that "
+"they will adhere to similar privacy and security procedures as Company. You "
+"may opt out of receiving third party communications pursuant to Sections 5 "
+"of this Privacy Policy."
+msgstr ""
+
+#: templates/site/policy.html:70
+msgid "3. The transfer of Personal Information."
+msgstr ""
+
+#: templates/site/policy.html:71
+msgid ""
+"The Personal Information you provide to Company may be transferred as an "
+"asset in connection a merger or sale involving all or part of Company or as "
+"part of a corporate reorganization, stock sale or other change of control. "
+"As part of its business operations, the Company may transfer Personal "
+"Information to servers or recipients in countries that do not provide the "
+"same level of legal data protection as the country from which you access our "
+"App. By using the App, you consent to the transfer of Personal Information "
+"and to the processing by the Company of that Personal Information."
+msgstr ""
+
+#: templates/site/policy.html:72
+msgid "4. Who is collecting your information?"
+msgstr ""
+
+#: templates/site/policy.html:73
+msgid ""
+"When you are asked for information while on this App, you are sharing that "
+"information with the Company, and its various affiliates and marketing "
+"partners, unless specifically stated otherwise. As a result of that sharing, "
+"you may receive communications from any of those affiliates and marketing "
+"partners. In addition, some services offered by the Company through this App "
+"are provided in conjunction with third parties with which the Company has a "
+"business relationship. If your Personal Information is being collected by an "
+"entity other than the Company, you will be so notified at the time that the "
+"process for the collection of that Personal Information is initiated. If you "
+"do not want to have your Personal Information so shared, please do not elect "
+"to use the service, the App or other platform from which that Personal "
+"Information is collected."
+msgstr ""
+
+#: templates/site/policy.html:74
+msgid "5. How can you manage your Personal Information?"
+msgstr ""
+
+#: templates/site/policy.html:75
+msgid ""
+"At the time you provide personal information, Company will give you the "
+"option of declining any future offers or information about new products, "
+"promotions, or services. In addition, many of the messages that Company may "
+"send you, such as SMS alerts, may be disabled by you within your mobile "
+"device preference settings on the App. You may also be given the opportunity "
+"to “opt out” of certain features or functions through the App through the "
+"App’s settings. Note, however, that if you opt out of certain "
+"communications, you may not have full access to all the App’s features."
+msgstr ""
+
+#: templates/site/policy.html:76
+msgid "6. What about Children?"
+msgstr ""
+
+#: templates/site/policy.html:77
+msgid ""
+"This App is designed by the Company and intended to be considered for use of "
+"adults who are of the age of majority in their state of jurisdiction and is "
+"not intended for use by children. Company does not intend to collect "
+"Personal Information from individual under the age of thirteen and does not "
+"authorize any minors to use this App. If you are the parent or guardian of "
+"any minor who has provided Personal Information to us, please contact us by "
+"clicking here: Contact Us. You can also contact us by e-mailing us at <a "
+"href=\"mailto:support@pay2k.com\">support@pay2k.com</a>."
+msgstr ""
+
+#: templates/site/policy.html:78
+msgid ""
+"7. How do you correct or delete your Personal Information or file a "
+"complaint?"
+msgstr ""
+
+#: templates/site/policy.html:79
+msgid ""
+"If, for any reason, you are concerned about the way we are using your "
+"Personal Information, or you would like to correct or request that we delete "
+"or correct any item of Personal Information, please contact us by e-mailing "
+"us at <a href=\"mailto:support@pay2k.com\">support@pay2k.com</a>."
+msgstr ""
+
+#: templates/site/policy.html:80
+msgid "8. Contact Us."
+msgstr ""
+
+#: templates/site/policy.html:81
+msgid ""
+"\n"
+"            If you have any questions, complaints, requests or comments "
+"regarding our privacy policy or our management of your Personal Information, "
+"please contact us at:<br>\n"
+"Pay2K, Inc. <br>\n"
+"Attn: Customer Service <br>\n"
+"21 Kr.Valdemara str.,<br>\n"
+"Riga, LV1010, Latvia<br>\n"
+"support@pay2k.com. <br>\n"
+"            "
+msgstr ""
+
+#: templates/site/policy.html:89
+msgid "9. Links to third party apps."
+msgstr ""
+
+#: templates/site/policy.html:90
+msgid ""
+"Our App may provide advertising or other links to various third party mobile "
+"applications in the Apple App Store or Google Play, which are provided as an "
+"accommodation to you. However, even if a third-party affiliation exists "
+"between our App and the other applications, we do not exercise authority "
+"over these other mobile applications, each of which maintains independent "
+"privacy and data collection policies and procedures. We do not assume "
+"responsibility or liability for these independent methods or actions and are "
+"not responsible for the independent policies or procedures of these other "
+"mobile application publishers or third party platforms. Similarly, we cannot "
+"take responsibility for the privacy initiatives or the content of such "
+"mobile application publishers or third party platforms. These links are "
+"provided only for your convenience, and as such, you access them at your own "
+"risk."
+msgstr ""
+
+#: templates/site/terms.html:25
+msgid "Terms of Service"
+msgstr ""
+
+#: templates/site/terms.html:31
+msgid "Agreement"
+msgstr ""
+
+#: templates/site/terms.html:32
+msgid ""
+"These Terms of Service (the “Terms”) govern your acquisition and use of "
+"services on our website cookiebot.com. By accepting these Terms, either by "
+"clicking a box indicating your acceptance or by executing an order form or "
+"other document referring to these Terms, you agree that these Terms form "
+"part of the agreement between you and Cybot A/S (“Cybot”) (the “Agreement”)."
+msgstr ""
+
+#: templates/site/terms.html:34
+msgid ""
+"These Terms were last updated on March 16, 2018 and are effective between "
+"you and Cybot as of the date when you place an order or set up an account at "
+"cookiebot.com. Cybot reserves the right to change these Terms from time to "
+"time. If such changes are considered material, Cybot will inform registered "
+"customers about the changes by email, and the changes will take effect one "
+"month after such emails have been sent. Your continued use of our website or "
+"services after such changes will constitute acknowledgment and acceptance of "
+"the modified Terms."
+msgstr ""
+
+#: templates/site/terms.html:38
+msgid ""
+"In case of any discrepancies between the wording of our website and these "
+"Terms, these Terms prevail. "
+msgstr ""
+
+#: templates/site/terms.html:42
+msgid ""
+"These Terms as well as all other texts throughout the website are translated "
+"from English to other languages. These are unofficial translations and are "
+"only provided as convenience translations. They should therefore be "
+"interpreted in accordance with their English language versions which will "
+"prevail in the event of any discrepancy between the English version and the "
+"translation. Cybot assumes no liability for any errors, omissions or "
+"ambiguities in the translations. Any person or entity choosing to rely on "
+"the translated content does so at their own risk. When in doubt, please "
+"always refer to the official English language version."
+msgstr ""
+
+#: templates/site/terms.html:45
+msgid "The Services We Deliver – and What You Need to Dot"
+msgstr ""
+
+#: templates/site/terms.html:51
+msgid ""
+"EU’s General Data Protection Regulation (GDPR) and EU’s ePrivacy Directive "
+"2009/136/EC (ePR) test"
+msgstr ""
+
+#: templates/site/terms.html:53
+msgid ""
+"Cybot offers a free GDPR/ePR test which analyzes your website to give you an "
+"indication of whether or not your website is compliant with the rules "
+"relating to online tracking set out in the GDPR and ePR."
+msgstr ""
+
+#: templates/site/terms.html:57
+msgid ""
+"The GDPR/ePR test is only based on some basic requirements in the GDPR and "
+"ePR and is furthermore only an analysis of up to 5 subpages of your website. "
+"It is therefore not a complete analysis of your website. Therefore, a "
+"positive test response must not be taken as a guarantee that your website "
+"fulfills all requirements set out in the GDPR and ePR."
+msgstr ""
+
+#: templates/site/terms.html:62
+msgid ""
+"The Disclaimer of Warranty as set out in clause 9 and the Limitation of "
+"Liability as set out in clause 10 also apply to the use of the GDPR/ePR test."
+msgstr ""
+
+#: templates/site/terms.html:65
+msgid ""
+"If you wish to perform a complete analysis of your website, you must sign up "
+"for a Cookiebot subscription, cf. clause 2.2"
+msgstr ""
+
+#: templates/site/terms.html:68
+msgid "Cookiebot Subscription"
+msgstr ""
