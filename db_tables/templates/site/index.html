@@ -263,7 +263,12 @@
     background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
     height: 16px;
     display: inline-block;
-    background-size: 100%;"></span><span style="vertical-align: middle;"> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
+    background-size: 100%;">
+        
+        <span class="cristals-prompt">
+            TON Crystal (TON)
+        </span>
+    </span><span style="vertical-align: middle;"> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
                                 ${{ val.normalize }}
                                 {% endwith %}
                             </span></div>

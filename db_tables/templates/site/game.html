@@ -25,13 +25,22 @@
 
             <div class="game-header__content">
                  <div class="header-content">
-                <h1>
+                    <div id="fixed_container" class="fixed_container">
+                        <h1 id="gameName" class="gameName">
                     {% trans 'GAME NAME' %}
-                </h1>
+                </h1> <p class="devName">{% trans 'by DEVNAME' %}</p>
+                    </div>
+                    
                 
-            <p class="">{% trans 'by DEVNAME' %}</p>
-            
+                
            
+            
+           <div class="download-page-description__title download-page-description__title-header">
+                {% blocktrans %}Play game, <br> Complete levels,
+<br>
+               Earn crypto!
+               {% endblocktrans %}
+            </div>
 
             </div>
 
@@ -47,8 +56,10 @@
 
    <section class="download-page-description download-page-description--hompage">
         <div class="container-fluid">
-            <div class="download-page-description__title download-page-description__title--desktop">
-                {% blocktrans %}Play game, Complete levels,
+            
+
+             <div class="download-page-description__title download-page-description__title--mobil">
+                {% blocktrans %}Play game,<br> Complete levels,
 <br>
                Earn crypto!
                {% endblocktrans %}
@@ -93,14 +104,14 @@
  <section class="download-page-description download-page-description--hompage">
         <div class="container-fluid">
             <div class="download-page-description__title download-page-description__title--desktop">
-                {% blocktrans %}How Just in 30 min and 100% for Free<br>
-                You can Earn Starting from $10 <br>
-                Playing Quiz Games{% endblocktrans %}
+                {% blocktrans %}Pay2K - is a game platform where you can find <br>
+free games in which you can earn real crypto!{% endblocktrans %}
+<span class="download-page-description__sub-title">Created on <a href="https://freeton.org/" target="_blank">Free TON</a> Blockchain</span>
             </div>
               <div class="download-page-description__title download-page-description__title--mobil">
-                {% blocktrans %}<i></i>How Just in 30 min and 100% for Free<br>
-                You can Earn Starting from $10 <br>
-                Playing Quiz Games{% endblocktrans %}
+                {% blocktrans %}<i></i>Pay2K - is a game platform where you can find 
+free games in which you can earn real crypto!{% endblocktrans %}
+<span class="download-page-description__sub-title">Created on <a href="https://freeton.org/" target="_blank">Free TON</a> Blockchain</span>
             </div>
             <p>
                       {% blocktrans %}Stop wasting your time by playing quiz games without any goal! Today, because of Pay2K platform, you can start to earn real money playing educational and fun trivia games!{% endblocktrans %}

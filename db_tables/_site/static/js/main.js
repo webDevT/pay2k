@@ -149,3 +149,52 @@ $(window).scroll(function(){
 
 });
 }
+if($(window).width() < 768) {
+checkFontSize();
+
+
+function checkFontSize() {
+  var elems = document.querySelectorAll(".gameName");
+  
+  [].forEach.call(elems, function(el) {
+    scaleFontSize(el);
+  });  
+
+}
+
+function scaleFontSize(element) {
+    element.style.fontSize = "230%";
+    if (element.scrollWidth > element.clientWidth) {
+        element.style.letterSpacing = "-0.05em";
+    }
+    if (element.scrollWidth > element.clientWidth) {
+        element.style.letterSpacing = "0";
+        element.style.fontSize = "130%";
+    }
+ 
+}
+
+checkFontSize2();
+
+
+function checkFontSize2() {
+  var elems = document.querySelectorAll(".devName");
+  
+  [].forEach.call(elems, function(el) {
+    scaleFontSize2(el);
+  });  
+
+}
+
+function scaleFontSize2(element) {
+    element.style.fontSize = "140%";
+    if (element.scrollWidth > element.clientWidth) {
+        element.style.letterSpacing = "-0.05em";
+    }
+    if (element.scrollWidth > element.clientWidth) {
+        element.style.letterSpacing = "0";
+        element.style.fontSize = "80%";
+    }
+ 
+}
+}

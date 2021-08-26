@@ -135,6 +135,7 @@ header .container-fluid .wrapper {
     font-weight: 400;
     color: #fff;
     line-height: 19px;
+    text-transform: uppercase;
 }
 
 .leng li {
@@ -694,6 +695,7 @@ footer .footer-menu a {
     color: #333333;
     font-family: "MuseoSansCyrlMedium";
     line-height: 19px;
+    text-transform: uppercase;
 }
 
 footer .follow-us {
@@ -1581,11 +1583,66 @@ footer .follow-us {
 }
 .game-header__content h1 {
     padding-top: 0;
-}
 
+}
+.download-page-description__sub-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+.download-page-description__sub-title a {
+    text-decoration: underline;
+    color: #212529;
+}
+.game-menu-link {
+    display: none;
+}
+.game-header .game-menu-link {
+    display: block;
+    font-weight: 700;
+}
+.game-header .menu-link {
+    display: none;
+}
+.download-page-description__title-header {
+    text-transform: uppercase;
+    text-align: left;
+}
+.game-icon img {
+   width: 200px;
+}
+.game-header h1 {
+    font-size: 56px;
+}
+.header-content p {
+    font-size: 26px;
+}
+.cryistals-amount {
+    position: relative;
+    cursor: pointer;
+}
+.cristals-prompt {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-110%) translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    padding:  2px 6px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 4px;
+    display: none;
+}
+.cryistals-amount:hover .cristals-prompt {
+    display: block;
+}
+.header-content p {
+    margin-bottom: 5px;
+}
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
-
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1700px) {
@@ -1680,7 +1737,7 @@ footer .follow-us {
 @media only screen and (max-width: 1600px) {
     /**/
     h1 {
-        padding-top: 117px;
+        padding-top: 80px;
         font-size: 45px;
     }
 
@@ -2053,7 +2110,7 @@ footer .follow-us {
         top: 4px;
     }
     .game-icon img {
-        width: 20vw;
+        width: 16vw;
     }
 
 }
@@ -2479,7 +2536,7 @@ footer .follow-us {
         padding-top: 65px;
     }
     .game-icon img {
-        width: 20vw;
+        width: 16vw;
     }
     .game-header__content {
         width: 600px;
@@ -3158,6 +3215,9 @@ footer .follow-us {
 }
 .game-header__content {
     width: 450px;
+}
+.game-header h1 {
+    font-size: 38px;
 }
 
 }
@@ -3867,7 +3927,7 @@ footer .follow-us {
     }
 
     .menu ul.active a {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 700;
     }
 
@@ -3913,7 +3973,11 @@ footer .follow-us {
         margin-bottom: 15px;
     }
     .recend-payouts__photo {
-        width: 80px;
+        width: 60px;
+    }
+    .recend_payouts .container-fluid .item img {
+        width: 50px;
+        height: 50px;
     }
     .recend-payouts__items-list {
         width: calc(100% - 80px);
@@ -3960,12 +4024,71 @@ footer .follow-us {
     left: 50%;
     transform: translateX(-50%);
 }
-
-
-
-
+.recend-payouts__item {
+    display: flex;
+    align-items: center;
+}
+.recend_payouts .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.recend_payouts .container-fluid .title {
+    padding-bottom: 0;
+    width: 100px;
+}
+.game-header .game-menu-link {
+    display:none;
 
 }
+.game-header .menu-link {
+    display: block;
+} 
+.download-page-description__title--mobil {
+    display: block;
+}
+.download-page-description__title-header {
+    display: none;
+}
+.game-header {
+    margin-bottom: 75px;
+}
+
+.game-icon img {
+    width: 120px;
+}
+
+
+.game-icon img {
+    margin-top: 40px;
+}
+.fixed_container {
+  width: 100%;
+}
+
+.fixed_container h1,
+.devName {
+width: 90%;
+min-width: 90%;
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+.game-header .header-content {
+    width: 100%;
+    text-align: center;
+}
+ .header-content {
+    text-align: left;
+
+}
+ .header-content h1 {
+    margin-top: 15px;
+ }
+ .devName {
+    margin-top: 10px;
+ }
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 690px) {
@@ -4052,6 +4175,12 @@ footer .follow-us {
     .download-page-description__title--mobil {
         display: block;
     }
+    .download-page-description__title .download-page-description__sub-title {
+        display: block;
+    }
+    .header-content p {
+        margin-top: 10px;
+    }
 
 }
 
@@ -4122,10 +4251,6 @@ footer .follow-us {
         order: 3;
     }
 
-    .recend_payouts .container-fluid .title {
-        font-size: 12px;
-    }
-
     .recend_payouts .container-fluid .value {
         font-size: 12px;
     }
@@ -4139,10 +4264,6 @@ footer .follow-us {
         padding-bottom: 24px;
     }
 
-    .recend_payouts .container-fluid {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
     .recend_payouts .container-fluid .col-3 {
         padding-left: 10px;
@@ -4209,10 +4330,6 @@ footer .follow-us {
 
     .recend_payouts .container-fluid .col-12 .value {
         min-width: 206px;
-    }
-
-    .recend_payouts .container-fluid .title {
-        font-size: 15px;
     }
 
     .recend_payouts .container-fluid .value {
@@ -4342,6 +4459,9 @@ footer .follow-us {
         -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
         justify-content: flex-end;
+    }
+     .header-content h1 {
+        margin-top: 0;
     }
 
 }
@@ -4536,10 +4656,12 @@ footer .follow-us {
         display: block;
     }
 
+
+
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 448px) {
+@media only screen and (max-width: 480px) {
     /**/
     header {
         background: url("/static/img/mob_bg.png");
@@ -4735,6 +4857,12 @@ footer .follow-us {
         min-height: 104vw;
 
     }
+    .header-content h1 {
+    font-size: 35px;
+}
+.header-content p {
+    font-size: 20px;
+}
 
 }
 
@@ -4853,6 +4981,13 @@ footer .follow-us {
 
     .download-content__title {
         margin-top: 24px;
+    }
+    .recend_payouts .container-fluid .value {
+        font-size: 13px;
+    }
+    .recend_payouts .container-fluid .title {
+        width: 95px;
+        min-width: 95px;
     }
 
 }
