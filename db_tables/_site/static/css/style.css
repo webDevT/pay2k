@@ -225,9 +225,6 @@ header .container-fluid .wrapper {
     border: 1px solid #E0E0E0;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    padding: 51px;
-    padding-bottom: 26px;
-    padding-top: 11px;
 }
 
 .recend_payouts .container-fluid img {
@@ -235,11 +232,7 @@ header .container-fluid .wrapper {
     width: 83.18px;
 }
 
-.recend_payouts .container-fluid .item {
-    padding-bottom: 40px;
-    padding-top: 40px;
-    border-bottom: 1px solid #E0E0E0;
-}
+
 
 .recend_payouts .container-fluid .item.last {
     border-bottom: none;
@@ -1530,9 +1523,41 @@ footer .follow-us {
 .call-to-action-button {
     margin-top: 60px;
 }
+.recend_payouts .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
 .recend-payouts__items {
     display: flex;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+
+}
+.recend-payouts__items .recend-payouts__items-wrap {
+ border-bottom: 1px solid #E0E0E0;
+}
+.recend-payouts__items-wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.recend-payouts__items:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.recend-payouts__items:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.recend-payouts__items:last-child .recend-payouts__items-wrap {
+    border-bottom: none;
+}
+.recend-payouts__items:hover {
+  background: rgba(224, 224, 224, 0.2);
 }
 .recend-payouts__items-list {
     display: flex;
@@ -1852,16 +1877,10 @@ footer .follow-us {
 
     .recend_payouts .container-fluid {
         width: 972px;
-        padding-left: 45px;
-        padding-right: 45px;
-        padding-bottom: 24px;
-        padding-top: 6px;
+        padding-top: 0px;
     }
 
-    .recend_payouts .container-fluid .item {
-        padding-top: 26px;
-        padding-bottom: 26px;
-    }
+
 
     .recend_payouts .container-fluid .item img {
         height: 74px;
@@ -2281,8 +2300,6 @@ footer .follow-us {
 
     .recend_payouts .container-fluid {
         width: 876px;
-        padding-left: 43px;
-        padding-right: 43px;
     }
 
     .play-earn .wrap img {
@@ -2664,8 +2681,6 @@ footer .follow-us {
 
     .recend_payouts .container-fluid {
         width: 875px;
-        padding-left: 36px;
-        padding-right: 36px;
     }
 
     .recend_payouts .container-fluid .item img {
@@ -3331,11 +3346,6 @@ footer .follow-us {
         line-height: 144%;
     }
 
-    .recend_payouts .container-fluid {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     .recend_payouts .container-fluid .title {
         font-size: 14px;
     }
@@ -3947,10 +3957,6 @@ footer .follow-us {
     display: flex;
     align-items: center;
 }
-.recend_payouts .container-fluid {
-    padding-left: 10px;
-    padding-right: 10px;
-}
 .recend_payouts .container-fluid .title {
     padding-bottom: 0;
     width: 100px;
@@ -4045,6 +4051,13 @@ h2 {
 }
 .question {
     margin-bottom: 60px;
+}
+.recend-payouts__items-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.recend-payouts__items:hover {
+    background: transparent;
 }
 }
 
@@ -4219,12 +4232,6 @@ h2 {
         margin-bottom: 18px;
     }
 
-    .recend_payouts .container-fluid .item {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-
-
     .recend_payouts .container-fluid .col-3 {
         padding-left: 10px;
     }
@@ -4283,10 +4290,7 @@ h2 {
         padding-bottom: 3px;
     }
 
-    .recend_payouts .container-fluid .item {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+
 
     .recend_payouts .container-fluid .col-12 .value {
         min-width: 206px;

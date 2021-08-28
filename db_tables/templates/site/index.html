@@ -215,8 +215,13 @@
     <h2 class="h2">{% trans 'Recent payouts' %}</h2>
     <div class="container-fluid">
         {% for x in rewards %}
-            <div class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
+
+
+          
+
+             <a href="" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
                  data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
+                  <span class="recend-payouts__items-wrap">
                 <div class="recend-payouts__photo">
                     <div class="">
                         <div class="">
@@ -279,8 +284,8 @@
                         
                     </div>
               
-
-            </div>
+</span>
+            </a>
         {% endfor %}
 
         {% if has_more_payouts %}
