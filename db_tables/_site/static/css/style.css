@@ -55,8 +55,7 @@ h2 {
     color: #333333;
     text-align: center;
     font-weight: 900;
-    padding-top: 80px;
-    padding-bottom: 70px;
+    padding-top: 60px;
     position: relative;
     z-index: 10;
 }
@@ -71,7 +70,7 @@ header {
     background: url("/static/img/header_bg.png");
     -webkit-background-size: 100% 100%;
     background-size: 100%;
-    min-height: 713px;
+    min-height: 37.3vw;
     padding-top: 44px;
     background-repeat: no-repeat;
     color: #fff;
@@ -127,7 +126,7 @@ header .container-fluid .wrapper {
 }
 
 .menu ul li {
-    margin: auto 24px;
+    margin: auto 10px;
 }
 
 .menu a {
@@ -318,10 +317,6 @@ header .container-fluid .wrapper {
     height: 22px !important;
 }
 
-.play-earn .container-fluid {
-    padding: 0 274px;
-}
-
 .play-earn .wrapper {
     width: 100%;
     position: relative;
@@ -424,11 +419,9 @@ header .container-fluid .wrapper {
 
 .about {
     text-align: center;
+    margin-bottom: 0 !important;
 }
 
-.about .container-fluid {
-    padding: 0 274px;
-}
 
 .about .img {
     width: 309px;
@@ -450,7 +443,7 @@ header .container-fluid .wrapper {
 .about span.stats {
     line-height: 60px;
     font-size: 40px;
-    padding-top: 50px;
+    padding-top: 60px;
     display: block;
     background: -webkit-linear-gradient(
             269.88deg, #985ADD 2.89%, #F36580 97.11%);
@@ -479,7 +472,7 @@ header .container-fluid .wrapper {
 }
 
 .question {
-    margin-bottom: 116px;
+    margin-bottom: 0px;
 }
 
 .question .wrapper {
@@ -757,7 +750,6 @@ footer .follow-us a {
 }
 
 .contacts .container-fluid h2 {
-    padding-bottom: 24px;
     width: 476px;
     padding-top: 70px;
 }
@@ -890,7 +882,6 @@ footer .follow-us a {
 .how-mutch .col-md-5 .title {
     font-size: 35px;
     line-height: 130%;
-    margin-bottom: 24px;
     font-weight: 900;
 }
 
@@ -1139,7 +1130,7 @@ footer .follow-us a {
     color: transparent;
     font-size: 20px;
     line-height: 130%;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .download-text {
@@ -1147,7 +1138,7 @@ footer .follow-us a {
     font-family: "MuseoSansCyrlLight";
     font-weight: 300;
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     max-width: 329px;
 }
 
@@ -1170,12 +1161,6 @@ footer .follow-us a {
 
 .download-section {
     position: relative;
-}
-
-.download-section h2 {
-    position: relative;
-    top: 15px;
-
 }
 
 .download__left-background {
@@ -1367,9 +1352,9 @@ footer .follow-us a {
     /*text-align: center;*/
     margin: 0 auto;
     font-size: 16px;
-    margin-top: 16px;
+    margin-top: 35px;
     font-weight: 700;
-    margin-bottom: 44px;
+    margin-bottom: 35px;
     /*margin-left: 10%;*/
 }
 
@@ -1381,7 +1366,9 @@ footer .follow-us a {
     padding-left: 20px;
     margin-left: 7%;
 }
-
+.download-page-description ul li:last-child {
+    margin-bottom: 0;
+}
 .download-page-description ul li a {
     text-decoration: underline;
     color: #212529;
@@ -1504,7 +1491,6 @@ footer .follow-us {
     max-width: 745px;
     margin: 0 auto;
     margin-bottom: 35px;
-    margin-top: 15px;
     position: relative;
 
 }
@@ -1542,7 +1528,7 @@ footer .follow-us {
     height: 250px;
 }
 .call-to-action-button {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .recend-payouts__items {
     display: flex;
@@ -1569,7 +1555,7 @@ footer .follow-us {
     width: 22%;
 }
 .call-to-action-button-game {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 .game-header__content {
     display: flex;
@@ -1641,6 +1627,23 @@ footer .follow-us {
 .header-content p {
     margin-bottom: 5px;
 }
+.download-page-description__title-header {
+    margin-top: 25px;
+}
+.game-icon img {
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+.h2 {
+    margin-bottom: 35px;
+}
+.download-links__wrapper {
+        margin-bottom: 60px;
+    } 
+.about .container-fluid {
+    width: 1200px;
+    max-width: 100%;
+}
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 /*==========  Desktop First  ==========*/
@@ -1650,20 +1653,9 @@ footer .follow-us {
     h1 {
         padding-top: 122px;
     }
-
-    header {
-        min-height: 630px;
-    }
-
     header .container-fluid {
         padding: 0 220px;
     }
-
-    .play-earn .container-fluid,
-    .about .container-fluid {
-        padding: 0 186px;
-    }
-
     footer .container-fluid {
         padding-left: 100px;
         padding-right: 100px;
@@ -1731,6 +1723,7 @@ footer .follow-us {
     .download-link__item img {
         height: 230px;
     }
+    
 }
 
 /* Large Devices, Wide Screens */
@@ -1740,20 +1733,9 @@ footer .follow-us {
         padding-top: 80px;
         font-size: 45px;
     }
-
-    header {
-        min-height: 594px;
-    }
-
     header .container-fluid {
         padding: 0 130px;
     }
-
-    .play-earn .container-fluid,
-    .about .container-fluid {
-        padding: 0 146px;
-    }
-
     .bg-company {
         width: 72%;
     }
@@ -1803,10 +1785,6 @@ footer .follow-us {
         right: -99px;
     }
 
-    .download-page-description--hompage {
-        padding-top: 40px;
-    }
-
     .download-content__sub-title {
         margin-bottom: 20px;
     }
@@ -1841,7 +1819,6 @@ footer .follow-us {
     }
 
     header {
-        min-height: 535.84px;
         padding-top: 40px;
     }
 
@@ -1896,8 +1873,6 @@ footer .follow-us {
     }
 
     h2 {
-        padding-top: 50px;
-        padding-bottom: 50px;
         font-size: 24px;
         line-height: 29px;
     }
@@ -1905,12 +1880,6 @@ footer .follow-us {
     .arrow img {
         height: 20px !important;
     }
-
-    .play-earn .container-fluid,
-    .about .container-fluid {
-        padding: 0 136px;
-    }
-
     .play-earn .wrap img {
         height: 88px;
         width: 88px;
@@ -2120,7 +2089,7 @@ footer .follow-us {
     /**/
     header {
         padding-top: 38.44px;
-        min-height: 488.77;
+
     }
 
     .header-content {
@@ -2264,9 +2233,6 @@ footer .follow-us {
     font-size: 13px;
     padding: 11px 10px;
   }*/
-    .download-text {
-        margin-bottom: 28px;
-    }
 
     .download-section .container-fluid {
         width: 70%;
@@ -2288,22 +2254,17 @@ footer .follow-us {
         /* font-size: 13px;
     padding: 11px 10px*/;
     }
-
-    .download-text {
-        margin-bottom: 28px;
-    }
-
     .download-section .container-fluid {
         width: 70%;
+    }
+    .menu ul li {
+    margin: auto 6px;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1280px) {
     /**/
-    header {
-        min-height: 476px;
-    }
 
     header .container-fluid {
         padding: 0 100px;
@@ -2551,11 +2512,6 @@ footer .follow-us {
     h1 {
         padding-top: 50px;
     }
-
-    header {
-        min-height: 442px;
-    }
-
     .play-earn .wrap {
         padding-top: 38px;
         padding-bottom: 38px;
@@ -2643,7 +2599,6 @@ footer .follow-us {
     }
 
     .download-page-description {
-        padding-top: 100px;
         padding-bottom: 0;
     }
 
@@ -2664,11 +2619,6 @@ footer .follow-us {
     footer h2 {
         padding-top: 70px;
     }
-
-    .download-page-description--hompage {
-        padding-top: 30px;
-    }
-
     .download__screen-image-left {
         top: 15px;
     }
@@ -2678,7 +2628,6 @@ footer .follow-us {
 @media only screen and (max-width: 1024px) {
     /**/
     header {
-        min-height: 378px;
         padding-top: 32px;
     }
 
@@ -2709,8 +2658,6 @@ footer .follow-us {
     }
 
     h2 {
-        padding-top: 50px;
-        padding-bottom: 45px;
         font-size: 22px;
         line-height: 26px;
     }
@@ -2737,11 +2684,6 @@ footer .follow-us {
 
     .arrow img {
         height: 16px !important;
-    }
-
-    .play-earn .container-fluid {
-        padding-left: 135px;
-        padding-right: 135px;
     }
 
     .play-earn .wrap img {
@@ -2779,7 +2721,6 @@ footer .follow-us {
 
     .about span.stats {
         font-size: 32px;
-        padding-top: 0px;
     }
 
     .about .img {
@@ -2958,6 +2899,9 @@ footer .follow-us {
         max-width: 720px;
         margin: 0 auto;
     }
+    .h2 {
+        margin-bottom: 35px;
+    }
 
 }
 
@@ -2980,11 +2924,6 @@ footer .follow-us {
         padding-top: 30px;
         max-width: 400px;
     }
-
-    header {
-        min-height: 366px;
-    }
-
     .recend_payouts .container-fluid {
         width: 95%;
     }
@@ -3000,7 +2939,6 @@ footer .follow-us {
     }
 
     .play-earn .container-fluid,
-    .about .container-fluid,
     .question .container-fluid {
         padding: 40px;
     }
@@ -3168,7 +3106,7 @@ footer .follow-us {
         font-size: 15px;
         max-width: 225px;
         margin: 0 auto;
-        margin-top: 14px;
+        margin-top: 20px;
     }
 
     .download-title {
@@ -3177,15 +3115,12 @@ footer .follow-us {
 
     .download__button {
         margin: 0 auto;
-        margin-top: 24px;
-
     }
 
     .download-title {
         max-width: 225px;
         margin: 0 auto;
         font-size: 20px;
-        margin-top: 30px;
     }
 
     .download__right-background {
@@ -3219,7 +3154,15 @@ footer .follow-us {
 .game-header h1 {
     font-size: 38px;
 }
-
+.menu ul li {
+    margin: auto 5px;
+    }
+    .download-links__wrapper {
+        margin-bottom: 20px;
+    }
+    .download-text {
+        margin-bottom: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -3229,11 +3172,6 @@ footer .follow-us {
         padding-top: 0;
         max-width: 365px;
     }
-
-    header {
-        min-height: 322px;
-    }
-
     .bg-company {
         width: 77%;
     }
@@ -3273,6 +3211,7 @@ footer .follow-us {
         max-width: 225px;
         margin: 0 auto;
         margin-top: 14px;
+        margin-bottom: 20px;
     }
 
     .download-title {
@@ -3281,14 +3220,12 @@ footer .follow-us {
 
     .download__button {
         margin: 0 auto;
-        margin-top: 24px;
     }
 
     .download-title {
         max-width: 225px;
         margin: 0 auto;
         font-size: 20px;
-        margin-top: 30px;
     }
 
     .download-page-description .container-fluid {
@@ -3304,9 +3241,6 @@ footer .follow-us {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
     /**/
-    header {
-        min-height: 310px;
-    }
 
     .menu ul {
         display: none;
@@ -3409,12 +3343,6 @@ footer .follow-us {
     .recend_payouts .container-fluid .value {
         font-size: 14px;
     }
-
-    h2 {
-        padding-top: 30px;
-        padding-bottom: 24px;
-    }
-
     .btn-close {
         display: none;
     }
@@ -3695,11 +3623,6 @@ footer .follow-us {
         position: relative;
         z-index: 99;
     }
-
-    .download-section {
-        margin-bottom: 80px;
-    }
-
     .download-img {
         display: none;
     }
@@ -3879,7 +3802,6 @@ footer .follow-us {
         max-width: 225px;
         margin: 0 auto;
         font-size: 20px;
-        margin-top: 30px;
     }
 
     .download__right-background {
@@ -3904,9 +3826,6 @@ footer .follow-us {
         z-index: 0;
     }
 
-    .download-section {
-        margin-bottom: 80px;
-    }
 
     .download__button-wrapper-fixed.fixed {
         position: fixed;
@@ -3970,7 +3889,7 @@ footer .follow-us {
         align-items: flex-start;
     }
     .recend-payouts__item {
-        margin-bottom: 15px;
+        margin-bottom: 3px;
     }
     .recend-payouts__photo {
         width: 60px;
@@ -4088,7 +4007,46 @@ min-width: 90%;
  .devName {
     margin-top: 10px;
  }
-
+ .game-icon img {
+    border-radius: 10px;
+}
+.download-page-description__title--mobil-game {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.about h3{
+    color: #212529;
+    margin-bottom: 20px;
+}
+.about .col-md-3:nth-child(4) h3,
+.about .col-md-3:nth-child(3) h3 {
+    margin-bottom: 0;
+}
+.h2 {
+    margin-bottom: 20px;
+}
+h2 {
+    padding-bottom: 0;
+}
+.download-page-description p {
+    margin-bottom: 20px;
+}
+.download-page-description__sub-title {
+    margin-top: 20px;
+}
+.download-page-description__sub-title {
+    margin-bottom: 20px;
+}
+.download-page-description__title--desktop {
+    display: none;
+}
+.question .question-item {
+    margin-bottom: 20px;
+}
+.question {
+    margin-bottom: 60px;
+}
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 690px) {
@@ -4120,11 +4078,6 @@ min-width: 90%;
     .slick-active {
         margin-right: 0px !important;
     }
-
-    .about .col-md-3 {
-        margin-bottom: 15px;
-    }
-
     .bg-company {
         width: 82%;
     }
@@ -4208,6 +4161,13 @@ min-width: 90%;
     .download-page-description__title {
         max-width: 464px;
 
+    }
+    .header-content p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .header-content h1 {
+        margin-bottom: 0;
     }
 
 }
@@ -4394,13 +4354,16 @@ min-width: 90%;
         right: 0px;
         top: 15px;
     }
+    .about .col-md-3:nth-child(3) h3 {
+    margin-bottom: 20px;
+}
 
-    /* .download__screen-image-right {
-    top: 8px;
-  }
-  .download__screen-image-left {
-    top: 21px;
-  }*/
+    .about .col-md-3:last-child h3 {
+    margin-bottom: 0;
+}
+.about span.stats {
+    padding-top: 20px;
+}
 
 }
 
@@ -4609,11 +4572,6 @@ min-width: 90%;
         position: relative;
         left: -25px;
     }
-
-    .download-page-description--hompage {
-        padding-top: 10px;
-    }
-
     .download-page-description__title {
         font-size: 18px;
         min-width: 300px;
@@ -4668,7 +4626,6 @@ min-width: 90%;
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100%;
-        /*min-height: 350px;*/
     }
 
     .header-content h1 {
@@ -4682,7 +4639,7 @@ min-width: 90%;
     }
 
     h2 {
-        padding-top: 20px;
+        padding-top: 60px;
     }
 
     footer {
@@ -4746,7 +4703,7 @@ min-width: 90%;
     }
 
     footer .container-fluid h2 {
-        padding-top: 40px !important;
+        padding-top: 13px !important;
     }
 
     .top-header .container-fluid {
@@ -4863,6 +4820,9 @@ min-width: 90%;
 .header-content p {
     font-size: 20px;
 }
+.download-page-description__title--mobil-game {
+    font-size: 20px;
+}
 
 }
 
@@ -4895,6 +4855,9 @@ min-width: 90%;
     .download-page-description__title {
         font-size: 17px;
     }
+    .download-page-description__title--mobil-game {
+    font-size: 20px;
+}
 
 }
 
@@ -4960,6 +4923,10 @@ min-width: 90%;
     .download-page-description__title {
         font-size: 16px;
     }
+    .download-page-description__title--mobil-game {
+    font-size: 20px;
+}
+    
 
 }
 
@@ -4986,8 +4953,8 @@ min-width: 90%;
         font-size: 13px;
     }
     .recend_payouts .container-fluid .title {
-        width: 95px;
-        min-width: 95px;
+        width: 80px;
+        min-width: 80px;
     }
 
 }
@@ -5024,6 +4991,9 @@ min-width: 90%;
     .download-page-description__title {
         font-size: 15px;
     }
+    .download-page-description__title--mobil-game {
+    font-size: 20px;
+} 
 }
 
 /* Custom, iPhone Retina */
