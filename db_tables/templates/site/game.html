@@ -13,6 +13,7 @@
 </head>
 <body>
 <header class="game-header">
+     <div class="header__top">
         <div class="container-fluid">
             <div class="wrapper">
                 <div class="logo">
@@ -22,13 +23,18 @@
                 </div>
                 {% include 'site/menu.html' %}
             </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
 
             <div class="game-header__content">
                  <div class="header-content">
                     <div id="fixed_container" class="fixed_container">
                         <h1 id="gameName" class="gameName">
-                    {% trans 'GAME NAME' %}
-                </h1> <p class="devName">{% trans 'by DEVNAME' %}</p>
+                    {{ data.name }}
+                </h1> <p class="devName">{% blocktrans with devname=data.devname %}by {{ devname }}{% endblocktrans %}</p>
                     </div>
                     
                 
@@ -45,7 +51,7 @@
             </div>
 
             <div class="game-icon">
-                <img src="/static/img/game-icon.png" alt="">
+                <img src="https://storage.googleapis.com/ninja_storage/{{ data.icon }}" alt="">
             </div>
             </div>
             
@@ -66,17 +72,8 @@
             </div>
             
             <p>
-                      {% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. {% endblocktrans %}
-
-            <p>
-
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                {{ data.description|default_if_none:'&mdash;'|safe }}
+            </p>
                
         </div>
     </section> 
@@ -87,12 +84,12 @@
                 <div class="download-text-wrapper">
                     <div class="download__button-wrapper-fixed fixed" style="text-align: center">
                         <div class="download__button ">
-                            <a href="/catalogue/">{% trans "Play Now!" %}</a>
+                            <a href="/catalogue/{{ data.uid }}/">{% trans "Play Now!" %}</a>
                         </div>
                     </div>
                     <div class="download__button-wrapper" style="text-align: center">
                         <div class="download__button ">
-                            <a href="/catalogue/">{% trans "Play Now!" %}</a>
+                            <a href="/catalogue/{{ data.uid }}/">{% trans "Play Now!" %}</a>
                         </div>
                     </div>
 

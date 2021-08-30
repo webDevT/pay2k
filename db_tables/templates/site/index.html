@@ -14,15 +14,23 @@
 <body>
 {% csrf_token %}
     <header>
-        <div class="container-fluid">
+
+        <div class="header__top">
+            <div class="container-fluid">
             <div class="wrapper">
                 <div class="logo">
                     <a href="">
-					Pay2k
-				</a>
+                    Pay2k
+                </a>
                 </div>
                 {% include 'site/menu.html' %}
             </div>
+        </div>
+        </div>
+        
+        <div class="container-fluid">
+
+
             <div class="header-content">
                 <h1 class="desktop">
                     {% trans 'Play Free Quiz Games<br>and Earn Real Cash' %}

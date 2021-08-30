@@ -71,7 +71,7 @@ header {
     -webkit-background-size: 100% 100%;
     background-size: 100%;
     min-height: 37.3vw;
-    padding-top: 44px;
+    /*padding-top: 44px;*/
     background-repeat: no-repeat;
     color: #fff;
 }
@@ -912,14 +912,15 @@ footer .follow-us a {
     background-repeat: no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100%;
-    min-height: 420px;
+    min-height: 21vw;
 }
 
 .title-serv {
     text-align: center;
     font-size: 48px;
     line-height: 58px;
-    padding-top: 50px;
+    padding-top: 4vw;
+
 }
 
 .service .container-fluid {
@@ -1669,6 +1670,97 @@ footer .follow-us {
     width: 1200px;
     max-width: 100%;
 }
+.menu-link-mobile {
+    display: none;
+}
+.header-button {
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15), -10px 10px 150px rgba(167, 167, 167, 0.3);
+    border-radius: 63px;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "MuseoSansCyrlMedium";    
+    background-color: #fff;
+}
+.header-button__text {
+    background: -webkit-linear-gradient(
+            269.88deg, #985ADD 2.89%, #F36580 97.11%);
+    background: -o-linear-gradient(269.88deg, #985ADD 2.89%, #F36580 97.11%);
+    background: linear-gradient(
+            180.12deg, #985ADD 2.89%, #F36580 97.11%);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    color: transparent;
+}
+.menu-wrapper {
+    align-items: center;
+}
+.menu ul {
+    margin-bottom: 0;
+}
+.header-button--game {
+    display: none;
+}
+.game-header .header-button {
+    display: none;
+}
+.game-header .header-button--game.header-button {
+    display: flex;
+}
+header .container-fluid .wrapper {
+    align-items: center;
+}
+.header__top {
+    padding-top: 24px;
+    transition: all 0.5s;
+
+}
+.header__top.sticky {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), -10px 10px 150px rgba(167, 167, 167, 0.2);
+    z-index: 9999;
+}
+.header__top.sticky .menu a {
+   color: #333333;
+}
+.header__top.sticky .header-button {
+    background: linear-gradient(222.36deg, #FF687B 11.29%, #FEB052 84.47%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15), -10px 10px 150px rgba(167, 167, 167, 0.3);
+}
+.header__top.sticky .header-button .header-button__text {
+    color: #fff;
+}
+.header__top.sticky .logo a {
+    background: -webkit-linear-gradient(
+            269.88deg, #985ADD 2.89%, #F36580 97.11%);
+    background: -o-linear-gradient(269.88deg, #985ADD 2.89%, #F36580 97.11%);
+    background: linear-gradient(
+            180.12deg, #985ADD 2.89%, #F36580 97.11%);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    color: transparent;
+}
+.header__top.sticky .language {
+    color: #333333;
+}
+.dd-selected label {
+    font-weight: 400;
+}
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 /*==========  Desktop First  ==========*/
@@ -1769,9 +1861,7 @@ footer .follow-us {
         width: 100%;
     }
 
-    .title-serv {
-        padding-top: 20px;
-    }
+
 
     .download-content__title {
         margin-top: 50px;
@@ -1843,9 +1933,7 @@ footer .follow-us {
         line-height: 144%;
     }
 
-    header {
-        padding-top: 40px;
-    }
+
 
     header .container-fluid {
         padding: 0 135px;
@@ -2006,11 +2094,6 @@ footer .follow-us {
         font-size: 36px;
         line-height: 43px;
     }
-
-    .service-header {
-        min-height: 316px;
-    }
-
     .service .container-fluid {
         padding-left: 234px;
         padding-right: 234px;
@@ -2106,10 +2189,6 @@ footer .follow-us {
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1366px) {
     /**/
-    header {
-        padding-top: 38.44px;
-
-    }
 
     .header-content {
         padding-left: 0;
@@ -2218,11 +2297,6 @@ footer .follow-us {
         font-size: 32px;
         line-height: 38px;
     }
-
-    .service-header {
-        min-height: 299px;
-    }
-
     .service .container-fluid {
         padding-left: 228px;
         padding-right: 228px;
@@ -2383,11 +2457,6 @@ footer .follow-us {
         font-size: 32px;
         line-height: 38px;
     }
-
-    .service-header {
-        min-height: 284px;
-    }
-
     .service .container-fluid {
         padding-left: 221px;
         padding-right: 221px;
@@ -2594,14 +2663,7 @@ footer .follow-us {
         margin-left: 15px !important;
     }
 
-    .title-serv {
-        padding-top: 0px;
-    }
-
-    .service-header {
-        min-height: 248px;
-    }
-
+   
     .service .container-fluid {
         padding-left: 135px;
         padding-right: 135px;
@@ -2639,15 +2701,14 @@ footer .follow-us {
     .download__screen-image-left {
         top: 15px;
     }
+    .title-serv {
+        padding-top: 2.5vw;
+    }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
     /**/
-    header {
-        padding-top: 32px;
-    }
-
     header .container-fluid {
         padding: 0 135px;
     }
@@ -2807,14 +2868,11 @@ footer .follow-us {
     }
 
     .title-serv {
-        padding-top: 5px;
+  
         font-size: 28px;
         line-height: 34px;
     }
 
-    .service-header {
-        min-height: 228px;
-    }
 
     .download-img {
         height: 388px;
@@ -3012,15 +3070,10 @@ footer .follow-us {
     }
 
     .title-serv {
-        padding-top: 0px;
+       
         font-size: 28px;
         line-height: 34px;
     }
-
-    .service-header {
-        min-height: 210px;
-    }
-
     .service .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
@@ -3178,6 +3231,12 @@ footer .follow-us {
     .download-text {
         margin-bottom: 20px;
     }
+    .header-button {
+        height: 40px;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
 }
 
 /* Small Devices, Tablets */
@@ -3196,12 +3255,7 @@ footer .follow-us {
     }
 
     .service-header {
-        -webkit-background-size: 110% 110%;
-        background-size: 110%;
-    }
 
-    .title-serv {
-        margin-top: -10px;
     }
 
     .play-earn .wrap {
@@ -3522,7 +3576,6 @@ footer .follow-us {
     }
 
     .title-serv {
-        margin-top: -10px;
         font-size: 22px;
         line-height: 26px;
     }
@@ -3572,9 +3625,7 @@ footer .follow-us {
         margin-left: 55px;
     }
 
-    .title-serv {
-        margin-top: 15px;
-    }
+
 
     .download-img {
         display: none;
@@ -4059,6 +4110,54 @@ h2 {
 .recend-payouts__items:hover {
     background: transparent;
 }
+.menu-link-mobile {
+    display: block;
+}
+.header-button {
+    display: none;
+}
+.game-header .header-button--game.header-button {
+    display: none;
+}
+.header__top.sticky {
+    background: transparent;
+    position: static;
+    width: 100%;
+    padding-bottom: 0px;
+    box-shadow: none;
+    z-index: 0;
+}
+.header__top.sticky .menu a {
+   color: #fff;
+}
+.header__top.sticky .header-button {
+    background: #fff;
+    
+}
+.header__top.sticky .header-button .header-button__text {
+    background: -webkit-linear-gradient(
+            269.88deg, #985ADD 2.89%, #F36580 97.11%);
+    background: -o-linear-gradient(269.88deg, #985ADD 2.89%, #F36580 97.11%);
+    background: linear-gradient(
+            180.12deg, #985ADD 2.89%, #F36580 97.11%);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    color: transparent;
+}
+.header__top.sticky .logo a {
+    color: #fff;
+}
+.header__top.sticky .language {
+    color: #fff;
+}
+.service-header {
+    min-height: 27vw;
+}
+.title-serv {
+    padding-top: 4vw;
+}
 }
 
 /* Small Devices, Tablets */
@@ -4099,9 +4198,7 @@ h2 {
         padding-top: 25px !important;
     }
 
-    .title-serv {
-        margin-top: 0px;
-    }
+  
 
     .service .container-fluid {
         padding-bottom: 0px;
@@ -4192,7 +4289,6 @@ h2 {
         -webkit-background-size: 627px 236px;
         background-size: 627px 236px;
         min-height: 234px;
-        padding-top: 15px;
     }
 
     .recend_payouts .container-fluid .col-md-9 {
@@ -4377,7 +4473,6 @@ h2 {
     header {
         -webkit-background-size: 540px 203px;
         background-size: 540px 203px;
-        padding-top: 10px;
         min-height: 202px;
     }
 
@@ -4616,6 +4711,9 @@ h2 {
 
     .download-page .download__button-wrapper {
         display: block;
+    }
+    .service-header {
+        min-height: 33vw;
     }
 
 
@@ -4891,12 +4989,8 @@ h2 {
         -webkit-background-size: 100% 100%;
         background-size: 100%;
         background-repeat: no-repeat;
-        min-height: 226px;
     }
 
-    .title-serv {
-        margin-top: 37px;
-    }
 
     footer {
         min-height: 300px;
@@ -4929,7 +5023,14 @@ h2 {
     }
     .download-page-description__title--mobil-game {
     font-size: 20px;
-}
+    }
+    .service-header {
+        min-height: 62vw;
+    }
+    .title-serv {
+        padding-top: 13vw;
+    }
+
     
 
 }
@@ -4960,6 +5061,7 @@ h2 {
         width: 80px;
         min-width: 80px;
     }
+    
 
 }
 

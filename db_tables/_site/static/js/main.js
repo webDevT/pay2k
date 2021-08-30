@@ -8,8 +8,6 @@ $('.btn_menu').click(function(){
 
     
 	})
-
-
   // ------end mobil menu---
 
   $('.slider').slick({
@@ -93,26 +91,13 @@ responsive: [
 
 });
 $('.slider').slick("setPosition");
-
-
-
-
 });
-
-
-
-
-
-
 
 $(function(){
 	$('.question-item').click(function(){
 		$(this).toggleClass('active');
 		$(this).find('p').slideToggle();
 		$(this).find('.btn-close').toggleClass('active');
-		
-
-
 	});
 });
 
@@ -154,12 +139,10 @@ checkFontSize();
 
 
 function checkFontSize() {
-  var elems = document.querySelectorAll(".gameName");
-  
+  var elems = document.querySelectorAll(".gameName"); 
   [].forEach.call(elems, function(el) {
     scaleFontSize(el);
   });  
-
 }
 
 function scaleFontSize(element) {
@@ -198,3 +181,16 @@ function scaleFontSize2(element) {
  
 }
 }
+
+// start sticky header
+
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){
+$('.header__top').addClass("sticky");
+}
+else{
+$('.header__top').removeClass("sticky");
+}
+});
+
+// end sticky header
