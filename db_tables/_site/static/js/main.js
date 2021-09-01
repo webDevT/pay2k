@@ -146,13 +146,13 @@ function checkFontSize() {
 }
 
 function scaleFontSize(element) {
-    element.style.fontSize = "230%";
+    element.style.fontSize = "7vw";
     if (element.scrollWidth > element.clientWidth) {
         element.style.letterSpacing = "-0.05em";
     }
     if (element.scrollWidth > element.clientWidth) {
         element.style.letterSpacing = "0";
-        element.style.fontSize = "130%";
+        element.style.fontSize = "4vw";
     }
  
 }
@@ -170,13 +170,13 @@ function checkFontSize2() {
 }
 
 function scaleFontSize2(element) {
-    element.style.fontSize = "140%";
+    element.style.fontSize = "5vw";
     if (element.scrollWidth > element.clientWidth) {
         element.style.letterSpacing = "-0.05em";
     }
     if (element.scrollWidth > element.clientWidth) {
         element.style.letterSpacing = "0";
-        element.style.fontSize = "80%";
+        element.style.fontSize = "3vw";
     }
  
 }

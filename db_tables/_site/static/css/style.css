@@ -43,7 +43,7 @@ p {
 
 h1 {
     font-size: 48px;
-    line-height: 58px;
+    line-height: 1.2;
     font-weight: 900;
     max-width: 700px;
     padding-top: 170px;
@@ -431,6 +431,9 @@ header .container-fluid .wrapper {
 .about h3 {
     font-size: 20px;
     margin: 0 auto;
+}
+.about--stat h3{
+    font-weight: 300 !important;
 }
 
 .about span.stats {
@@ -1687,6 +1690,7 @@ footer .follow-us {
     font-weight: 500;
     font-family: "MuseoSansCyrlMedium";    
     background-color: #fff;
+    text-transform: uppercase;
 }
 .header-button__text {
     background: -webkit-linear-gradient(
@@ -1732,6 +1736,8 @@ header .container-fluid .wrapper {
     padding-bottom: 24px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), -10px 10px 150px rgba(167, 167, 167, 0.2);
     z-index: 9999;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .header__top.sticky .menu a {
    color: #333333;
@@ -1760,6 +1766,9 @@ header .container-fluid .wrapper {
 }
 .dd-selected label {
     font-weight: 400;
+}
+.download-page-description__title-header {
+    font-size: 22px;
 }
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -1920,8 +1929,12 @@ header .container-fluid .wrapper {
     h1 {
         padding-top: 100px;
         font-size: 36px;
-        line-height: 43px;
         max-width: 500px;
+    }
+    .game-header h1{
+        max-width: 50vw;
+        line-height: 1.1;
+        font-size: 3.6vw;
     }
 
     .header-content {
@@ -2200,7 +2213,6 @@ header .container-fluid .wrapper {
 
     h1 {
         font-size: 32px;
-        line-height: 38px;
         max-width: 500px;
         padding-top: 80px;
     }
@@ -2282,7 +2294,6 @@ header .container-fluid .wrapper {
 
     .company h1 {
         font-size: 32px !important;
-        line-height: 38px !important;
         min-width: 400px !important;
         max-width: 400px !important;
     }
@@ -2586,7 +2597,7 @@ header .container-fluid .wrapper {
         width: 16vw;
     }
     .game-header__content {
-        width: 600px;
+        width: 65vw;
     }
 
 
@@ -2704,6 +2715,9 @@ header .container-fluid .wrapper {
     .title-serv {
         padding-top: 2.5vw;
     }
+    .download-page-description__title-header {
+        margin-top: 5px;
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -2724,14 +2738,12 @@ header .container-fluid .wrapper {
 
     h1 {
         font-size: 26px;
-        line-height: 34px;
         max-width: 400px;
         padding-top: 37px;
     }
 
     .header-content p {
         font-size: 14px;
-        line-height: 144%;
         max-width: 350px;
     }
 
@@ -3216,12 +3228,7 @@ header .container-fluid .wrapper {
 .recend-payouts__photo {
     width: 100px;
 }
-.game-header__content {
-    width: 450px;
-}
-.game-header h1 {
-    font-size: 38px;
-}
+
 .menu ul li {
     margin: auto 5px;
     }
@@ -3390,14 +3397,13 @@ header .container-fluid .wrapper {
 
     h1 {
         font-size: 22px;
-        line-height: 29px;
         margin-top: 0px;
         max-width: 350px;
     }
 
     .header-content p {
         font-size: 14px;
-        line-height: 144%;
+       
     }
 
     .recend_payouts .container-fluid .title {
@@ -3549,7 +3555,7 @@ header .container-fluid .wrapper {
 
     .company .container-fluid h1 {
         font-size: 24px !important;
-        line-height: 29px !important;
+
     }
 
     .company .container-fluid p {
@@ -3953,7 +3959,7 @@ header .container-fluid .wrapper {
         margin-bottom: 3px;
     }
     .recend-payouts__photo {
-        width: 60px;
+        width: 70px;
     }
     .recend_payouts .container-fluid .item img {
         width: 50px;
@@ -4030,7 +4036,7 @@ header .container-fluid .wrapper {
 }
 
 .game-icon img {
-    width: 120px;
+    width: 30vw;
 }
 
 
@@ -4043,9 +4049,9 @@ header .container-fluid .wrapper {
 
 .fixed_container h1,
 .devName {
-width: 90%;
-min-width: 90%;
-   white-space: nowrap;
+width: 98%;
+min-width: 98%;
+/*   white-space: nowrap;*/
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0 auto;
@@ -4157,6 +4163,21 @@ h2 {
 }
 .title-serv {
     padding-top: 4vw;
+}
+.header-content p {
+    line-height: 1.2;
+}
+.game-header .header-content {
+    transform: translateY(11vw);
+}
+.download-page-description__title--mobil-game {
+    padding-top: 0;
+}
+.game-header {
+    margin-bottom: 15vw;
+}
+.download-page-description.download-page-description--game {
+    padding-top: 20px;
 }
 }
 
@@ -4959,6 +4980,9 @@ h2 {
     }
     .download-page-description__title--mobil-game {
     font-size: 20px;
+}
+.game-header .header-content {
+    transform: translateY(20vw);
 }
 
 }
