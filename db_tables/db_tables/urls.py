@@ -20,6 +20,7 @@ urlpatterns += i18n_patterns(
     re_path(r'^company/$', TemplateView.as_view(template_name='site/company.html')),
     # re_path(r'^terms/$', TemplateView.as_view(template_name='site/terms.html')),
     re_path(r'^policy/$', TemplateView.as_view(template_name='site/policy.html')),
+    re_path(r'^recent-payouts/$', TemplateView.as_view(template_name='site/recent-payouts.html')),
     re_path(r'^contact/$', TemplateView.as_view(template_name='site/contact.html')),
     re_path(r'^download/$', TemplateView.as_view(template_name='site/download.html')),
     re_path(r'^game/$', TemplateView.as_view(template_name='site/game.html')),

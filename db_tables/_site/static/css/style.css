@@ -279,6 +279,7 @@ header .container-fluid .wrapper {
     font-family: "MuseoSansCyrlLight";
     font-weight: 300;
     padding-bottom: 20px;
+    display: none;
 }
 
 .recend_payouts .container-fluid .value {
@@ -1534,20 +1535,29 @@ footer .follow-us {
 .recend-payouts__items {
     display: flex;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    
-
 }
 .recend-payouts__items .recend-payouts__items-wrap {
  border-bottom: 1px solid #E0E0E0;
+ padding-left: 7%;
+ padding-right: 7%;
+}
+.recend_payouts .container-fluid .value {
+    
+    font-family: "MuseoSansCyrlMedium";
+    font-weight: 400;
+}
+
+.recend_payouts .container-fluid .value.recend_payouts-name {
+   font-family: "MuseoSansCyrl";
+    font-weight: 500;
+
 }
 .recend-payouts__items-wrap {
     display: flex;
     width: 100%;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .recend-payouts__items:first-child {
     border-top-left-radius: 10px;
@@ -1769,6 +1779,50 @@ header .container-fluid .wrapper {
 }
 .download-page-description__title-header {
     font-size: 22px;
+}
+.recend-payouts__items--header {
+    background: transparent;
+}
+.recend-payouts__items--header:hover {
+    background: transparent;
+}
+.recend-payouts__items:last-child .recend-payouts__items-wrap {
+    border-bottom: none;
+}
+.recend_payouts .container-fluid .item.last .recend-payouts__items-wrap {
+    border-bottom: none;
+}
+.load-more__button {
+    font-size: 14px;
+    display: flex;
+    margin: 0 auto;
+    background: linear-gradient(222.36deg, #FF687B 11.29%, #FEB052 84.47%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15), -10px 10px 150px rgba(167, 167, 167, 0.3);
+    border-radius: 63px;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 178px;
+    color: #fff;
+    margin-bottom: 60px;
+    margin-top: 13px;
+}
+.load-more__button:hover {
+    color: #fff;
+}
+.sub-title {
+    font-size: 16px;
+    text-align: center;
+    font-family: "MuseoSansCyrlMedium";
+    font-weight: 400;
+    padding-top: 18px;
+}
+.recend_payouts--page {
+    padding-top: 80px;
+    padding-bottom: 117px;
+}
+.service-header--header .title-serv{
+    padding-top: 3vw;
 }
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -2599,6 +2653,10 @@ header .container-fluid .wrapper {
     .game-header__content {
         width: 65vw;
     }
+    .sub-title {
+        padding-top: 1vw;
+        line-height: 1.2;
+    }
 
 
 }
@@ -3242,6 +3300,9 @@ header .container-fluid .wrapper {
         height: 40px;
         margin-left: 10px;
         font-size: 13px;
+    }
+    .service-header--header .title-serv {
+        padding-top: 1.2vw;
     }
 
 }
@@ -4179,6 +4240,27 @@ h2 {
 .download-page-description.download-page-description--game {
     padding-top: 20px;
 }
+.recend_payouts .container-fluid .title {
+    display: block;
+}
+.recend-payouts__items--header {
+    display: none;
+}
+.load-more__button {
+    margin-bottom: 30px;
+}
+.service-header--header .sub-title{
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.recend_payouts--page {
+    padding-top: 60px;
+    padding-bottom: 100px;
+
+
+
+}
 }
 
 /* Small Devices, Tablets */
@@ -4946,7 +5028,14 @@ h2 {
 .download-page-description__title--mobil-game {
     font-size: 20px;
 }
+.service-header--header {
+    background-size: 220%;
+    min-height: 43vw;
 
+}
+.service-header--header .title-serv {
+    padding-top: 3.2vw;   
+}
 }
 
 /* Extra Small Devices, Phones */
@@ -5053,6 +5142,9 @@ h2 {
     }
     .title-serv {
         padding-top: 13vw;
+    }
+    .service-header--header .title-serv {
+        padding-top: 10vw;
     }
 
     

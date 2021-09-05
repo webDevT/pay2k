@@ -42,9 +42,9 @@
            
             
            <div class="download-page-description__title download-page-description__title-header">
-                {% blocktrans %}Play game, <br> Complete levels,
+                {% blocktrans %}Play game <br> Complete levels
 <br>
-               Earn crypto!
+               Earn crypto
                {% endblocktrans %}
             </div>
 
@@ -65,14 +65,14 @@
             
 
              <div class="download-page-description__title download-page-description__title--mobil download-page-description__title--mobil-game h2">
-                {% blocktrans %}Play game,<br> Complete levels,
+                {% blocktrans %}Play game<br> Complete levels
 <br>
-               Earn crypto!
+               Earn crypto
                {% endblocktrans %}
             </div>
             
             <p>
-                {{ data.description|default_if_none:'&mdash;'|safe }}
+                {{ description|default_if_none:'&mdash;'|safe }}
             </p>
                
         </div>
@@ -223,12 +223,12 @@ where you can earn crypto!{% endblocktrans %}
                 <div class="download-text-wrapper">
                     <div class="download__button-wrapper-fixed fixed" style="text-align: center">
                         <div class="download__button ">
-                            <a href="/catalogue/">{% trans "Play Now!" %}</a>
+                            <a href="/catalogue/{{ data.uid }}/">{% trans "Play Now!" %}</a>
                         </div>
                     </div>
                     <div class="download__button-wrapper" style="text-align: center">
                         <div class="download__button ">
-                            <a href="/catalogue/">{% trans "Play Now!" %}</a>
+                            <a href="/catalogue/{{ data.uid }}/">{% trans "Play Now!" %}</a>
                         </div>
                     </div>
 
@@ -238,7 +238,7 @@ where you can earn crypto!{% endblocktrans %}
     </div> 
    <div class="download__button-wrapper-fixed fixed download__button-wrapper-fixed-game">
                      <div class="download__button ">
-                    <a href="/catalogue/">{% trans 'Play Now!' %}</a>
+                    <a href="/catalogue/{{ data.uid }}/">{% trans 'Play Now!' %}</a>
                 </div>
                 </div>
 <footer id="scroll-position">

@@ -1,0 +1,206 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "site/title.html" %}
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon"
+      type="image/png"
+      href="{% static 'img/favicon.png' %}">
+
+</head>
+<body>
+<header class="service-header service-header--header" style="">
+    <div class="header__top">
+         <div class="container-fluid">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/">
+                    Pay2k
+                </a>
+            </div>
+            {% include 'site/menu.html' %}
+        </div>
+
+    </div>
+    </div>
+   
+    <div class="title-serv">{% trans 'Recent Payouts' %}</div>
+    <div class="sub-title">
+        All payments are 100% real, with transactions recorded on the blockchain
+    </div>
+</header>
+
+
+<section class="recend_payouts recend_payouts--page">
+   
+    <div class="container-fluid">
+     
+
+
+          <div href="" target="_blank" class="recend-payouts__items recend-payouts__items--header item"
+                 data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
+                  <span class="recend-payouts__items-wrap">
+                <div class="recend-payouts__photo">
+                   User
+                </div>
+
+                    <div class="recend-payouts__items-list">
+
+                        <div class="recend-payouts__item">
+                           
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            Date
+                        </div>
+
+                        <div class="recend-payouts__item">
+                           Type
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            Amount
+
+                        </div>
+                        
+                    </div>
+              
+</span>
+            </div>
+
+           
+
+              
+              <a href="" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
+                 data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
+                  <span class="recend-payouts__items-wrap">
+                <div class="recend-payouts__photo">
+                    <div class="">
+                        <div class="">
+                            <img style="border-radius: 83px;" src="{{x.account.userpic }}"
+                                 alt="{{ x.account.username }}">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                    <div class="recend-payouts__items-list">
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Username' %}
+                            </div>
+                            <div class="value recend_payouts-name">
+                                {{ x.account.username }}
+                            </div>
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Date' %}
+                            </div>
+                            <div class="value">
+                                {{ x.timestamp|date:'Y-m-d' }}
+                            </div>
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Type' %}
+                            </div>
+                            <div class="value">
+                                {{ x.get_reward_type_display }}
+                            </div>
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Amount' %}
+                            </div>
+                            <div class="value">
+                                <span style="vertical-align: middle;">{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding" style="vertical-align: middle; width: 20px;
+    background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
+    height: 16px;
+    display: inline-block;
+    background-size: 100%;">
+        
+        <span class="cristals-prompt">
+            TON Crystal (TON)
+        </span>
+    </span></div>
+
+                        </div>
+                        
+                    </div>
+              
+</span>
+            </a>
+
+<a href="" class="load-more__button">
+   Load more
+</a>
+
+       
+
+        {% if has_more_payouts %}
+            <a href="javascript://" class="arrow loader-1">
+                <img src="/static/img/arrow.svg" alt="">
+            </a>
+        {% endif %}
+    </div>
+{#<a name="catalogue"></a>#}
+</section>
+
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>{% trans 'Need help?' %}</h2>
+                <div class="text">
+                    <p>{% trans 'We are ready to help you any time!!' %}</p>
+                    <a href="/contact/">{% trans 'Contact us' %}</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <nav class="footer-menu">
+
+                    <ul>
+                        <li><a href="/company/">{% trans 'Company' %}</a></li>
+                        <li><a href="/terms/">{% trans 'Terms' %}</a></li>
+                        <li><a href="/policy/">{% trans 'Privacy Policy' %}</a></li>
+                        <li><a href="/contact/">{% trans 'Contact Us' %}</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="logo">
+                    <a href="">
+                        Pay2k
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="follow-us">
+                    <span>{% trans 'Follow us' %}</span>
+                    <a href="https://www.facebook.com/pay2k/"><img src="{% static "img/facebook.svg" %}" alt=""></a>
+                    <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}"><img src="{% static "img/instagram.svg" %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</footer>
+{% include 'site/scripts.html' %}
+</body>
+</html>
