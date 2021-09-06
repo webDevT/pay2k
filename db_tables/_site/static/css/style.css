@@ -7,7 +7,7 @@
 @font-face {
     font-family: "MuseoSansCyrlLight";
     src: url("../fonts/MuseoSansCyrl-300.ttf");
-    font-style: normal;
+    font-style: ormal;
     font-weight: normal;
 }
 
@@ -753,6 +753,7 @@ footer .follow-us a {
 
 .contacts .container-fluid .col-md-7 img {
     margin-top: -50px;
+    max-width: 100%;
 }
 
 .contacts .container-fluid .col-md-5 {
@@ -1163,13 +1164,15 @@ footer .follow-us a {
 
 .download__left-background {
     position: absolute;
-    top: 258px;
+    top: -300px;
+    left: -4px;
 }
 
 .download__right-background {
     position: absolute;
-    bottom: -190px;
+    bottom: -500px;
     right: 0;
+    width: 68vw;
 }
 
 .download-section .download-text-wrapper,
@@ -1881,15 +1884,10 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
         transform: scale(0.8);
-        left: -43px;
-        top: 220px;
+        left: -55px;
     }
 
     .download__right-background {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-        right: -99px;
     }
 
     .download__screen-image--3 {
@@ -1952,16 +1950,9 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
         transform: scale(0.8);
-        left: -43px;
-        top: 220px;
     }
 
-    .download__right-background {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-        right: -99px;
-    }
+
 
     .download-content__sub-title {
         margin-bottom: 20px;
@@ -2193,17 +2184,6 @@ header .container-fluid .wrapper {
         padding: 13px 19px;
     }
 
-    .download__left-background {
-        top: 15px;
-    }
-
-    .download__right-background {
-        right: -149px;
-        -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-        bottom: -200px;
-    }
 
     .download-header {
         height: 670px;
@@ -2232,23 +2212,15 @@ header .container-fluid .wrapper {
         padding: 13px 19px;
     }
 
-    .download__left-background {
-        top: 15px;
-    }
-
-    .download__right-background {
-        right: -149px;
-        -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-        bottom: -200px;
-    }
 
     .download__screen-image-left, .download__screen-image-right {
         top: 4px;
     }
     .game-icon img {
         width: 16vw;
+    }
+    .download__right-background {
+        bottom: -400px;
     }
 
 }
@@ -2531,19 +2503,13 @@ header .container-fluid .wrapper {
         margin-bottom: 0;
     }
 
-    .download__right-background {
-        right: -248px;
-        bottom: -201px;
-        -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        transform: scale(0.5);
-    }
+
 
     .download__left-background {
         -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
         transform: scale(0.7);
-        left: -64px;
+        left: -135px;
     }
 
     .download-section .container-fluid {
@@ -2558,26 +2524,15 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
-        left: -107px;
     }
-
-    .download__left-background {
-        top: 25px;
-    }
-
     .download__right-background {
-        right: -248px;
-        bottom: -201px;
-        -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        transform: scale(0.5);
+        bottom: -550px;
     }
 
     .download__left-background {
         -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
         transform: scale(0.7);
-        left: -64px;
     }
 
     .download-section .container-fluid {
@@ -2592,13 +2547,7 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
-        left: -107px;
     }
-
-    .download__left-background {
-        top: 25px;
-    }
-
     footer .footer-menu {
         display: -webkit-box;
         display: -webkit-flex;
@@ -2610,19 +2559,12 @@ header .container-fluid .wrapper {
         justify-content: flex-end;
     }
 
-    .download__right-background {
-        right: -248px;
-        bottom: -201px;
-        -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        transform: scale(0.5);
-    }
+ 
 
     .download__left-background {
         -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
         transform: scale(0.7);
-        left: -64px;
     }
 
     .download-section .container-fluid {
@@ -2637,13 +2579,7 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
-        left: -107px;
     }
-
-    .download__left-background {
-        top: 25px;
-    }
-
     footer h2 {
         padding-top: 65px;
     }
@@ -2656,6 +2592,9 @@ header .container-fluid .wrapper {
     .sub-title {
         padding-top: 1vw;
         line-height: 1.2;
+    }
+    .download__right-background {
+        bottom: -300px;
     }
 
 
@@ -2948,9 +2887,7 @@ header .container-fluid .wrapper {
         height: 388px;
     }
 
-    .download__right-background {
-        bottom: -277px;
-    }
+
 
     .download-link__item img {
         height: 150px;
@@ -2984,9 +2921,7 @@ header .container-fluid .wrapper {
         height: 388px;
     }
 
-    .download__right-background {
-        bottom: -277px;
-    }
+
 
     .download-link__item img {
         height: 150px;
@@ -3002,9 +2937,6 @@ header .container-fluid .wrapper {
         height: 388px;
     }
 
-    .download__right-background {
-        bottom: -277px;
-    }
 
     .download-link__item img {
         height: 150px;
@@ -3154,13 +3086,7 @@ header .container-fluid .wrapper {
         height: auto;
     }
 
-    .download__right-background {
-        -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.4);
-        bottom: -300px;
-        right: -298px;
-    }
+
 
     .download-section .container-fluid {
         width: 100%;
@@ -3170,7 +3096,7 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.4);
         -ms-transform: scale(0.4);
         transform: scale(0.4);
-        left: -129px;
+        left: -159px;
         top: -100px;
     }
 
@@ -3207,13 +3133,7 @@ header .container-fluid .wrapper {
         height: auto;
     }
 
-    .download__right-background {
-        -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.4);
-        bottom: -300px;
-        right: -298px;
-    }
+
 
     .download-section .container-fluid {
         width: 100%;
@@ -3223,7 +3143,7 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(0.4);
         -ms-transform: scale(0.4);
         transform: scale(0.4);
-        left: -129px;
+        left: -159px;
         top: -100px;
     }
 
@@ -3261,13 +3181,7 @@ header .container-fluid .wrapper {
         font-size: 20px;
     }
 
-    .download__right-background {
-        -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.25);
-        bottom: -372px;
-        right: -372px;
-    }
+
 
     .download-page-description .container-fluid {
         width: 100%;
@@ -3735,16 +3649,18 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
-        bottom: -90px;
+        width: 60vw;
+        bottom:  -30vw;
+
+
     }
 
     .download__left-background {
-        top: -214px;
-        left: -148px;
+        top: -10vw;
+        left: 0px;
         z-index: 0;
-        -webkit-transform: scale(0.3);
-        -ms-transform: scale(0.3);
-        transform: scale(0.3);
+       width: 40vw;
+       transform: scale(1);
     }
 
     h2 {
@@ -3763,6 +3679,7 @@ header .container-fluid .wrapper {
     .download-section .download-text-wrapper {
         text-align: center;
     }
+
 
     .download-text {
         font-size: 12px;
@@ -3790,16 +3707,14 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
-        bottom: -90px;
+
+
     }
 
     .download__left-background {
-        top: -214px;
-        left: -148px;
         z-index: 0;
-        -webkit-transform: scale(0.3);
-        -ms-transform: scale(0.3);
-        transform: scale(0.3);
+
+
     }
 
     h2 {
@@ -3937,16 +3852,13 @@ header .container-fluid .wrapper {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
-        bottom: -90px;
+
     }
 
     .download__left-background {
-        top: -214px;
-        left: -148px;
+
         z-index: -1;
-        -webkit-transform: scale(0.3);
-        -ms-transform: scale(0.3);
-        transform: scale(0.3);
+
     }
 
     h2 {
