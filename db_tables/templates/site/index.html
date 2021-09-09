@@ -14,23 +14,19 @@
 <body>
 {% csrf_token %}
     <header>
-
         <div class="header__top">
-            <div class="container-fluid">
+        <div class="container-fluid">
             <div class="wrapper">
                 <div class="logo">
                     <a href="">
-                    Pay2k
-                </a>
+					Pay2k
+				</a>
                 </div>
                 {% include 'site/menu.html' %}
             </div>
         </div>
         </div>
-        
         <div class="container-fluid">
-
-
             <div class="header-content">
                 <h1 class="desktop">
                     {% trans 'Play Free Quiz Games<br>and Earn Real Cash' %}
@@ -93,12 +89,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="download-text-wrapper">
-                    <div class="download__button-wrapper-fixed fixed" style="text-align: center">
+                    <div class="download__button-wrapper-fixed fixed">
                         <div class="download__button ">
                             <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
                         </div>
                     </div>
-                    <div class="download__button-wrapper" style="text-align: center">
+                    <div class="download__button-wrapper">
                         <div class="download__button ">
                             <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
                         </div>
@@ -109,24 +105,24 @@
         </div>
     </div>
 
-    <section class="about about--stat" style="margin-bottom: 20px;">
+    <section class="about about--stat">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <span class="stats">{{ apps|intcomma }}</span>
-                <h3 style="font-weight: 100;">Games in the Store</h3>
+                <h3>Games in the Store</h3>
             </div>
             <div class="col-md-3 col-sm-6">
                 <span class="stats">{{ developers|intcomma }}</span>
-                <h3 style="font-weight: 100;">Registered Game Developers</h3>
+                <h3>Registered Game Developers</h3>
             </div>
             <div class="col-md-3 col-sm-6">
                 <span class="stats">800+</span>
-                <h3 style="font-weight: 100;">New developers<br>registered daily</h3>
+                <h3>New developers<br>registered daily</h3>
             </div>
             <div class="col-md-3 col-sm-6">
                 <span class="stats">32</span>
-                <h3 style="font-weight: 100;">Languages<br>supported</h3>
+                <h3>Languages<br>supported</h3>
             </div>
         </div>
     </div>
@@ -167,12 +163,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="download-text-wrapper">
-                    <div class="download__button-wrapper-fixed fixed" style="text-align: center">
+                    <div class="download__button-wrapper-fixed fixed">
                         <div class="download__button ">
                             <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
                         </div>
                     </div>
-                    <div class="download__button-wrapper" style="text-align: center">
+                    <div class="download__button-wrapper">
                         <div class="download__button ">
                             <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
                         </div>
@@ -206,14 +202,14 @@
                     <img src="/static/img/icon3.png" alt="">
                 </div>
                 <h3>
-                    {% trans 'Play Games<br>Earn Crystals' %}
+                    {% trans 'Play Games<br>Earn Gems' %}
                 </h3>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="img">
                     <img src="/static/img/icon4.png" alt=""></div>
                 <h3>
-                    {% trans 'Convert Crystals on Real Money and Gift Cards' %}
+                    {% trans 'Convert Gems on Real Money and Gift Cards' %}
                 </h3>
             </div>
         </div>
@@ -223,10 +219,7 @@
 <section class="recend_payouts">
     <h2 class="h2">{% trans 'Recent payouts' %}</h2>
     <div class="container-fluid">
-        {% for x in rewards %}
-
-
-          <div href="" target="_blank" class="recend-payouts__items recend-payouts__items--header item"
+    <div class="recend-payouts__items recend-payouts__items--header item"
                  data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
                   <span class="recend-payouts__items-wrap">
                 <div class="recend-payouts__photo">
@@ -236,7 +229,7 @@
                     <div class="recend-payouts__items-list">
 
                         <div class="recend-payouts__item">
-                           
+
                         </div>
 
                         <div class="recend-payouts__item">
@@ -251,22 +244,23 @@
                             Amount
 
                         </div>
-                        
+
                     </div>
-              
+
 </span>
             </div>
+        {% for x in rewards %}
 
-            <a href="" target="_blank" class="recend-payouts__items item"
+            <a href="javascript://" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
                  data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
                   <span class="recend-payouts__items-wrap">
                 <div class="recend-payouts__photo">
                     <div class="">
                         <div class="">
-                            <img style="border-radius: 83px;" src="{{x.account.userpic }}"
+                            <img src="{{x.account.userpic }}"
                                  alt="{{ x.account.username }}">
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -304,108 +298,31 @@
                                 {% trans 'Amount' %}
                             </div>
                             <div class="value">
-                                <span style="vertical-align: middle;">{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding" style="vertical-align: middle; width: 20px;
-    background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
-    height: 16px;
-    display: inline-block;
-    background-size: 100%;">
-        
+                                <span>{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding cryistals-amount-icon">
+
         <span class="cristals-prompt">
             TON Crystal (TON)
         </span>
-    </span><span style="vertical-align: middle;"> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
+    </span><span> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
                                 ${{ val.normalize }}
                                 {% endwith %}
                             </span></div>
 
                         </div>
-                        
+
                     </div>
-              
-</span>
-            </a> 
 
-              
-              <a href="" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
-                 data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
-                  <span class="recend-payouts__items-wrap">
-                <div class="recend-payouts__photo">
-                    <div class="">
-                        <div class="">
-                            <img style="border-radius: 83px;" src="{{x.account.userpic }}"
-                                 alt="{{ x.account.username }}">
-                        </div>
-                        
-                    </div>
-                </div>
-
-                    <div class="recend-payouts__items-list">
-
-                        <div class="recend-payouts__item">
-                            <div class="title">
-                                {% trans 'Username' %}
-                            </div>
-                            <div class="value recend_payouts-name">
-                                {{ x.account.username }}
-                            </div>
-                        </div>
-
-                        <div class="recend-payouts__item">
-                            <div class="title">
-                                {% trans 'Date' %}
-                            </div>
-                            <div class="value">
-                                {{ x.timestamp|date:'Y-m-d' }}
-                            </div>
-                        </div>
-
-                        <div class="recend-payouts__item">
-                            <div class="title">
-                                {% trans 'Type' %}
-                            </div>
-                            <div class="value">
-                                {{ x.get_reward_type_display }}
-                            </div>
-                        </div>
-
-                        <div class="recend-payouts__item">
-                            <div class="title">
-                                {% trans 'Amount' %}
-                            </div>
-                            <div class="value">
-                                <span style="vertical-align: middle;">{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding" style="vertical-align: middle; width: 20px;
-    background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
-    height: 16px;
-    display: inline-block;
-    background-size: 100%;">
-        
-        <span class="cristals-prompt">
-            TON Crystal (TON)
-        </span>
-    </span><span style="vertical-align: middle;"> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
-                                ${{ val.normalize }}
-                                {% endwith %}
-                            </span></div>
-
-                        </div>
-                        
-                    </div>
-              
 </span>
             </a>
-
-<a href="/recent-payouts/" class="load-more__button">
-   Explore more
-</a>
-
         {% endfor %}
 
         {% if has_more_payouts %}
-            <a href="javascript://" class="arrow loader-1">
-                <img src="/static/img/arrow.svg" alt="">
+            <a href="/recent-payouts/" class="load-more__button">
+                Explore more
             </a>
         {% endif %}
     </div>
+
 {#<a name="catalogue"></a>#}
 </section>
 {% endif %}
@@ -598,14 +515,7 @@
     {% include 'site/scripts.html' %}
 
  <link rel="stylesheet" href="/app-static/node_modules/fancybox-master/dist/jquery.fancybox.min.css">
-<style>
-    .fancybox-slide--iframe .fancybox-content {
-    width  : 450px !important;
-    height : 80vh !important;
-    max-height : 900px;
-    margin: 0;
-}
-</style>
+
 {#    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>#}
     <script src="/app-static/node_modules/fancybox-master/dist/jquery.fancybox.min.js"></script>
 

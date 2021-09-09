@@ -81,7 +81,7 @@
                 <div class="recend-payouts__photo">
                     <div class="">
                         <div class="">
-                            <img style="border-radius: 83px;" src="{{x.account.userpic }}"
+                            <img src="{{x.account.userpic }}"
                                  alt="{{ x.account.username }}">
                         </div>
                         
@@ -122,11 +122,7 @@
                                 {% trans 'Amount' %}
                             </div>
                             <div class="value">
-                                <span style="vertical-align: middle;">{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding" style="vertical-align: middle; width: 20px;
-    background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
-    height: 16px;
-    display: inline-block;
-    background-size: 100%;">
+                                <span>{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding cryistals-amount-icon">
         
         <span class="cristals-prompt">
             TON Crystal (TON)
@@ -172,7 +168,7 @@
 
                     <ul>
                         <li><a href="/company/">{% trans 'Company' %}</a></li>
-                        <li><a href="/terms/">{% trans 'Terms' %}</a></li>
+                        {#<li><a href="/terms/">{% trans 'Terms' %}</a></li>#}
                         <li><a href="/policy/">{% trans 'Privacy Policy' %}</a></li>
                         <li><a href="/contact/">{% trans 'Contact Us' %}</a></li>
                     </ul>

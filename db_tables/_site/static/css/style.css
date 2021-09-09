@@ -20,8 +20,8 @@
 
 body {
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
     font-weight: 900;
+    font-family: sans-serif;
 }
 
 ul {
@@ -434,7 +434,7 @@ header .container-fluid .wrapper {
     margin: 0 auto;
 }
 .about--stat h3{
-    font-weight: 300 !important;
+    font-weight: 300;
 }
 
 .about span.stats {
@@ -840,7 +840,7 @@ footer .follow-us a {
 }
 
 .company .container-fluid p {
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 300;
     font-family: "MuseoSansCyrlLight";
     width: 468px;
@@ -950,7 +950,7 @@ footer .follow-us a {
 
 .service .container-fluid p span {
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
+
 }
 
 .service .container-fluid .sub-item {
@@ -1090,7 +1090,7 @@ footer .follow-us a {
 }
 
 .download-link__item {
-    font-family: "Montserrat", sans-serif;
+
     font-size: 20px;
     line-height: 130%;
 }
@@ -1106,6 +1106,7 @@ footer .follow-us a {
     width: 400px;
     max-width: 100%;
     text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15), -10px 10px 150px rgba(167, 167, 167, 0.3);
 }
 
 .download__button a {
@@ -1127,7 +1128,7 @@ footer .follow-us a {
     -moz-background-clip: text;
     -ms-background-clip: text;
     color: transparent;
-    font-size: 20px;
+    font-size: 28px;
     line-height: 130%;
     margin-bottom: 35px;
 }
@@ -1136,7 +1137,7 @@ footer .follow-us a {
     color: #828282;
     font-family: "MuseoSansCyrlLight";
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 35px;
     max-width: 329px;
 }
@@ -1796,7 +1797,7 @@ header .container-fluid .wrapper {
     border-bottom: none;
 }
 .load-more__button {
-    font-size: 14px;
+    font-size: 20px;
     display: flex;
     margin: 0 auto;
     background: linear-gradient(222.36deg, #FF687B 11.29%, #FEB052 84.47%);
@@ -1804,11 +1805,13 @@ header .container-fluid .wrapper {
     border-radius: 63px;
     justify-content: center;
     align-items: center;
-    height: 52px;
-    width: 178px;
     color: #fff;
     margin-bottom: 60px;
+    margin:  0 auto;
     margin-top: 13px;
+    font-family: "MuseoSansCyrlLight";
+    padding: 13px 19px;
+    max-width: 200px;
 }
 .load-more__button:hover {
     color: #fff;
@@ -1826,6 +1829,43 @@ header .container-fluid .wrapper {
 }
 .service-header--header .title-serv{
     padding-top: 3vw;
+}
+.cryistals-amount-icon {
+    vertical-align: middle; width: 20px;
+    background: url(/static/img/diamond.svg) center center no-repeat;
+    height: 16px;
+    display: inline-block;
+    background-size: 100%;
+}
+.download__button-wrapper-fixed {
+    text-align: center;
+}
+.download__button-wrapper {
+    text-align: center;
+}
+.about--stat {
+    margin-bottom: 20px;
+}
+.recend-payouts__photo img {
+    border-radius: 83px;
+}
+   .fancybox-slide--iframe .fancybox-content {
+    width  : 450px !important;
+    height : 80vh !important;
+    max-height : 900px;
+    margin: 0;
+}
+.p-center {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.ol {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 180%;
+    font-family: 'MuseoSansCyrlLight';
+    list-style: lower-roman;
 }
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -1987,7 +2027,7 @@ header .container-fluid .wrapper {
     }
 
     .header-content p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 144%;
     }
 
@@ -2130,7 +2170,6 @@ header .container-fluid .wrapper {
     }
 
     .company p {
-        font-size: 14px !important;
         width: 400px !important;
         padding-top: 0 !important;
     }
@@ -2222,6 +2261,9 @@ header .container-fluid .wrapper {
     .download__right-background {
         bottom: -400px;
     }
+    .company .container-fluid p {
+    font-size: 18px;
+}
 
 }
 
@@ -2325,7 +2367,6 @@ header .container-fluid .wrapper {
     }
 
     .company p {
-        font-size: 14px !important;
         width: 400px !important;
         padding-top: 0 !important;
     }
@@ -2977,6 +3018,9 @@ header .container-fluid .wrapper {
     .h2 {
         margin-bottom: 35px;
     }
+     .company .container-fluid p {
+    font-size: 14px;
+}
 
 }
 
@@ -3173,12 +3217,13 @@ header .container-fluid .wrapper {
 
     .download__button {
         margin: 0 auto;
+
     }
 
     .download-title {
         max-width: 225px;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 22px;
     }
 
 
@@ -3276,7 +3321,7 @@ header .container-fluid .wrapper {
     .download-title {
         max-width: 225px;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .download-page-description .container-fluid {
@@ -3529,7 +3574,8 @@ header .container-fluid .wrapper {
     }
 
     .company .container-fluid h1 {
-        font-size: 24px !important;
+        font-size: 24px ;
+
 
     }
 
@@ -3553,7 +3599,8 @@ header .container-fluid .wrapper {
 
     .service-header {
         -webkit-background-size: 130% 130%;
-        background-size: 130%;
+        background-size: 170%;
+        min-height: 35vw;
     }
 
     .title-serv {
@@ -3640,7 +3687,7 @@ header .container-fluid .wrapper {
     .download-title {
         max-width: 225px;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 22px;
         margin-top: 30px;
     }
 
@@ -3844,7 +3891,7 @@ header .container-fluid .wrapper {
     .download-title {
         max-width: 225px;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .download__right-background {
@@ -4131,9 +4178,7 @@ h2 {
 .header__top.sticky .language {
     color: #fff;
 }
-.service-header {
-    min-height: 27vw;
-}
+
 .title-serv {
     padding-top: 4vw;
 }
@@ -4173,6 +4218,7 @@ h2 {
 
 
 }
+
 }
 
 /* Small Devices, Tablets */
@@ -4504,7 +4550,7 @@ h2 {
     }
 
     .about .col-md-3:first-child h3 {
-        max-width: 150px;
+        max-width: 160px;
     }
 
     .about .col-md-3:nth-child(2) h3,
@@ -4513,7 +4559,7 @@ h2 {
     }
 
     .about .col-md-3:nth-child(4) h3 {
-        max-width: 160px;
+        max-width: 200px;
     }
 
     .service .container-fluid {
@@ -4687,7 +4733,7 @@ h2 {
         left: -25px;
     }
     .download-page-description__title {
-        font-size: 18px;
+        font-size: 22px;
         min-width: 300px;
     }
 
@@ -4729,6 +4775,12 @@ h2 {
     }
     .service-header {
         min-height: 33vw;
+    }
+    .download-page-description__title {
+        font-size: 22px;
+    }
+    .download-text {
+        font-size: 14px;
     }
 
 
@@ -4830,7 +4882,7 @@ h2 {
 
     .company .container-fluid h1 {
         min-width: 100px !important;
-        width: 220px;
+   
         margin-top: 25px !important;
     }
 
@@ -4948,6 +5000,25 @@ h2 {
 .service-header--header .title-serv {
     padding-top: 3.2vw;   
 }
+.title-serv {
+    font-size: 6.1vw;
+    line-height: 1.5;
+}
+.service-header--header .sub-title {
+    font-size: 4.5vw;
+    line-height: 1.4;
+}
+.service-header {
+    background-size: 285vw;
+    min-height: 50vw;
+}
+.company .container-fluid p {
+    font-size: 4.5vw;
+}
+.company .container-fluid h1 {
+    font-size: 6.1vw;
+    line-height: 1.5;
+}
 }
 
 /* Extra Small Devices, Phones */
@@ -4977,13 +5048,16 @@ h2 {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 380px) {
     .download-page-description__title {
-        font-size: 17px;
+        font-size: 20px;
     }
     .download-page-description__title--mobil-game {
     font-size: 20px;
 }
 .game-header .header-content {
     transform: translateY(20vw);
+}
+.h2 {
+    font-size: 20px;
 }
 
 }
@@ -5044,8 +5118,9 @@ h2 {
     }
 
     .download-page-description__title {
-        font-size: 16px;
+        font-size: 20px;
     }
+
     .download-page-description__title--mobil-game {
     font-size: 20px;
     }
@@ -5122,9 +5197,6 @@ h2 {
         margin-top: 24px;
     }
 
-    .download-page-description__title {
-        font-size: 15px;
-    }
     .download-page-description__title--mobil-game {
     font-size: 20px;
 } 
