@@ -1817,7 +1817,7 @@ header .container-fluid .wrapper {
     color: #fff;
 }
 .sub-title {
-    font-size: 16px;
+    font-size: 26px;
     text-align: center;
     font-family: "MuseoSansCyrlMedium";
     font-weight: 400;
@@ -2262,6 +2262,9 @@ header .container-fluid .wrapper {
         bottom: -400px;
     }
     .company .container-fluid p {
+    font-size: 18px;
+}
+.sub-title {
     font-size: 18px;
 }
 
@@ -4214,11 +4217,34 @@ h2 {
 .recend_payouts--page {
     padding-top: 60px;
     padding-bottom: 100px;
-
-
-
 }
-
+.service-header--header .title-serv {
+    padding-top: 6vw;
+}
+.download-page-description p {
+    font-size: 16px;
+}
+body {
+    font-size: 16px;
+}
+.download-text {
+    font-size: 16px;
+}
+.how-mutch .col-md-5 p {
+    font-size: 16px;
+}
+.how-mutch {
+    padding-bottom: 45px;
+}
+.contacts {
+    padding-bottom: 45px;
+}
+.service .container-fluid p {
+    font-size: 16px;
+}
+.ol {
+    font-size: 16px;
+}
 }
 
 /* Small Devices, Tablets */
@@ -4744,7 +4770,6 @@ h2 {
 
     .download-page-description ul li {
         margin-bottom: 15px;
-        font-size: 14px;
     }
 
     .download-content__sub-title .retry {
@@ -4779,9 +4804,7 @@ h2 {
     .download-page-description__title {
         font-size: 22px;
     }
-    .download-text {
-        font-size: 14px;
-    }
+
 
 
 
@@ -5018,6 +5041,9 @@ h2 {
 .company .container-fluid h1 {
     font-size: 6.1vw;
     line-height: 1.5;
+}
+.download-page-description__sub-title {
+    font-size: 16px;
 }
 }
 

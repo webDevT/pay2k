@@ -72,7 +72,7 @@
             </div>
             
             <p>
-                {{ description|default_if_none:'&mdash;'|safe }}
+                {{ description|default_if_none:'&mdash;'|linebreaksbr|safe }}
             </p>
                
         </div>
