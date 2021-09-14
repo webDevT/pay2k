@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
-from _site.views import landing
+from _site.views import landing, transaction_in_explorer
 from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.contrib import admin
@@ -24,4 +24,5 @@ urlpatterns += i18n_patterns(
     re_path(r'^contact/$', TemplateView.as_view(template_name='site/contact.html')),
     re_path(r'^download/$', TemplateView.as_view(template_name='site/download.html')),
     re_path(r'^game/$', TemplateView.as_view(template_name='site/game.html')),
+    re_path(r'^transaction-in-explorer/(?P<id>.+)/$', transaction_in_explorer, name='transaction_in_explorer'),
 )+ static('/static/', document_root=settings.STATIC_ROOT)

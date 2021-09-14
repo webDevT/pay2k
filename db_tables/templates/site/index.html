@@ -251,7 +251,7 @@
             </div>
         {% for x in rewards %}
 
-            <a href="javascript://" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
+            <a href="{% url 'transaction_in_explorer' x.id %}" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
                  data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
                   <span class="recend-payouts__items-wrap">
                 <div class="recend-payouts__photo">
@@ -316,12 +316,12 @@
             </a>
         {% endfor %}
 
-        {% if has_more_payouts %}
-            <a href="/recent-payouts/" class="load-more__button">
-                Explore more
-            </a>
-        {% endif %}
     </div>
+    {% if has_more_payouts %}
+        <a href="/recent-payouts/" class="load-more__button">
+            Explore more
+        </a>
+    {% endif %}
 
 {#<a name="catalogue"></a>#}
 </section>
@@ -403,7 +403,7 @@
                     {% trans 'One Account for all games' %}
                 </div>
                 <div class="download-text">
-                    {% trans 'Collect crystals by playing any game presented in the store. Stuck in one game? No problem - open another one and continue collect crystals.' %}
+                    {% trans 'Collect gems by playing any game presented in the store. Stuck in one game? No problem - open another one and continue collect gems.' %}
                 </div>
                 <div class="download__button-wrapper-fixed fixed">
                      <div class="download__button ">

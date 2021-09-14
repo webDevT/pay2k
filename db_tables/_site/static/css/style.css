@@ -455,7 +455,7 @@ header .container-fluid .wrapper {
 }
 
 .about .col-md-3:first-child h3 {
-    max-width: 200px;
+    max-width: 250px;
 }
 
 .about .col-md-3:first-child h3 a {
@@ -835,7 +835,7 @@ footer .follow-us a {
 .company .container-fluid h1 {
     min-width: 621px;
     font-size: 48px;
-    line-height: 58px;
+    line-height: 1.5;
     padding-top: 170px;
 }
 
@@ -2163,15 +2163,15 @@ header .container-fluid .wrapper {
     }
 
     .company h1 {
-        font-size: 36px !important;
-        line-height: 43px !important;
-        min-width: 400px !important;
-        max-width: 400px !important;
+        font-size: 36px;
+        line-height: 43px;
+        min-width: 400px;
+        max-width: 400px;
     }
 
     .company p {
-        width: 400px !important;
-        padding-top: 0 !important;
+        width: 400px ;
+        padding-top: 0;
     }
 
     .how-mutch .col-md-5 .title {
@@ -2364,14 +2364,14 @@ header .container-fluid .wrapper {
     }
 
     .company h1 {
-        font-size: 32px !important;
-        min-width: 400px !important;
-        max-width: 400px !important;
+        font-size: 32px;
+        min-width: 400px;
+        max-width: 400px;
     }
 
     .company p {
-        width: 400px !important;
-        padding-top: 0 !important;
+        width: 400px;
+        padding-top: 0;
     }
 
     .title-serv {
@@ -2693,14 +2693,14 @@ header .container-fluid .wrapper {
         height: 84px !important;
     }
 
-    .company .container-fluid h1 {
-        padding-top: 72px !important;
-        font-size: 28px !important;
-        min-width: 250px !important;
+   /* .company .container-fluid h1 {
+        padding-top: 72px;
+      /*  font-size: 28px;*/
+      */  min-width: 250px;
     }
 
     .company .container-fluid p {
-        width: 250px !important;
+        width: 90%;
     }
 
     .bg-company {
@@ -3110,7 +3110,7 @@ header .container-fluid .wrapper {
     }
 
     .company .container-fluid h1 {
-        padding-top: 30px !important;
+        padding-top: 30px;
     }
 
     .how-mutch .container-fluid {
@@ -3281,7 +3281,7 @@ header .container-fluid .wrapper {
     }
 
     .company .container-fluid h1 {
-        min-width: 302px !important;
+        min-width: 302px;
     }
 
     .service-header {
@@ -3582,9 +3582,6 @@ header .container-fluid .wrapper {
 
     }
 
-    .company .container-fluid p {
-        line-height: 20px !important;
-    }
 
     .company .container-fluid {
         padding-right: 20px;
@@ -4275,14 +4272,14 @@ body {
     }
 
     .slick-active {
-        margin-right: 0px !important;
+        margin-right: 0px;
     }
     .bg-company {
         width: 82%;
     }
 
     .company .container-fluid h1 {
-        padding-top: 25px !important;
+        padding-top: 25px;
     }
 
   
@@ -4576,16 +4573,16 @@ body {
     }
 
     .about .col-md-3:first-child h3 {
-        max-width: 160px;
+        max-width: 100%;
     }
 
     .about .col-md-3:nth-child(2) h3,
     .about .col-md-3:nth-child(3) h3 {
-        max-width: 150px;
+        max-width: 100%;
     }
 
     .about .col-md-3:nth-child(4) h3 {
-        max-width: 200px;
+        max-width: 226px;
     }
 
     .service .container-fluid {
@@ -4904,9 +4901,9 @@ body {
     }
 
     .company .container-fluid h1 {
-        min-width: 100px !important;
+        min-width: 100px ;
    
-        margin-top: 25px !important;
+        margin-top: 25px;
     }
 
     .desctop-company-bg {

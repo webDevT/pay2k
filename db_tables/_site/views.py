@@ -15,6 +15,9 @@ def landing(request):
     payouts = Rewards.objects.order_by('-timestamp')[:6]
     return render(request, 'site/index.html', {'rewards': payouts})
 
+def transaction_in_explorer(request, id):
+    redirect('landing')
+
 # def landing_load_games(request):
 #     _popular_games = Games.objects.filter(hide=False, installs__lte=request.GET.get('installs'))\
 #     .filter(~Q(id=request.GET.get('id'))).order_by('-installs', '-id')[:13]

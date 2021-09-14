@@ -74,8 +74,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
-                'db.context_processors.landing_counters'
-            ],
+                'db.context_processors.landing_counters',
+                '_site.data.data'
+            ]
         },
     },
 ]

@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static i18n mathfilters decimal %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,7 +130,10 @@
         <span class="cristals-prompt">
             TON Crystal (TON)
         </span>
-    </span></div>
+    </span><span> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
+                                ${{ val.normalize }}
+                                {% endwith %}
+                            </span></div>
 
                         </div>
                         
@@ -140,14 +143,15 @@
             </a>
     {% endfor %}
 
-    {% if has_more_payouts %}
-            <a href="/recent-payouts/?c={{ c }}#l" class="load-more__button">
-                Load more
-            </a>
-        {% endif %}
-
 
     </div>
+
+    {% if has_more_payouts %}
+        <a href="/recent-payouts/?c={{ c }}#l" class="load-more__button">
+            Load more
+        </a>
+    {% endif %}
+
     <script>
         let el = document.querySelector('.recend-payouts__items.last');
         window.scroll(0, (window.innerHeight - el.offsetTop) / 2);

@@ -20,6 +20,6 @@
     {% include 'site/lang-switcher.html' %}
     <a href="/catalogue/" class="header-button"><span class="header-button__text">{% trans 'Launch Game Store' %}</span></a>
 
-     <a href="/catalogue/" class="header-button header-button--game"><span class="header-button__text">{% trans 'Play & Earn Crypto now' %}</span></a>
+     <a href="{{ right_button_url|default:"/catalogue/" }}" class="header-button header-button--game"><span class="header-button__text">{% trans 'Play & Earn Crypto now' %}</span></a>
 
 </div>

@@ -21,7 +21,7 @@
                     Pay2k
                 </a>
                 </div>
-                {% include 'site/menu.html' %}
+                {% include 'site/menu.html' with right_button_url="/catalogue/"|add:data.uid|add:"/" %}
             </div>
         </div>
     </div>
@@ -153,14 +153,14 @@ where you can earn crypto!{% endblocktrans %}
                     <img src="/static/img/icon3.png" alt="">
                 </div>
                 <h3>
-                    {% trans 'Play Games<br>Earn Crystals' %}
+                    {% trans 'Play Games<br>Earn Gems' %}
                 </h3>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="img">
                     <img src="/static/img/icon4.png" alt=""></div>
                 <h3>
-                    {% trans 'Convert Crystals on Real Money and Gift Cards' %}
+                    {% trans 'Convert Gems on Real Money and Gift Cards' %}
                 </h3>
             </div>
         </div>
