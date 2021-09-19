@@ -411,19 +411,38 @@ header .container-fluid .wrapper {
     color: #333333;
 }
 
+
+/*start about style*/
 .about {
     text-align: center;
     margin-bottom: 0 !important;
 }
-
-
 .about .img {
     width: 309px;
     height: 290px;
     display: block;
     margin: 0 auto;
+    background-size: 265px 250px;
+    -webkit-background-size: 265px 250px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
+.about-icon-1 {
+    background: url("/static/img/icon1.png");
+}
+
+.about-icon-2 {
+    background: url("/static/img/icon2.png");
+}
+
+.about-icon-3 {
+    background: url("/static/img/icon3.png");
+}
+
+.about-icon-4 {
+    background: url("/static/img/icon4.png");
+}
 .about .img img {
     width: 265px;
     height: 250px;
@@ -580,6 +599,7 @@ header .container-fluid .wrapper {
     margin-top: -2px;
 }
 
+/*start footer style*/
 footer {
     background: url("/static/img/bg_footer.png");
     -webkit-background-size: 100% 100%;
@@ -704,6 +724,19 @@ footer .follow-us {
 footer .follow-us a {
     margin-left: 16px;
 }
+.facebook-link {
+    position: relative;
+}
+.facebook-link:before {
+    content: url("/static/img/facebook.svg");
+}
+.instagram-link:before {
+    content: url("/static/img/instagram.svg");
+}
+.follow-us {
+    white-space: nowrap;
+}
+/*end footer style*/
 
 .top-header {
     padding-top: 44px;
@@ -751,9 +784,12 @@ footer .follow-us a {
     padding-top: 70px;
 }
 
-.contacts .container-fluid .col-md-7 img {
-    margin-top: -50px;
-    max-width: 100%;
+.contacts .container-fluid .col-md-7 .contact-img {
+    width: 100%;
+    height: 100%;
+    background: url("/static/img/contact.png");
+    background-size: 100%;
+    background-position: center;
 }
 
 .contacts .container-fluid .col-md-5 {
@@ -821,6 +857,13 @@ footer .follow-us a {
     top: 0;
     position: absolute;
     z-index: -1;
+    background: url("/static/img/bg-company.png");
+    width: 63%;
+    height: 40vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+
 }
 
 .company {
@@ -852,14 +895,17 @@ footer .follow-us a {
     margin-top: -13px;
 }
 
-.company .container-fluid .col-md-7 img {
-    width: 100%;
+.company-img {
+    width: 40.990vw;
+    height: 33.177vw;
+    background: url("/static/img/img-company.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
 }
 
-.how-mutch .container-fluid {
-    padding-left: 100px;
-    padding-right: 274px;
-}
+
 
 .how-mutch .col-md-5 {
     display: -webkit-box;
@@ -904,9 +950,7 @@ footer .follow-us a {
     font-family: "MuseoSansCyrlMedium";
 }
 
-.how-mutch .col-md-6 img {
-    width: 100%;
-}
+
 
 .mobil-company-bg {
     display: none;
@@ -1163,19 +1207,30 @@ footer .follow-us a {
     position: relative;
 }
 
-.download__left-background {
-    position: absolute;
-    top: -300px;
-    left: -4px;
-}
+
 
 .download__right-background {
-    position: absolute;
-    bottom: -500px;
-    right: 0;
     width: 68vw;
+    height: 68vw;
+    background: url("/static/img/right-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    right: 0;
+    bottom: -300px;
 }
-
+.download__left-background {
+    height: 70vw;
+    width: 30vw;
+    background: url("/static/img/left-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 0;
+    top: -150px;
+}
 .download-section .download-text-wrapper,
 .download-links__wrapper {
     z-index: 99;
@@ -1185,7 +1240,14 @@ footer .follow-us a {
 .download-section .container-fluid {
     width: 60%;
 }
+.download-img {
+    width: 626px;
+    height: 647px;
+    background: url("/static/img/download-screens.png");
+    background-size: 100%;
 
+
+}
 /*---------------end donload section ------------*/
 .download-header {
     background: none;
@@ -1526,8 +1588,11 @@ footer .follow-us {
     top: 9.5px;
 }
 
-.download-link__item img {
+.download-link__item-img {
     height: 250px;
+    width: 250px;
+    background: url("/static/img/22-512.webp");
+    background-size: 100%;
 }
 .call-to-action-button {
     margin-top: 60px;
@@ -1867,6 +1932,24 @@ header .container-fluid .wrapper {
     font-family: 'MuseoSansCyrlLight';
     list-style: lower-roman;
 }
+.download-link__item-img {
+    height: 250px;
+    width: 250px;
+    background: url("/static/img/22-512.webp");
+    background-size: 100%;
+    display: block;
+}
+.how-mutch__img {
+    width: 39.479vw;
+    height: 35.781vw;
+    display: block;
+    background: url("/static/img/company-img2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.how-mutch .container-fluid {
+    width: 83%;
+}
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 /*==========  Desktop First  ==========*/
@@ -1919,17 +2002,6 @@ header .container-fluid .wrapper {
         padding-left: 134px;
         padding-right: 90px;
     }
-
-    .download__left-background {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-        left: -55px;
-    }
-
-    .download__right-background {
-    }
-
     .download__screen-image--3 {
         top: -3px;
     }
@@ -1938,12 +2010,22 @@ header .container-fluid .wrapper {
         padding-top: 37px;
     }
 
-    .download-link__item img {
+    .download-link__item-img {
         height: 230px;
+        width: 230px;
     }
+
+.bg-company {
+    width: 75%;
+    height: 48vw;
+}
+.company-img {
+    width: 49.882vw;
+    height: 40.353vw;
+
     
 }
-
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1600px) {
     /**/
@@ -1954,16 +2036,6 @@ header .container-fluid .wrapper {
     header .container-fluid {
         padding: 0 130px;
     }
-    .bg-company {
-        width: 72%;
-    }
-
-    .bg-company img {
-        width: 100%;
-    }
-
-
-
     .download-content__title {
         margin-top: 50px;
     }
@@ -1985,15 +2057,6 @@ header .container-fluid .wrapper {
         -webkit-background-size: cover;
         background-size: cover;
     }
-
-    .download__left-background {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-    }
-
-
-
     .download-content__sub-title {
         margin-bottom: 20px;
     }
@@ -2002,8 +2065,9 @@ header .container-fluid .wrapper {
         top: 7.2px;
     }
 
-    .download-link__item img {
+    .download-link__item-img {
         height: 220px;
+        width: 220px;
     }
 
 }
@@ -2154,14 +2218,6 @@ header .container-fluid .wrapper {
         margin-left: -30px;
     }
 
-    .bg-company {
-        width: 72%;
-    }
-
-    .bg-company img {
-        width: 100%;
-    }
-
     .company h1 {
         font-size: 36px;
         line-height: 43px;
@@ -2183,9 +2239,6 @@ header .container-fluid .wrapper {
         margin-bottom: 6px;
     }
 
-    .how-mutch .container-fluid {
-        padding-right: 132px;
-    }
 
     .title-serv {
         font-size: 36px;
@@ -2205,13 +2258,9 @@ header .container-fluid .wrapper {
         font-size: 18px;
         line-height: 130%;
     }
-
-    .download-img {
-        height: 544px;
-    }
-
-    .download-link__item img {
+    .download-link__item-img {
         height: 200px;
+        width: 200px;
     }
 
     .download-links__title,
@@ -2234,14 +2283,6 @@ header .container-fluid .wrapper {
         margin-bottom: 0px;
     }
 
-    .download-img {
-        height: 544px;
-    }
-
-    .download-link__item img {
-        height: 200px;
-    }
-
     .download-links__title,
     .download-title {
         font-size: 18px;
@@ -2258,16 +2299,26 @@ header .container-fluid .wrapper {
     .game-icon img {
         width: 16vw;
     }
-    .download__right-background {
-        bottom: -400px;
-    }
     .company .container-fluid p {
     font-size: 18px;
 }
 .sub-title {
     font-size: 18px;
 }
+.about .img {
+    background-size: 177px 169px;
+    -webkit-background-size: 177px 169px;
+}
+.download__left-background {
+    top:  -50px;
+}
+ .download-img {
+    width: 36.528vw;
+    height: 37.778vw;
+   
 
+
+}
 }
 
 /* Large Devices, Wide Screens */
@@ -2391,33 +2442,12 @@ header .container-fluid .wrapper {
     footer .footer-menu ul li {
         margin: auto 6px;
     }
-
-    .download-img {
-        height: 525px;
-    }
-
-    .download-link__item img {
+    .download-link__item-img {
         height: 190px;
+        width: 190px;
     }
-
-    /*.download__button {
-    width: 172px;
-  }
-  .download__button a {
-    font-size: 13px;
-    padding: 11px 10px;
-  }*/
-
     .download-section .container-fluid {
         width: 70%;
-    }
-
-    .download-img {
-        height: 525px;
-    }
-
-    .download-link__item img {
-        height: 190px;
     }
 
     .download__button {
@@ -2476,7 +2506,7 @@ header .container-fluid .wrapper {
 
     .about .img {
         width: 163px;
-        height: 157px;
+        height: 180px;
     }
 
     .question .question-item {
@@ -2530,9 +2560,7 @@ header .container-fluid .wrapper {
         padding-top: 60px;
     }
 
-    .how-mutch .container-fluid {
-        padding-left: 40px;
-    }
+
 
     .title-serv {
         font-size: 32px;
@@ -2546,51 +2574,11 @@ header .container-fluid .wrapper {
     .question {
         margin-bottom: 0;
     }
-
-
-
-    .download__left-background {
-        -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-        left: -135px;
-    }
-
     .download-section .container-fluid {
         width: 75%;
     }
-
-    .download-img {
-        height: 480px;
-    }
-
-    .download__left-background {
-        -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        transform: scale(0.5);
-    }
-    .download__right-background {
-        bottom: -550px;
-    }
-
-    .download__left-background {
-        -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-    }
-
     .download-section .container-fluid {
         width: 75%;
-    }
-
-    .download-img {
-        height: 480px;
-    }
-
-    .download__left-background {
-        -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        transform: scale(0.5);
     }
     footer .footer-menu {
         display: -webkit-box;
@@ -2602,27 +2590,8 @@ header .container-fluid .wrapper {
         -ms-flex-pack: end;
         justify-content: flex-end;
     }
-
- 
-
-    .download__left-background {
-        -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-    }
-
     .download-section .container-fluid {
         width: 75%;
-    }
-
-    .download-img {
-        height: 480px;
-    }
-
-    .download__left-background {
-        -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        transform: scale(0.5);
     }
     footer h2 {
         padding-top: 65px;
@@ -2638,9 +2607,8 @@ header .container-fluid .wrapper {
         line-height: 1.2;
     }
     .download__right-background {
-        bottom: -300px;
+        bottom: -240px;
     }
-
 
 }
 
@@ -2693,19 +2661,11 @@ header .container-fluid .wrapper {
         height: 84px !important;
     }
 
-   /* .company .container-fluid h1 {
-        padding-top: 72px;
-      /*  font-size: 28px;*/
-      */  min-width: 250px;
-    }
 
     .company .container-fluid p {
         width: 90%;
     }
 
-    .bg-company {
-        width: 75%;
-    }
 
     .how-mutch .container-fluid .title {
         font-size: 21.5px;
@@ -2736,13 +2696,6 @@ header .container-fluid .wrapper {
     .download-content__sub-title {
         margin-bottom: 25px;
     }
-
-    /*.download__screen-image-left {
-    top: 14px;
-  }
-  .download__screen-image-right {
-    top: 21px;
-  }*/
     .download__screen-image-left, .download__screen-image-right {
         top: 14px;
     }
@@ -2759,6 +2712,16 @@ header .container-fluid .wrapper {
     .download-page-description__title-header {
         margin-top: 5px;
     }
+    .bg-company {
+    width: 75%;
+    height: 48vw;
+
+
+}
+.how-mutch .container-fluid {
+    width: 100%;
+}
+   
 }
 
 /* Large Devices, Wide Screens */
@@ -2925,15 +2888,7 @@ header .container-fluid .wrapper {
         font-size: 28px;
         line-height: 34px;
     }
-
-
-    .download-img {
-        height: 388px;
-    }
-
-
-
-    .download-link__item img {
+    .download-link__item-img {
         height: 150px;
         width: 150px;
     }
@@ -2960,32 +2915,11 @@ header .container-fluid .wrapper {
         top: 0;
 
     }
-
-    .download-img {
-        height: 388px;
-    }
-
-
-
-    .download-link__item img {
-        height: 150px;
-        width: 150px;
-    }
-
     .download-links__title,
     .download-title {
         font-size: 16px;
     }
 
-    .download-img {
-        height: 388px;
-    }
-
-
-    .download-link__item img {
-        height: 150px;
-        width: 150px;
-    }
 
     .download-links__title,
     .download-title {
@@ -3113,10 +3047,7 @@ header .container-fluid .wrapper {
         padding-top: 30px;
     }
 
-    .how-mutch .container-fluid {
-        padding-right: 40px;
-        padding-left: 0px;
-    }
+
 
     .title-serv {
        
@@ -3127,26 +3058,9 @@ header .container-fluid .wrapper {
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    .download-img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
-
     .download-section .container-fluid {
         width: 100%;
     }
-
-    .download__left-background {
-        -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.4);
-        left: -159px;
-        top: -100px;
-    }
-
     .screen3 {
         top: 47px;
     }
@@ -3174,31 +3088,11 @@ header .container-fluid .wrapper {
         -webkit-background-size: cover;
         background-size: cover;
     }
-
-    .download-img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
-
     .download-section .container-fluid {
         width: 100%;
     }
 
-    .download__left-background {
-        -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.4);
-        left: -159px;
-        top: -100px;
-    }
-
-    .download-img {
-        display: none;
-    }
-
-    .download-link__item img {
+    .download-link__item-img {
         height: 130px;
         width: 130px;
     }
@@ -3266,6 +3160,10 @@ header .container-fluid .wrapper {
     .service-header--header .title-serv {
         padding-top: 1.2vw;
     }
+    .download-img {
+        display: none;
+    }
+
 
 }
 
@@ -3276,9 +3174,7 @@ header .container-fluid .wrapper {
         padding-top: 0;
         max-width: 365px;
     }
-    .bg-company {
-        width: 77%;
-    }
+
 
     .company .container-fluid h1 {
         min-width: 302px;
@@ -3291,16 +3187,6 @@ header .container-fluid .wrapper {
     .play-earn .wrap {
         width: 165px;
     }
-
-    .download-img {
-        display: none;
-    }
-
-    .download-link__item img {
-        height: 130px;
-        width: 130px;
-    }
-
     .download-section .download-text-wrapper {
         text-align: center;
     }
@@ -3652,18 +3538,6 @@ header .container-fluid .wrapper {
     .recend_payouts .container-fluid .col-6:last-child .value, .recend_payouts .container-fluid .col-6:last-child .title {
         margin-left: 55px;
     }
-
-
-
-    .download-img {
-        display: none;
-    }
-
-    .download-link__item img {
-        height: 130px;
-        width: 130px;
-    }
-
     .download-section .download-text-wrapper {
         text-align: center;
     }
@@ -3690,39 +3564,10 @@ header .container-fluid .wrapper {
         font-size: 22px;
         margin-top: 30px;
     }
-
-    .download__right-background {
-        right: 0;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        width: 60vw;
-        bottom:  -30vw;
-
-
-    }
-
-    .download__left-background {
-        top: -10vw;
-        left: 0px;
-        z-index: 0;
-       width: 40vw;
-       transform: scale(1);
-    }
-
     h2 {
         position: relative;
         z-index: 99;
     }
-    .download-img {
-        display: none;
-    }
-
-    .download-link__item img {
-        height: 130px;
-        width: 130px;
-    }
-
     .download-section .download-text-wrapper {
         text-align: center;
     }
@@ -3748,22 +3593,6 @@ header .container-fluid .wrapper {
         max-width: 190px;
         margin: 0 auto;
     }
-
-    .download__right-background {
-        right: 0;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-
-
-    }
-
-    .download__left-background {
-        z-index: 0;
-
-
-    }
-
     h2 {
         position: relative;
         z-index: 99;
@@ -3858,16 +3687,6 @@ header .container-fluid .wrapper {
         justify-content: center;
 
     }
-
-    .download-img {
-        display: none;
-    }
-
-    .download-link__item img {
-        height: 130px;
-        width: 130px;
-    }
-
     .download-section .download-text-wrapper {
         text-align: center;
     }
@@ -3893,21 +3712,6 @@ header .container-fluid .wrapper {
         margin: 0 auto;
         font-size: 22px;
     }
-
-    .download__right-background {
-        right: 0;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-
-    }
-
-    .download__left-background {
-
-        z-index: -1;
-
-    }
-
     h2 {
         position: relative;
         z-index: 0;
@@ -4242,6 +4046,12 @@ body {
 .ol {
     font-size: 16px;
 }
+.how-mutch__img {
+    width: 90vw;
+    height: 83vw;
+    background-position: center;
+    margin: 0 auto;
+}
 }
 
 /* Small Devices, Tablets */
@@ -4273,9 +4083,6 @@ body {
 
     .slick-active {
         margin-right: 0px;
-    }
-    .bg-company {
-        width: 82%;
     }
 
     .company .container-fluid h1 {
@@ -4348,9 +4155,7 @@ body {
         max-width: 347px;
     }
 
-    .bg-company {
-        width: 85%;
-    }
+
 
     .download-page-description__title {
         max-width: 464px;
@@ -4420,9 +4225,7 @@ body {
         padding-right: 0;
     }
 
-    .bg-company {
-        width: 100%;
-    }
+
 
     .company img {
         display: none;
@@ -4548,7 +4351,16 @@ body {
 .about span.stats {
     padding-top: 20px;
 }
-
+.bg-company {
+    width: 100%;
+    height: 64vw;
+}
+.company-img {
+    display: none;
+}
+.how-mutch__img { 
+    margin-top: 10vw;
+}
 }
 
 /* Small Devices, Tablets */
@@ -4801,6 +4613,19 @@ body {
     .download-page-description__title {
         font-size: 22px;
     }
+    .download__left-background {
+        top:  0;
+    }
+    .bg-company {
+    width: 100%;
+    height: 101vw;
+    background: url("/static/img/mobil-company.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.how-mutch__img { 
+    margin-top: 0vw;
+} 
 
 
 
@@ -5041,6 +4866,9 @@ body {
 }
 .download-page-description__sub-title {
     font-size: 16px;
+}
+.download__right-background {
+    bottom: -30vw;
 }
 }
 

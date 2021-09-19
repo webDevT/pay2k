@@ -26,8 +26,6 @@
     </div>
 </div>
 <div class="bg-company">
-    <img class="desctop-company-bg" src="/static/img/bg-company.png" alt="">
-    <img class="mobil-company-bg" src="/static/img/mobil-company.png" alt="">
 </div>
 
 <div class="company">
@@ -38,7 +36,8 @@
                 <p>{% trans 'We give opportunity to earn real money by playing favorite games!' %}</p>
             </div>
             <div class="col-md-7 col-sm-6">
-                <img src="/static/img/img-company.png" alt="">
+                <div class="company-img"></div>
+               
             </div>
         </div>
     </div>
@@ -47,7 +46,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <img src="/static/img/company-img2.png" alt="">
+                <div class="how-mutch__img"></div>
             </div>
             <div class="offset-1 col-md-5">
                 <div class="title h2">
@@ -107,12 +106,16 @@
             </div>
 
             <div class="col-md-6 col-sm-6 col-6">
-                <div class="follow-us">
-                    <span>{% trans 'Follow us' %}</span>
-                    <a href="https://www.facebook.com/pay2k/"><img src="{% static "img/facebook.svg" %}" alt=""></a>
-                    <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}"><img src="{% static "img/instagram.svg" %}" alt=""></a>
+                    <div class="follow-us">
+                        <span>{% trans 'Follow us' %}</span>
+                        <a href="https://www.facebook.com/pay2k/" class="facebook-link">
+                           
+                        </a>
+                        <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
+                           
+                        </a>
+                    </div>
                 </div>
-            </div>
         </div>
 
     </div>

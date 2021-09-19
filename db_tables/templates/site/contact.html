@@ -31,7 +31,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7">
-                <img src="{% static 'img/contact.png' %}" alt="">
+                <div class="contact-img"></div>
             </div>
             <div class="col-md-5 col-sm-12">
                 <h2 class="h2">{% trans 'Contact us' %}</h2>
@@ -92,12 +92,16 @@
             </div>
 
             <div class="col-md-6 col-sm-6 col-6">
-                <div class="follow-us">
-                    <span>{% trans 'Follow us' %}</span>
-                    <a href="https://www.facebook.com/pay2k/"><img src="{% static "img/facebook.svg" %}" alt=""></a>
-                    <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}"><img src="{% static "img/instagram.svg" %}" alt=""></a>
+                    <div class="follow-us">
+                        <span>{% trans 'Follow us' %}</span>
+                        <a href="https://www.facebook.com/pay2k/" class="facebook-link">
+                           
+                        </a>
+                        <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
+                           
+                        </a>
+                    </div>
                 </div>
-            </div>
         </div>
 
     </div>
