@@ -1,0 +1,44 @@
+<div style="    overflow: hidden;
+    padding: 20px;">
+    <style>
+        label.filter-checkbox {
+            position: relative;
+        }
+        label.filter-checkbox input[type=checkbox] {
+            position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+        }
+        label.filter-checkbox.odd {
+        float: left;
+            width: 52%;
+        }
+        label.filter-checkbox.even {
+        float: left;
+            clear: right;
+            width: 48%;
+        }
+        label.filter-checkbox i:not(.fas) {
+         font-style: normal;
+    font-family: Roboto, sans-serif;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+    <label class="filter-checkbox" style="width: 48%;
+    display: block;
+    margin-left: 52%;
+    margin-bottom: 10px" ng-click="toggle_languages()">
+        <i ng-bind="languages_to_filter==36?'Clear all':'Check all'"></i><i style="vertical-align: middle;
+    font-size: 22px; margin-left: 10px;" class="fas" ng-class="{'fa-toggle-on': languages_to_filter.length==36, 'fa-toggle-off': languages_to_filter.length!=36 }"></i>
+    </label>
+    <div style="overflow: hidden;">
+        <label class="filter-checkbox" ng-repeat="language in languages|orderBy:'name':false:accents_comparator"
+               ng-class-even="'even'" ng-class-odd="'odd'">
+            <i ng-bind="language.name"></i><input type="checkbox" ng-model="language.selected"><br>
+        </label>
+    </div>
+    <a style="margin-top: 20px;" href="javascript://" class="popup-button" ng-click="apply()">Apply</a>
+</div>

@@ -1,0 +1,25 @@
+{% load i18n %}
+<div class="menu-wrapper">
+    <nav class="menu" id="menu">
+        <div class="btn_menu" id="menu">
+            <span class="btn_row"></span>
+            <span class="btn_row"></span>
+            <span class="btn_row"></span>
+        </div>
+        <ul>
+            <li class="mobil-menu-item"><a href="/">{% trans 'Home' %}</a></li>
+            <li><a href="/catalogue/" class="menu-link-mobile"><span class="menu-link">{% trans 'Launch Game Store' %}</span> <span class="game-menu-link">PLAY & EARN CRYPTO NOW</span></a></li>
+            <li><a href="/company/">{% trans 'About us' %}</a></li>
+            <li><a href="/contact/">{% trans 'Contacts' %}</a></li>
+
+            
+            <li class="mobil-menu-item"><a href="https://www.instagram.com/pay2k.mobile/ "> Instagram</a></li>
+            <li class="mobil-menu-item"><a href="https://www.facebook.com/pay2k/">Facebook</a></li>
+        </ul>
+    </nav>
+    {% include 'site/lang-switcher.html' %}
+    <a href="/catalogue/" class="header-button"><span class="header-button__text">{% trans 'Launch Game Store' %}</span></a>
+
+     <a href="{{ right_button_url|default:"/catalogue/" }}" class="header-button header-button--game"><span class="header-button__text">{% trans 'Play & Earn Crypto now' %}</span></a>
+
+</div>

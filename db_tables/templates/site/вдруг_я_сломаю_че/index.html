@@ -1,0 +1,535 @@
+{% load static i18n thumbnail humanize mathfilters decimal  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "site/title.html" %}
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon"
+      type="image/png"
+      href="{% static 'img/favicon.png' %}">
+</head>
+<body>
+{% csrf_token %}
+    <header>
+        <div class="header__top">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="">
+					Pay2k
+				</a>
+                </div>
+                {% include 'site/menu.html' %}
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid">
+            <div class="header-content">
+                <h1 class="desktop">
+                    {% trans 'Play Free Quiz Games<br>and Earn Real Cash' %}
+                </h1>
+                <h1 class="mobile">
+                    {% trans 'Play Free Quiz Games<br>and Earn Real Cash' %}
+                </h1>
+            <p class="desktop">
+{% trans 'Pay2k - a platform with free games <br>where you can earn money!' %}
+               </p>
+
+            <p class="mobile">{% trans 'Pay2k - a platform with free games <br>where  you can earn money' %}</p>
+            <p class="desktop">
+                {% blocktrans with ton_link='<a href="https://freeton.org/" target="_blank">Free TON</a>' %}
+                    Created on {{ ton_link }} Blockchain
+                {% endblocktrans %}
+            </p>
+            <p class="mobile">
+                {% blocktrans with ton_link='<a href="https://freeton.org/" target="_blank">Free TON</a>' %}
+                    Created on {{ ton_link }} Blockchain
+                {% endblocktrans %}
+            </p>
+
+            </div>
+        </div>
+    </header>
+     <section class="download-page-description download-page-description--hompage">
+        <div class="container-fluid">
+            <div class="download-page-description__title download-page-description__title--desktop h2">
+                {% blocktrans %}How Just in 30 min and 100% for Free<br>
+                You can Earn Starting from $10 <br>
+                Playing Quiz Games{% endblocktrans %}
+            </div>
+              <div class="download-page-description__title download-page-description__title--mobil h2">
+                {% blocktrans %}<i></i>How Just in 30 min and 100% for Free<br>
+                You can Earn Starting from $10 <br>
+                Playing Quiz Games{% endblocktrans %}
+            </div>
+            <p>
+                      {% blocktrans %}Stop wasting your time by playing quiz games without any goal! Today, because of Pay2K platform, you can start to earn real money playing educational and fun trivia games!{% endblocktrans %}
+
+            <p>
+                <ul>
+                    <li>{% trans 'Receive payouts on a daily basis' %}</li>
+                    <li>{% trans '100% for FREE! You came to earn money & not to spent it. Right?' %}</li>
+                    <li>{% trans 'More then 3,000 fun entertainment trivia games' %}</li>
+                    <li>{% trans 'Daily top leader receive $10!' %}</li>
+                    <li>{% trans 'Weekly raffle - winner get $100 (Winner guaranteed)' %}</li>
+                    <li>{% trans 'Monthly raffle - winner get $300 (Winner guaranteed)' %}</li>
+                    <li>
+                        {% blocktrans with ton_link='<a href="https://freeton.org/" target="_blank">Free TON</a>' %}
+                            All payments are 100% real and recorded in the {{ ton_link }} blockchain!
+                        {% endblocktrans %}
+                    </li>
+                </ul>
+        </div>
+    </section>
+
+    <div class="container-fluid call-to-action-button" >
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="download-text-wrapper">
+                    <div class="download__button-wrapper-fixed fixed">
+                        <div class="download__button ">
+                            <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
+                        </div>
+                    </div>
+                    <div class="download__button-wrapper">
+                        <div class="download__button ">
+                            <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="about about--stat">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <span class="stats">{{ apps|intcomma }}</span>
+                <h3>Games in the Store</h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <span class="stats">{{ developers|intcomma }}</span>
+                <h3>Registered Game Developers</h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <span class="stats">800+</span>
+                <h3>New developers<br>registered daily</h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <span class="stats">32</span>
+                <h3>Languages<br>supported</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+     <section class="download-page-description download-page-description--hompage">
+        <div class="container-fluid">
+            <div class="download-page-description__title h2">
+                {% blocktrans %}Does all this look unreal?<br>
+                    Where are the "pitfalls"?{% endblocktrans %}
+
+
+            </div>
+            <p>
+               {% trans 'Pay2K app gives you such a great opportunity to make money playing trivia games because of amazing partnership with QuickAppNinja (Android game builder platform) & Free TON (Fast, secure and scalable blockchain).' %}
+            </p>
+            <p>
+               {% trans 'QuickAppNinjna is free Android game builder that allows any person without any special skills make their own unique trivia games for Google Play. For last 7 years more than 490,000+ users already made their trivia games! ' %}
+            <p>
+        <p>
+            {%  trans 'Free TON is based on a flexible multi-blockchain platform called TON Blockchain, which is capable of processing millions of transactions per second, with Turing-complete smart contracts, upgradable formal blockchain specifications, multi-cryptocurrency value transfer, support for micropayment channels and off-chain payment networks.' %}
+        </p>
+
+            <div class="download-page-description__sub-title">
+              {% trans 'Why Pay2K can pay money?' %}
+            </div>
+
+                <ul class="list-item">
+                    <li>{% trans 'QuickAppNinja users are very interested that gamers play their created games, because game developers are making money from ads inside the games.' %}</li>
+                    <li>{% trans 'You play games and watch ads inside it.' %}</li>
+                    <li>{% trans 'Pay2K pay you money and earn revenue from promoting QuickAppNinja service' %}</li>
+                </ul>
+        </div>
+    </section>
+
+
+    <div class="container-fluid  call-to-action-button">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="download-text-wrapper">
+                    <div class="download__button-wrapper-fixed fixed">
+                        <div class="download__button ">
+                            <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
+                        </div>
+                    </div>
+                    <div class="download__button-wrapper">
+                        <div class="download__button ">
+                            <a href="/catalogue/">{% trans "Play Games & Earn Money Now!" %}</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <section class="about">
+    <div class="container-fluid">
+        <h2 class="h2">{% trans 'What you need to do?' %}</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="img about-icon-1">
+                    
+                </div>
+                <h3>{% blocktrans with store_link='/catalogue/' %}Launch any game<br>from the <a target="_blank" href="{{ store_link }}">game store</a>{% endblocktrans %}</h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="img about-icon-2">
+                    
+                </div>
+                <h3>
+                    {% trans 'Register Account<br>for FREE' %}
+                </h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="img about-icon-3">
+                    
+                </div>
+                <h3>
+                    {% trans 'Play Games<br>Earn Gems' %}
+                </h3>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="img about-icon-4">
+                    </div>
+                <h3>
+                    {% trans 'Convert Gems on Real Money and Gift Cards' %}
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+{% if rewards.count %}
+<section class="recend_payouts">
+    <h2 class="h2">{% trans 'Recent payouts' %}</h2>
+    <div class="container-fluid">
+    <div class="recend-payouts__items recend-payouts__items--header item"
+                 data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
+                  <span class="recend-payouts__items-wrap">
+                <div class="recend-payouts__photo">
+                   User
+                </div>
+
+                    <div class="recend-payouts__items-list">
+
+                        <div class="recend-payouts__item">
+
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            Date
+                        </div>
+
+                        <div class="recend-payouts__item">
+                           Type
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            Amount
+
+                        </div>
+
+                    </div>
+
+</span>
+            </div>
+        {% for x in rewards %}
+
+            <a href="{% url 'transaction_in_explorer' x.id %}" target="_blank" class="recend-payouts__items item{% if forloop.last %} last{% endif %}"
+                 data-timestamp="{{ x.timestamp|date:"Y-m-d H:i:s" }}">
+                  <span class="recend-payouts__items-wrap">
+                <div class="recend-payouts__photo">
+                    <div class="">
+                        <div class="">
+                            <img src="{{x.account.userpic }}"
+                                 alt="{{ x.account.username }}">
+                        </div>
+
+                    </div>
+                </div>
+
+                    <div class="recend-payouts__items-list">
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Username' %}
+                            </div>
+                            <div class="value recend_payouts-name">
+                                {{ x.account.username }}
+                            </div>
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Date' %}
+                            </div>
+                            <div class="value">
+                                {{ x.timestamp|date:'Y-m-d' }}
+                            </div>
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Type' %}
+                            </div>
+                            <div class="value">
+                                {{ x.get_reward_type_display }}
+                            </div>
+                        </div>
+
+                        <div class="recend-payouts__item">
+                            <div class="title">
+                                {% trans 'Amount' %}
+                            </div>
+                            <div class="value">
+                                <span>{{ x.amount|floatformat:"4g" }}</span> <span class="cryistals-amount ng-binding cryistals-amount-icon">
+
+        <span class="cristals-prompt">
+            TON Crystal (TON)
+        </span>
+    </span><span> ≈ {% with val=x.amount|mul:x.rate|floatformat:2|to_decimal %}
+                                ${{ val.normalize }}
+                                {% endwith %}
+                            </span></div>
+
+                        </div>
+
+                    </div>
+
+</span>
+            </a>
+        {% endfor %}
+
+    </div>
+    {% if has_more_payouts %}
+        <a href="/recent-payouts/" class="load-more__button">
+            Explore more
+        </a>
+    {% endif %}
+
+{#<a name="catalogue"></a>#}
+</section>
+{% endif %}
+{#    <section class="play-earn">#}
+{#        <div class="wrapper">#}
+{#            <h2>{% trans 'Play these games & Earn Money' %}</h2>#}
+{#            <img class="ellips" src="/static/img/ellips.svg" alt="">#}
+{#            <div class="container-fluid">#}
+{#            <div class="row">#}
+{#                {% for x in popular_games %}#}
+{#                    <div class="col-md-3" data-installs="{{ x.installs }}" data-id="{{ x.id }}">#}
+{#                        <div class="wrap">#}
+{#                            <img src="{{ x.picture.url }}" alt="">#}
+{#                            <h3>{{ x.name }}</h3>#}
+{#                            <br>#}
+                            {#						<p>#}
+                            {#							{{ x.short_description }}#}
+                            {#						</p>#}
+{#                            <div class="btn">#}
+{#                                <a target="_blank" data-src="/catalogue/{{ x.uid }}/" href="/catalogue/{{ x.uid }}/">{% trans 'Play now' %}</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#                {% if has_more_payouts %}#}
+{#                    <a href="javascript://" class="more loader-2">#}
+{#                        {% trans 'Show more games' %}#}
+{#                        <img src="/static/img/arrow.svg" alt="">#}
+{#                    </a>#}
+{#                {% endif %}#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="mobil-container">#}
+{#            <div class="slider_box">#}
+{##}
+{#                <div class="slider">#}
+{#                    {% for x in popular_games %}#}
+{#                        <div class="items_slider">#}
+{#                            <div class="wrap">#}
+{#                                <img src="{{ x.picture.url }}" alt="">#}
+{#                                <h3>{{ x.name }}</h3>#}
+{#                                <div class="btn">#}
+{#                                    <a target="_blank" data-src="/catalogue/{{ x.uid }}/" href="/catalogue/{{ x.uid }}/">{% trans 'Play' %}</a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{##}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#        </div>#}
+{#    </section>#}
+
+
+<!-- ----------------start download section----------- -->
+<section class="download-section">
+    <h2 class="h2">{% trans 'Play and Earn on any device' %}</h2>
+    <div class="download-links__wrapper">
+        <a href="/catalogue/" class="download-link__item">
+           <span class="download-link__item-img"></span>
+            
+{#            <div class="download-links__title">#}
+{#                Google Play#}
+{#            </div>#}
+        </a>
+    </div>
+    <div class="download__left-background"></div>
+   <div class="download__right-background"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="download-text-wrapper">
+                    <div class="download-title">
+                    {% trans 'One Account for all games' %}
+                </div>
+                <div class="download-text">
+                    {% trans 'Collect gems by playing any game presented in the store. Stuck in one game? No problem - open another one and continue collect gems.' %}
+                </div>
+                <div class="download__button-wrapper-fixed fixed">
+                     <div class="download__button ">
+                    <a href="/catalogue/">{% trans 'Open Game Store' %}</a>
+                </div>
+                </div>
+                <div class="download__button-wrapper">
+                     <div class="download__button ">
+                    <a href="/catalogue/">{% trans 'Open Game Store' %}</a>
+                </div>
+                </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="download-img"></div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ----------------end download section----------- -->
+    <section class="question">
+    <h2 class="h2">{% trans 'FAQ' %}</h2>
+    <div class="wrapper">
+        <div class="question-item">
+            <div class="title">
+                {% trans 'How much can I earn?' %}
+            </div>
+            <p>
+                {% trans 'Your income is not limited at all! The more you play, the more money you will make!' %}
+            </p>
+            <div class="btn-close">
+                <div class="colse">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+        <div class="question-item">
+            <div class="title">
+                {% trans 'How can I receive payment for #1 leaderboard position?' %}
+            </div>
+            <p>
+                {% trans 'Because the Pay2K platform operated under Free TON blockchain, all payments are transferred automatically to your blockchain wallet.' %}
+            </p>
+            <div class="btn-close">
+                <div class="colse">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+        <div class="question-item">
+            <div class="title">
+                {% trans 'Pay2K is really free?' %}
+            </div>
+            <p>
+                {% trans "Yes, absolutly! You don't need to spend anything at all! All you need to do is to play games and EARN MONEY!" %}
+            </p>
+            <div class="btn-close">
+                <div class="colse">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+    <footer id="scroll-position">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>{% trans 'Need help?' %}</h2>
+                    <div class="text">
+                        <p>{% trans 'We are ready to help you any time!' %}</p>
+                        <a href="/contact/">{% trans 'Contact us' %}</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="footer-menu">
+                        <ul>
+                            <li><a href="/company/">{% trans 'Company' %}</a></li>
+{#                            <li><a href="/terms/">{% trans 'Terms' %}</a></li>#}
+                            <li><a href="/policy/">{% trans 'Privacy Policy' %}</a></li>
+                            <li><a href="/contact/">{% trans 'Contact Us' %}</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6">
+                    <div class="logo">
+                        <a href="">
+					Pay2k
+				</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6">
+                    <div class="follow-us">
+                        <span>{% trans 'Follow us' %}</span>
+                        <a href="https://www.facebook.com/pay2k/" class="facebook-link">
+                           
+                        </a>
+                        <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
+                           
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% include 'site/scripts.html' %}
+
+ <link rel="stylesheet" href="/app-static/node_modules/fancybox-master/dist/jquery.fancybox.min.css">
+
+{#    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>#}
+    <script src="/app-static/node_modules/fancybox-master/dist/jquery.fancybox.min.js"></script>
+
+    <script>
+    {#$('[data-fancybox]').fancybox({#}
+    {#    toolbar: false,#}
+    {#    smallBtn: false,#}
+    {#    iframe: {#}
+    {#        preload: true,#}
+    {#    }#}
+    {#});#}
+    </script>
+</body>
+</html>

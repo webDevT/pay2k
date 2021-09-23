@@ -1,0 +1,309 @@
+<ui-view>
+    <div ng-mouseup="fade_out_autocomplete_wrapper($event)">
+        <div class="cryistals-header cryistals-header--page">
+            <div class="cryistals-container">
+                <div class="cryistals__search-wrapper" ng-click="trigger_autocomplete()">
+
+                    <a href="javascript://" ng-click="handle_back_arrow_on_autocomplete($event)">
+                        <img src="/app-static/static/crystals/img/back.svg" alt=""
+                             class="cryistals__search-wrapper-arrow">
+                    </a>
+
+                    <div class="cryistals__search-container">
+                        <div class="cryistals__search-left" ng-bind="'Find app in catalog'">
+
+                        </div>
+
+                        <img src="/app-static/static/crystals/img/search.svg" alt="">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="cryistals-container cryistals-container--play-earn">
+            <a href="" class="cryistals-block cryistals-block--info">
+
+                <div class="cryistals-win-content cryistals-win-content--info">
+                    <div class="cryistals-win__text">
+                        <div class="cryistals-text">
+                            Play games, complete levels & earn
+                        </div>
+                        <span class="cryistals__title gradient-text">
+						More  Gems!
+					</span>
+
+                    </div>
+
+
+                </div>
+
+            </a>
+        </div>
+
+        <div class="cryistals-container">
+            <div class="cryistals-block">
+
+                <div class="cryistals-block__header">
+                    <a ui-sref="crystals.play_earn.catalog({source: 'popular'})"
+                       class="cryistals__text cryistals__block-title">
+                        Popular
+                    </a>
+
+                    <a ui-sref="crystals.play_earn.catalog({source: 'popular'})" class="cryistals-more">
+                        <div class="cryistals-more__text">
+                            More
+                        </div>
+
+
+                    </a>
+
+                </div>
+
+
+                <div class="cryistals-play-earn-items">
+
+
+                    <a href="" ng-repeat="app in popular_apps" ng-click="open_prelaunch_app_dialog(app)"
+                       class="openPaddingLink cryistals-play-earn-item">
+                        <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                        <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                    </a>
+                </div>
+
+
+            </div>
+
+
+            <!-- end cristals block -->
+
+            <!-- start cristals block -->
+
+            <div class="cryistals-block">
+
+                <div class="cryistals-block__header">
+                    <a ui-sref="crystals.play_earn.catalog({source: 'new'})"
+                       class="cryistals__text cryistals__block-title">
+                        New
+                    </a>
+
+                    <a ui-sref="crystals.play_earn.catalog({source: 'new'})" class="cryistals-more">
+                        <div class="cryistals-more__text">
+                            More
+                        </div>
+
+
+                    </a>
+
+                </div>
+
+
+                <div class="cryistals-play-earn-items">
+
+                    <a href="" ng-repeat="app in new_apps" ng-click="open_prelaunch_app_dialog(app)"
+                       class="openPaddingLink cryistals-play-earn-item">
+                        <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+			<!--<span class="cryistals-play-earn__img">
+<!--<img ng-src="{{ app.icon }}" alt="{{ app.name }}" class="cryistals-play-earn__icon">
+			</span>-->
+
+                        <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                    </a>
+                </div>
+
+
+            </div>
+
+            <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'music', search_results_title: 'MUSIC'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Music
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'music', search_results_title: 'MUSIC'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in music_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'TRIVIA'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Trivia
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'TRIVIA'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in trivia_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'MOVIES'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Movies
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'MOVIES'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in movies_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'CARTOONS'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Cartoons
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'CARTOONS'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in cartoons_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'ANIME'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Anime
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'ANIME'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in anime_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+            <!-- end cristals block -->
+            <style>
+                .search-modal {
+                    opacity: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0.15s, opacity 0.15s linear;
+                    display: block;
+                    padding: 24px 0px;
+                }
+
+                .search-modal.active {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .search-modal .close-modal {
+                    left: 12px;
+                }
+
+                .selectize-control {
+                    font-size: 0;
+                }
+
+                .selectize-input, .selectize-input.items.input-active, .selectize-input.items.focus {
+                    padding: 0 !important;
+                }
+
+                .selectize-input > input {
+                    height: 40px;
+                    padding: 0px 0px 0px 37px !important;
+                    font-size: 16px;
+                    width: 100%;
+                }
+
+                .selectize-dropdown.single {
+                    margin-top: 10px;
+                    /*border-radius: 5px !important;*/
+                }
+
+                .selectize-control.single .selectize-input input, .selectize-dropdown.single input {
+                    padding-left: 46px !important;
+                    width: 100% !important;
+                }
+
+                .selectize-dropdown, .selectize-dropdown.form-control {
+                    height: 60vh !important;
+                }
+
+                .selectize-dropdown-content {
+                    max-height: 100% !important;
+                    height: 100% !important;
+                }
+            </style>
+            <div class="search-modal" ng-class="{'active': search_modal_active}">
+                <div class="game-serch-wrapper">
+                    <div class="game-serch-wrapper-content">
+                        <div class="close-modal">
+
+                        </div>
+                        <selectize id="select-game" class="game" config="apps_search_selectize_config"
+                                   ng-model="trigger_autocomplete.game_from_catalog" api="trigger_autocomplete.autocomplete_api"></selectize>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</ui-view>

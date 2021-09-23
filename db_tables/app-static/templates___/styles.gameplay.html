@@ -1,0 +1,17 @@
+<div>
+    <style>
+        .letters-list li {
+            width: {{ styles.guessed_stroke_width }}px !important;
+            margin: 0 !important;
+            margin-right: {{ styles.guessed_stroke_margin }}px !important;
+            font-size: {{ styles.guessed_button_font_size }}px !important;
+            /*line-height: {{ styles.guessed_button_line_height }}px !important;*/
+        }
+        .letters-list li:last-child {
+            margin-right: 0 !important;
+        }
+        .letters-list li.whitespace-breakpoint {
+            margin-right: {{ styles.guessed_stroke_whitespace }}px !important;
+        }
+    </style>
+</div>

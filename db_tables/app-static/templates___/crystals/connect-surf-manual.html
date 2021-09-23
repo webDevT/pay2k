@@ -1,0 +1,55 @@
+<div>
+    <div class="cryistals-header cryistals-header--page">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ng-if="from_state != 'index'"
+                   ui-sref="crystals.rewards({page: null, all_users: false, profile: profile})" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">Connect Wallet
+                </a>
+                <a ng-if="from_state == 'index'" ui-sref="crystals.index({silent: true})" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">Connect Wallet
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- end header section -->
+
+
+    <section class="cryistals-profile">
+
+        <div class="cryistals-container">
+            <div class="cash-out-title cash-out-title--wallet">
+                All payments will be processed <br>
+                in crypto called "TON Crystal".
+            </div>
+            <div class="cash-out-sub-title text-left cash-out-sub-title--margin">
+                You get paid in TON Crystals in the equivalent to US dollars. You can easily sell TON Crystals on a
+                crypto exchange.
+            </div>
+        </div>
+
+        <div class="cryistals-container">
+            <div class="cryistals-profile__form">
+
+                <div class="cryistals__form-row">
+
+                    <input type="text" placeholder="TON Crystal Wallet Address:" ng-model="profile.ton_wallet_manual" class="cryistals__input">
+
+                    <div class="input-prompt">
+                        Don’t
+                        have TON Crystal wallet address? Download free TON wallet here:
+                        <a href="https://ton.surf/main" target="blank">https://ton.surf/main</a>
+                    </div>
+                </div>
+                <a href="javascript://" ng-click="apply_ton_wallet()" class="popup-button">
+                    Connect TON Wallet
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

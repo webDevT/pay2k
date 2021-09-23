@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "site/title.html" %}
-    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{{ static_prefix }}{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{{ static_prefix }}{% static 'css/style.css' %}">
 <link rel="icon"
       type="image/png"
-      href="{% static 'img/favicon.png' %}">
+      href="{{ static_prefix }}{% static 'img/favicon.png' %}">
 </head>
 <body>
 <header class="game-header">
@@ -136,13 +136,13 @@ where you can earn crypto!{% endblocktrans %}
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="img about-icon-1">
-                    
+
                 </div>
                 <h3>{% blocktrans with store_link='/catalogue/' %}Launch any game<br>from the <a target="_blank" href="{{ store_link }}">game store</a>{% endblocktrans %}</h3>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="img about-icon-2">
-                    
+
                 </div>
                 <h3>
                     {% trans 'Register Account<br>for FREE' %}
@@ -150,7 +150,7 @@ where you can earn crypto!{% endblocktrans %}
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="img about-icon-3">
-                    
+
                 </div>
                 <h3>
                     {% trans 'Play Games<br>Earn Gems' %}
@@ -273,17 +273,17 @@ where you can earn crypto!{% endblocktrans %}
 
             </div>
 
-          <div class="col-md-6 col-sm-6 col-6">
-                    <div class="follow-us">
-                        <span>{% trans 'Follow us' %}</span>
+            <div class="col-md-6 col-sm-6 col-6">
+                <div class="follow-us">
+                    <span>{% trans 'Follow us' %}</span>
                         <a href="https://www.facebook.com/pay2k/" class="facebook-link">
-                           
+
                         </a>
                         <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
-                           
+
                         </a>
-                    </div>
                 </div>
+            </div>
         </div>
 
     </div>

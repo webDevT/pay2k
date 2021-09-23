@@ -1,0 +1,32 @@
+<div class="menu-screen">
+    <div class="container w-100">
+        <ul class="navigation">
+            <li><a ui-sref="base.gameplay.coins({parent_screen: 'menu'})" translate>play_n_earn</a></li>
+            <li>
+                <a ng-click="toggle_sounds()">
+                    <text translate>sounds</text>
+                    <span ng-cloak ng-if="check_toggle_sounds()" translate>off</span>
+                    <span ng-cloak ng-if="!check_toggle_sounds()" translate>on</span>
+                </a>
+            </li>
+            <li style="position: relative;" ng-class="{'is-copy': copy_was_succeed}"><a ng-click="share()" ngclipboard
+             data-clipboard-text="https://pay2k.com/catalogue/{{ app_config.app_uid }}/#!/splash/{{ app_config.invite_code }}"><text translate>share</text></a>
+                <div class="cipboard-succ" id="cipboard-succ">
+                Game link
+                copied!
+            </div>
+            </li>
+            <li>
+                <a ui-sref="base.gameplay.opt_languages">
+                    <text translate>language</text>
+                    <span ng-bind="get_app_ui_language()[0]"></span>
+                </a>
+            </li>
+            <li ng-if="friends_play_too"><a ui-sref="base.gameplay.help_friends" translate>help_friends_with_level</a></li>
+            <!--<li><a href="">About</a></li>-->
+            <!--<li><a href="">Contact us</a></li>-->
+        </ul><!-- navigation -->
+    </div><!-- container -->
+
+    <!--<a href="" class="mt-auto privacy-link">Privacy policy</a>-->
+</div>

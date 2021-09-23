@@ -1,0 +1,327 @@
+<div ng-init="dots_menu_active=false;" ng-click="dots_menu_active=false;">
+    <ui-view></ui-view>
+<!-- start header section -->
+	<div class="cryistals-header">
+	<div class="cryistals-container">
+		<div class="cryistals-header__top">
+			<a ng-click="exit_crystals_and_update_amount()" class="cryistals-back">
+				<img src="/app-static/static/crystals/img/back.svg" alt=""> My Gems
+			</a>
+
+			<div class="cryistals-header__menu" ng-class="{'active': dots_menu_active}" ng-click="dots_menu_active = !dots_menu_active;$event.stopPropagation();">
+				<div class="cryistals-header__menu-btn">
+					<img src="/app-static/static/crystals/img/menu-btn.svg" alt="">
+				</div>
+				<div class="cryistals-header__menu-content">
+					<a ui-sref="crystals.transactions" class="cryistals-header__menu-item">Transaction History</a>
+					<a ui-sref="crystals.leaderboard" class="cryistals-header__menu-item">Leaderboards</a>
+					<a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-header__menu-item">My payments</a>
+					<a ui-sref="crystals.rewards({page: 'wallet', profile: profile, from_state: 'index'})" class="cryistals-header__menu-item">Connect Wallet</a>
+				</div>
+			</div>
+</div>
+			<div class="cryistals-header__contetn">
+				<div class="cryistals-header__contetn-left">
+					<a ui-sref="crystals.profile" class="cryistals-header__user-info">
+						<span class="cryistals__title" ng-bind="profile.username"></span>
+                    </a>
+
+					<a ui-sref="crystals.transactions" class="cryistals-amount-wrapper">
+						<span class="cryistals-amount ng-binding" style="
+    display: block;
+    width: 30px;
+    background: url('/app-static/static/crystals/img/cryistal.svg') center center no-repeat;
+    height: 24px;
+"></span>
+                        <span class="cryistals-amount" ng-bind="app_config.crystals"></span>
+					</a>
+
+                    <a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-amount-wrapper">
+                        <span class="cryistals-amount ng-binding" style="
+    display: block;
+    width: 30px;
+    background: url('/app-static/static/crystals/img/ton.png') center center no-repeat;
+    height: 24px;background-size: 25px;
+"></span>
+                        <span class="cryistals-amount" ng-bind="(app_config.tons|currency:'':4) + ' ≈ '"></span>
+                        <!--<span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':3)|limitTo:((app_config.tons_usd|currency:'$':3).length - 1)"></span>-->
+                        <span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':2)"></span>
+					</a>
+
+				</div>
+
+				<div class="cryistals-header__contetn-photo">
+					<a ui-sref="crystals.profile" class="cryistals-header__photo">
+						<img ng-src="{{ profile.userpic }}" alt="" class="cryistals-header__photo-img">
+					</a>
+				</div>
+
+			</div>
+
+
+
+
+	</div>
+</div>
+
+<div class="cryistals-fixed-page-content">
+
+    <!--<div class="cryistals-container">
+        <a ui-sref="crystals.rewards({page: 'wallet', profile: profile, from_state: 'index'})" class="cryistals-block">
+
+	<div class="cryistals-win-content cryistals-win-content--wallet">
+                <div class="cryistals-win__text">
+			<span class="cryistals__title gradient-text">
+						Connect Wallet
+					</span>
+                    <div class="cryistals-text">
+                        To get paid, you need to connect your crypto wallet.
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>-->
+    <div class="cryistals-container" ng-if="!profile.ton_wallet_manual && profile.pending_payouts">
+        <a ui-sref="crystals.rewards({page: 'wallet', profile: profile, from_state: 'index'})" class="cryistals-block">
+
+	<div class="cryistals-win-content cryistals-win-content--wallet">
+                <div class="cryistals-win__text">
+			<span class="cryistals__title gradient-text">
+						Connect Wallet
+					</span>
+                    <div class="cryistals-text">
+                        To get paid, you need to connect your crypto wallet.
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+    <div class="cryistals-container">
+        <a ui-sref="crystals.leaderboard" class="cryistals-block" ng-click2="call_info_popup()">
+
+            <div class="cryistals-win-content">
+                <div class="cryistals-win__text">
+                <span class="cryistals__title gradient-text">
+                    Win $10
+                </span>
+                    <div class="cryistals-text">
+                        Today’s highest gems
+                        balance wins!
+                    </div>
+                </div>
+
+                <div class="cryistals-win__img">
+                    <img src="/app-static/static/crystals/img/money.svg" alt="">
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="cryistals-container">
+        <a ui-sref="crystals.raffle" class="cryistals-block">
+
+            <div class="cryistals-win-content">
+                <div class="cryistals-win__text">
+        <span class="cryistals__title gradient-text">
+                    Raffle
+                </span>
+                    <div class="cryistals-text">
+                        Win up to $100 each week<br>Winner guaranteed!
+                    </div>
+                </div>
+
+                <div class="cryistals-win__img">
+                    <img src="/app-static/static/crystals/img/tickets.svg" alt="">
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+
+    <div class="cryistals-container">
+        <div class="cryistals-block">
+
+            <div class="cryistals-block__header">
+                <a href="play-earn.html" class="cryistals__text cryistals__block-title">
+                    Play & Earn
+                </a>
+
+                <a ui-sref="crystals.play_earn" class="cryistals-more">
+                    <div class="cryistals-more__text">
+                        More
+                    </div>
+
+
+                </a>
+
+            </div>
+
+
+            <div class="cryistals-play-earn-items">
+                <a ng-repeat="app in play_n_earn" href="javascript://" class="cryistals-play-earn-item"
+                   ng-click="open_prelaunch_app_dialog(app)">
+        <span class="cryistals-play-earn__img">
+            <img ng-src="{{ app.icon }}" alt="{{ app.name }}" class="cryistals-play-earn__icon">
+        </span>
+
+                    <span class="cryistals-play-earn__title" ng-bind="app.name">
+        </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="cryistals-container">
+        <div class="cryistals-block cryistals-block--slider">
+
+            <div class="cryistals-block__header cryistals-block__header--slider">
+                <div class="cryistals__text cryistals__block-title">
+                    Earn more gems
+                </div>
+
+                <!--<a href="" class="cryistals-more">
+                    <div class="cryistals-more__text">
+                        More
+                    </div>
+
+                </a>-->
+
+            </div>
+
+
+            <div class="cryistals-slider-wrapper">
+                <!--<slick class="cryistals-slider" settings="{  slidesToShow: 1,
+arrows:false,
+dots:false,
+centerPadding: '50px',
+centerMode: true}">-->
+
+                    <div class="cryistals-slide-item" ng-show="app_config.has_pollfish_survey" ng-click="start_pollfish_survey()">
+                        <div class="cryistals-slider__card cryistals-slider__card--orange">
+                            <div class="cryistals-slider__card-content">
+                                <div class="cryistal-slider__title">
+                                    Take a Survey
+                                </div>
+
+                                <div class="cryistal-slider__text">
+                                    Over 1,000,000 gems
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cryistals-slide-item" ng-click="route_to_state($event, 'crystals.invites')" ng-mousedown="track_click_position_in_slick($event)">
+                        <div class="cryistals-slider__card cryistals-slider__card--purple">
+                            <div class="cryistals-slider__card-content">
+                                <div class="cryistal-slider__title">
+                                    Invite Friends +
+                                </div>
+
+                                <div class="cryistal-slider__text">
+                                    Over 1,000,000 gems
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="cryistals-slide-item" ng-show2="app_config.has_pollfish_survey"
+                     ng-click="adgem_offerwall()">
+                    <div class="cryistals-slider__card cryistals-slider__card--star">
+                        <div class="cryistals-slider__card-content">
+                            <div class="cryistal-slider__title">
+                               Special Offers
+                            </div>
+
+                            <div class="cryistal-slider__text">
+                                Over 1,000,000 gems
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cryistals-slide-item" ng-show2="app_config.has_pollfish_survey"
+                     ng-click="adgate_offerwall()">
+                    <div class="cryistals-slider__card cryistals-slider__card--star-orange">
+                        <div class="cryistals-slider__card-content">
+                            <div class="cryistal-slider__title">
+                                Top Offers
+                            </div>
+
+                            <div class="cryistal-slider__text">
+                                Over 1,000,000 gems
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!--<div class="cryistals-slide-item">
+                        <div class="cryistals-slider__card cryistals-slider__card--pink">
+                            <div class="cryistals-slider__card-content">
+                                <div class="cryistal-slider__title">
+                                    Special offer
+                                </div>
+
+                                <div class="cryistal-slider__text">
+                                    Over 1,000,000
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>-->
+
+                <!--</slick>-->
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="cryistals-container">
+        <div class="cryistals-block">
+
+            <div class="cryistals-block__header">
+                <a href="javascript://" class="cryistals__text cryistals__block-title">
+                    Players’ activity
+                </a>
+
+
+            </div>
+
+            <a ui-sref="crystals.leaderboard" class="players-activity__item">
+		<span class="players-activity__img-wrapper">
+			<img src="/app-static/static/crystals/img/medal.svg" alt="">
+		</span>
+                <span class="players-activity__text">
+			Leaderboard
+		</span>
+
+            </a>
+
+            <a ui-sref="crystals.rewards({all_users: true})" class="players-activity__item">
+            <span class="players-activity__img-wrapper">
+                <img src="/app-static/static/crystals/img/euro.svg" alt="">
+            </span>
+            <span class="players-activity__text">
+                Recent Payouts
+            </span>
+            </a>
+
+        </div>
+
+
+    </div>
+</div>
+</div>
+

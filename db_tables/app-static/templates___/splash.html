@@ -1,0 +1,28 @@
+
+<div class="spalsh__page">
+
+    <style>
+         .box svg {
+        fill: #000 !important;
+    }
+     </style>
+
+	<div class="splash__header">
+	<div class="splash-title">
+		{{ AppPreload.game_name }}
+	</div>
+
+
+</div>
+<img ng-src="{{ AppPreload.icon }}" alt="" class="cryistals-product-img">
+
+<div class="splash-text">
+	To avoid scam, fraud & protect your identity, please sign up or login with your Google account.
+</div>
+
+    <a class="popup-button popup-button--splash" ng-if="!GoogleAuthProvider.need_signin" ng-click="launch_game()" href="javascript://">Launch game</a>
+    <a class="popup-button popup-button--splash" ng-if="GoogleAuthProvider.need_signin" ng-click="sign_in()" href="javascript://">Sign in With Google</a>
+</div>
+
+
+

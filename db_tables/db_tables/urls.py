@@ -25,4 +25,5 @@ urlpatterns += i18n_patterns(
     re_path(r'^download/$', TemplateView.as_view(template_name='site/download.html')),
     re_path(r'^game/$', TemplateView.as_view(template_name='site/game.html')),
     re_path(r'^transaction-in-explorer/(?P<id>.+)/$', transaction_in_explorer, name='transaction_in_explorer'),
-)+ static('/static/', document_root=settings.STATIC_ROOT)
+)+ static('/app-static/', document_root=settings.STATIC_ROOT2)
+print (settings.STATIC_ROOT2 )

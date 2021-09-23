@@ -1,0 +1,46 @@
+<div>
+
+    <div class="cryistals-header cryistals-header--page">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">Transaction History
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <section class="cryistals-transactions-history" when-scrolled="load_more()" scroll-listen=".cryistals-wrapper">
+        <div class="cryistals-container">
+            <div class="transactions-history__list">
+
+                    <div ng-repeat="t in transactions|orderBy:'-id'" class="transactions-history__item">
+
+                        <div class="transactions-history__item-left">
+                            <div class="transactions-history__item-title" ng-bind="get_transaction_description(t)">
+                            </div>
+
+                            <div class="transactions-history__item-text" ng-bind="'Completed - ' + t.timestamp">
+                            </div>
+                            <div ng-if="t.source" class="transactions-history__item-text" ng-bind="t.source">
+                            </div>
+                        </div>
+
+                        <div class="transactions-history__amount-wrapper">
+
+                            <div class="transactions-history__amount" ng-bind="(t.crystals > 0?'+':'') + t.crystals">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>

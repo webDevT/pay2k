@@ -1,0 +1,20 @@
+<div class="popup-content">
+    <div class="popup-game">
+        <div ng-class="{'is-copy': copy_was_succeed}" class="btn-clipboard btn-clipboard--popup" ngclipboard
+             data-clipboard-text="https://pay2k.com/catalogue/{{ ngDialogData.app.uid }}/#!/splash/{{ ngDialogData.app_config.invite_code }}"
+             ngclipboard-success="app_link_copied(e);">
+            <img src="/app-static/static/crystals/img/share.svg" alt="" class="share-btn">
+
+            <div class="cipboard-succ" id="cipboard-succ">
+                Game link
+                copied!
+            </div>
+        </div>
+        <img ng-src="{{ ngDialogData.app.icon }}" alt="{{ ngDialogData.app.name }}" class="popup-img">
+        <div class="popup-title" ng-bind="ngDialogData.app.name"></div>
+        <p ng-if="ngDialogData.app.short_description" ng-bind="ngDialogData.app.short_description"></p>
+        <a href="https://pay2k.com/catalogue/{{ ngDialogData.app.uid }}/#!/splash?force=1" class="popup-button">
+            Play now!
+        </a>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div>
+<div class="cryistals-header">
+    <div class="cryistals-container">
+        <div class="cryistals-header__top">
+            <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
+                <img src="/app-static/static/crystals/img/back.svg" alt=""> Leaderboard
+            </a>
+
+        </div>
+        <div class="cryistals-header__contetn cryistals-header__contetn--leaderboard">
+            <div class="cryistals-header__contetn-left">
+					<span class="cryistals-header__user-info cryistals-header__user-info--leaderboard">
+                    <span class="cryistals__title">
+                Win $10
+                </span>
+
+                <span class="cryistals-header__text">
+                    Today’s highest gems balance win
+                </span>
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+<div class="cryistals-fixed-page-content">
+    <div class="cryistals-container--game">
+        <section class="leaderboard-content">
+
+<div class="leaderboard__game-balance-wrapper">
+
+		<div class="leaderboard-content__sub-title leaderboard-content__sub-title--white">
+			Gems Balance
+		</div>
+<div class="leaderboard-content__sub-title leaderboard-content__sub-title--black leaderboard-content__sub-title--white">
+			Contest ends in: <timer countdown="leaderboard.time_remain" max-time-unit="'hour'" interval="1000">
+                        <span ng-bind="hhours"></span>:<span ng-bind="mminutes"></span>:<span ng-bind="sseconds"></span>
+                    </timer>
+		</div>
+</div>
+
+            <div class="leaderboard-items leaderboard-items--no-margin">
+                <div class="leaderboard__item" ng-repeat="position in leaderboard.leaderboard"
+                     ng-class="{'leaderboard__item--user-position': ($index + 1) == leaderboard.user_position}">
+                    <div class="leaderboard__item-num"
+                         ng-class="{
+                'leaderboard__item-num--first': $index == 0,
+                'leaderboard__item-num--second': $index == 1,
+                'leaderboard__item-num--third': $index == 2
+                }" ng-bind="position.pos">
+                    </div>
+                    <div class="cryistals-container">
+                        <div class="leaderboard__item-user-info">
+                            <div class="leaderboard__photo">
+                                <img ng-src="{{ position.userpic }}" alt="">
+                            </div>
+
+                            <div class="leaderboard__name" ng-bind="position.username"></div>
+                        </div>
+
+                        <div class="transactions-history__amount-wrapper">
+
+                            <div class="transactions-history__amount" ng-bind="position.crystals"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</div>

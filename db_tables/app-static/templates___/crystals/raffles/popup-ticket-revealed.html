@@ -1,0 +1,31 @@
+<div class="popup-content">
+    <div class="popup-loss">
+        <div class="popup-loss__photo-wrapper">
+            <img ng-src="{{ ngDialogData.win_data.winner_userpic }}" alt="">
+        </div>
+        <div class="popup-loss__text">
+            {{ ngDialogData.win_data.winner_ticket }}
+        </div>
+        <div class="popup-lottery__title">
+            {{ ngDialogData.win_data.winner_username }}
+        </div>
+        <div class="popup-lottery__sub-title">
+            won ${{ ngDialogData.win_data.award }}
+
+        </div>
+
+        <div class="popup-loss__text" ng-if="!ngDialogData.win_data.win">
+            Don't worry. Please participate in the
+            next raffle and try your luck.
+        </div>
+
+        <div class="popup-loss__text" ng-if="ngDialogData.win_data.win">
+            YOU ARE THE WINNER!!!
+        </div>
+
+        <button class="invite-friends__form-button invite-friends__form-button--sm" ng-click="closeThisDialog()">
+            Close
+        </button>
+
+    </div>
+</div>

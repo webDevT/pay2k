@@ -1,0 +1,122 @@
+<div class="wrapper" ng-class="{'secondary-screen': get_state() != 'base.gameplay'}">
+    <ui-view name="header"></ui-view>
+
+
+
+    <main>
+        <ng-include src="'templates/styles.gameplay.html'"></ng-include>
+        <style>
+            li.proposed-char.ng-enter {
+                -webkit-transition: 129ms linear all; /* Chrome */
+                transition: 129ms linear all;
+                opacity: 0;
+            }
+
+            li.proposed-char.ng-enter.ng-enter-active {
+                opacity: 1;
+            }
+
+            li.proposed-char button.char-is-used {
+                opacity: 0;
+            }
+
+            li.proposed-char button.char-is-used.char-is-used-add {
+                transition: opacity 200ms;
+            }
+
+            li.proposed-char button.char-is-used.char-is-used-add-active {
+                opacity: 0;
+            }
+
+            li.proposed-char button.char-is-used.char-is-used-remove {
+                transition: opacity 1000ms;
+            }
+
+            li.proposed-char button.char-is-used.char-is-used-remove-active {
+                opacity: 1;
+            }
+
+            .char-btn, .char-btn.ng-leave {
+                -webkit-transition: 129ms linear all;
+                transition: 129ms linear all;
+            }
+
+            .char-btn.ng-leave-active {
+                opacity: 0;
+            }
+
+            .gameplay-secondary-screen > div{
+                width: 100%;
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #0d6a6a;
+                bottom: 0;
+                -ms-flex-flow: column;
+                -ms-flex-align: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+            </style>
+        <div class="middle-container middle-container--flex">
+            <h3 ng-cloak class="text-center" ng-if="app_config.quiz_type != '4pic'"
+                ng-bind="game.current_level.question"></h3>
+            <div class="img-game-container text-center">
+                <img ng-cloak ng-src="{{ game.current_level.img }}" class="img-fluid" alt="">
+            </div>
+
+            <ul ng-cloak class="letters-list">
+                <li ng-cloak ng-class="{'with-expose-hint': check_guess_char_is_hint($index), 'whitespace-breakpoint': (whitespace_breakpoints.indexOf($index) > -1)}"
+                    ng-repeat="char in game.guessed_chars track by $index" ng-click="release_char($index)">
+                    <span ng-bind="char"></span>
+                </li>
+
+            </ul>
+
+            <!--<div class="btns-group" ng-if="!app_config.context">
+                <a ng-click="ask_friends()" class="btn btn-primary">
+                    <text translate>ask_friends_button_text</text>
+                </a>
+                <a class="btn btn-secondary" ui-sref="base.gameplay.hints">
+                    <text translate>hints_button_text</text>
+                </a>
+            </div><!-- btns-group -->
+
+
+            <div class="cristals__orange-buttons-wrapper">
+                <div class="cristals__orange-button" ng-click="expose_char_hint()">
+                    <img style="width: 20px;" src="/app-static/images/revela the letter white.png" alt="">
+                    <div class="cristals__orange-button-text" ng-bind="app_config.hints.expose_char"></div>
+
+                </div>
+                <div class="cristals__orange-button" ng-click="reveal_chars_hint()">
+                    <img style="width: 20px;" src="/app-static/images/remove letters white.png" alt="">
+                    <div class="cristals__orange-button-text" ng-bind="app_config.hints.reveal_chars"></div>
+                </div>
+                <div class="cristals__orange-button" ng-click="pass_level_hint()">
+                    <img style="width: 20px;" src="/app-static/images/Skip the level white.png" alt="">
+                    <div class="cristals__orange-button-text" ng-bind="app_config.hints.pass_level"></div>
+                </div>
+            </div>
+
+            <div>
+                <ul class="letters-list-bottom first">
+                    <li ng-class="{'last-button': $last}" class="proposed-char" ng-repeat="char in proposed_chars_row1 track by $index">
+                        <proposed-char char="char" row="1"></proposed-char>
+                    </li>
+                </ul>
+
+                <ul class="letters-list-bottom mt-0">
+                    <li ng-class="{'last-button': $last}" class="proposed-char" ng-repeat="char in proposed_chars_row2 track by $index">
+                        <proposed-char char="char" row="2"></proposed-char>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<pre>{{styles.foo|json}}</pre>-->
+        <!--<button ng-click="flushfbdata()">Flush fb data</button>-->
+        <ui-view class="gameplay-secondary-screen" name="gameplay-secondary-screen"></ui-view>
+    </main>
+    <span us-spinner="{color: app_config.spinner_color}" spinner-key="spinner-1"></span>
+</div>

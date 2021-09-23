@@ -1,0 +1,26 @@
+<div class="completed-screen">
+    <div class="middle-container middle-container--flex">
+        <h2 class="text-center text-orange" translate>well_done</h2>
+        <div class="img-game-container text-center">
+            <img ng-src="{{ welldone_level.img }}" class="img-fluid" alt="">
+        </div>
+
+        <h2 class="text-center text-white" ng-bind="welldone_level.answer_orig"></h2>
+        <div class="text-center buttons-price__wrapper" ng-if="!app_config.context">
+            <a href="#" class="btn price">
+                <img src="/app-static/images/coins.png" alt="">
+                +<span ng-bind="app_config.coins_on_passed_level"></span>
+            </a>
+            <a href="#" class="btn price">
+                <img src="/app-static/static/crystals/img/cryistal.svg" alt="">
+                +<span ng-bind="app_config.crystals_on_passed_level"></span>
+            </a>
+        </div>
+
+        <div class="text-center">
+            <button type="button" class="btn btn-default lg mt-3" ng-click="well_done_continue()" translate>continue</button>
+        </div>
+
+    </div>
+
+</div>

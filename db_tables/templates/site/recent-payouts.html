@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "site/title.html" %}
-    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{{ static_prefix }}{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{{ static_prefix }}{% static 'css/style.css' %}">
     <link rel="icon"
       type="image/png"
-      href="{% static 'img/favicon.png' %}">
+      href="{{ static_prefix }}{% static 'img/favicon.png' %}">
 
 </head>
 <body>
@@ -193,16 +193,16 @@
             </div>
 
             <div class="col-md-6 col-sm-6 col-6">
-                    <div class="follow-us">
-                        <span>{% trans 'Follow us' %}</span>
+                <div class="follow-us">
+                    <span>{% trans 'Follow us' %}</span>
                         <a href="https://www.facebook.com/pay2k/" class="facebook-link">
-                           
+
                         </a>
                         <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
-                           
+
                         </a>
-                    </div>
                 </div>
+            </div>
         </div>
 
     </div>

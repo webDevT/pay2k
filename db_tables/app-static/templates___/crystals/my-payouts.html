@@ -1,0 +1,67 @@
+<div>
+    <div class="cryistals-header cryistals-header--page">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">Payouts History
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- end header section -->
+
+    <section class="cryistals-transactions-history">
+        <div class="cryistals-container">
+            <div class="transactions-history__list" when-scrolled="load_more()" scroll-listen=".cryistals-wrapper">
+                <div ng-if="!rewards.length" class="no-payouts">
+                    <div>
+                        <img src="/app-static/static/crystals/img/icn_money.svg" alt="">
+                        <div class="no-payouts-title">
+                            No Payouts Yet!
+                        </div>
+                    </div>
+
+                    <!--<a href="index.html" class="popup-button">
+                        Earn Free Gems
+                    </a>-->
+                </div>
+
+<!--ng-if="rewards.length" -->
+                <a ui-sref="crystals.rewards({all_users: false, profile: profile, page: 'wallet', from_state: 'payouts'})" ng-class="{'recent-payments__item--info-need': r.status==1}"
+                   class="recent-payments__item transactions-history__item" ng-repeat="r in rewards|orderBy:'-id'">
+
+                    <div class="transactions-history__item-left">
+                        <div class="transactions-history__item-title" ng-bind="get_reward_description(r)">
+                        </div>
+                        <div class="transactions-history__item-text" ng-class="{'red': r.status==1}">
+                            <span ng-if="!profile.is_surf_linked">Info needed - </span>{{ r.date }}
+                            <span ng-if="r.status!=1" ng-bind="r.status==2?'Processing':'Paid'"></span>
+                        </div>
+                    </div>
+
+                    <div class="transactions-history__amount-wrapper">
+
+                        <div class="transactions-history__amount">
+                            <span class="cryistals-amount ng-binding" style="vertical-align: middle; width: 20px;
+    background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
+    height: 16px;
+    display: inline-block;
+    background-size: 100%;"></span><span ng-bind="(r.amount|currency:'':4)"></span>
+                             ≈ <span ng-bind="((r.amount * r.rate)|currency:'$':2)"></span>
+                        </div>
+
+                    </div>
+
+
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+</div>

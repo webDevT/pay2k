@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-hsw==r+do0#-tnk+zsdno+8cbt!x)eet(95-n64g+9(l4imq&o
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEBUG__ = True
 INTERNAL_IPS  = [
 ]
 ALLOWED_HOSTS = ['*']
@@ -130,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-print (STATIC_ROOT)
+STATIC_ROOT2 = os.path.join(BASE_DIR, 'app-static')
 MEDIA_URL = '/media/'
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'db_tables/locale')]
 

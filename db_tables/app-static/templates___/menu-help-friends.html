@@ -1,0 +1,26 @@
+<div class="menu-screen">
+    <div class="container w-100">
+        <ul class="navigation">
+            <li class="friend-info" ng-repeat="friend in friends_list">
+                <table class="friend-info">
+                    <tbody>
+                    <tr>
+                        <td rowspan="2" class="friend-photo"><img ng-cloak="true" ng-src="{{ friend.photo }}" alt="friend.name"></td>
+                        <td ng-bind="friend.name" class="friend"></td>
+                        <td rowspan="2" class="friend-help-btn">
+                            <span ng-click="help(friend)">HELP</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="friend-level">
+                            <text translate>level2</text>: <span ng-bind="(friend.level + 1)"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul><!-- navigation -->
+    </div><!-- container -->
+
+    <!--<a href="" class="mt-auto privacy-link">Privacy policy</a>-->
+</div>

@@ -1,0 +1,94 @@
+<ui-view>
+    <div class="cryistals-header cryistals-header--lottery ">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt=""> My Gems
+                </a>
+
+            </div>
+            <div class="cryistals-header__contetn">
+                <div class="cryistals-header__contetn-left raffle-lottery__header">
+					<span class="cryistals-header__user-info">
+						<span class="cryistals__title">
+						Raffle
+					</span>
+
+					<span class="raffle-header__text">
+						Win up to $100 each week<br>Winner guaranteed!
+					</span>
+					</span>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="lottery-tabs">
+            <div ng-class="{'active': tab == 1}" class="lottery-tab" ng-click="tab = 1">New Lottery</div>
+            <div ng-class="{'active': tab == 2}" class="lottery-tab" ng-click="tab = 2">Сheck Winner</div>
+        </div>
+    </div>
+    <section class="lottery-content">
+        <div class="cryistals-container">
+            <div class="lottery-tabs__content">
+
+                <div class="lottery-tab__item" ng-if="tab == 1">
+
+                    <a ng-repeat="raffle in raffles_active|orderBy:'-id'" href="javascript://" class="lottery-item"
+                    ng-class="{'lottery-item--yellow': ($index + 1) % 3 == 1, 'lottery-item--pink': ($index + 1) % 3 == 0}"
+                    ui-sref="crystals.raffle.item({raffle: raffle})">
+                        <div class="lottery-item__content">
+                            <div class="lottery-left">
+                                <div class="lottery-iten__name" ng-bind="raffle.name"></div>
+                                <div class="lottery-item__text" ng-bind="raffle.short_description"></div>
+
+                                <timer end-time="raffle.local_ends_by" max-time-unit="'day'" interval="1000">
+                                    <div class="lottery-item__timer">
+                                    <span ng-show="days > 0" ng-bind="days"></span><span ng-show="days > 0">d.</span>
+                                    <span ng-bind="hhours"></span>:<span ng-bind="mminutes"></span>:<span ng-bind="sseconds"></span>
+                                </div>
+                                </timer>
+                            </div>
+                            <div class="lottery-right">
+                                <div class="lottery-price" ng-bind="raffle.cost"></div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <div class="lottery-tab__item" ng-if="tab == 2">
+
+                <a ng-repeat="raffle in raffles_check_winner|orderBy:['opened', '-id']" href="javascript://" class="lottery-item lottery-item--past"
+                    ng-class="{
+                    'lottery-item--yellow': ($index + 1) % 3 == 1 && !raffle.opened,
+                    'lottery-item--pink': ($index + 1) % 3 == 0 && !raffle.opened,
+                    'lottery-item--noactive': raffle.opened
+                    }"
+                    ng-click="check_winner(raffle)">
+                        <div class="lottery-item__content">
+                            <div class="lottery-left">
+                                <div class="lottery-iten__name" ng-bind="raffle.name"></div>
+                                <div class="lottery-item__text">
+                                    Guaranteed winner today!
+                                </div>
+
+                            </div>
+                            <div class="lottery-right">
+                                <div class="lottery-price">
+                                    Reveal now
+                                </div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</ui-view>

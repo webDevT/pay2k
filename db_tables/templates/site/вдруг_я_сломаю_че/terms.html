@@ -1,0 +1,253 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ {% include "site/title.html" %}
+<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon"
+      type="image/png"
+      href="{% static 'img/favicon.png' %}">
+ 
+</head>
+<body>
+	<header class="service-header" style="">
+		 <div class="header__top">
+		<div class="container-fluid">
+			<div class="wrapper">
+			<div class="logo">
+				<a href="/">
+					Pay2k
+				</a>
+			</div>
+			{% include 'site/menu.html' %}
+		</div>
+	
+		</div>
+	</div>
+		<div class="title-serv">{% trans 'Terms of Service' %}</div>
+	</header>
+
+<section class="service">
+	<div class="container-fluid">
+		<div class="item">
+			<div class="title">1. {% trans 'Agreement' %}</div>
+			<p><span>1.1. </span>{% trans 'These Terms of Service (the “Terms”) govern your acquisition and use of services on our website cookiebot.com. By accepting these Terms, either by clicking a box indicating your acceptance or by executing an order form or other document referring to these Terms, you agree that these Terms form part of the agreement between you and Cybot A/S (“Cybot”) (the “Agreement”).' %}
+			</p>
+			<p><span>1.2. </span>{% trans 'These Terms were last updated on March 16, 2018 and are effective between you and Cybot as of the date when you place an order or set up an account at cookiebot.com. Cybot reserves the right to change these Terms from time to time. If such changes are considered material, Cybot will inform registered customers about the changes by email, and the changes will take effect one month after such emails have been sent. Your continued use of our website or services after such changes will constitute acknowledgment and acceptance of the modified Terms.' %}
+				</p> 
+				<p>
+					<span>1.3.</span>
+			  {% trans 'In case of any discrepancies between the wording of our website and these Terms, these Terms prevail. ' %}
+			 </p>
+			 <p>
+			 	<span>1.4.</span>
+			 {% trans 'These Terms as well as all other texts throughout the website are translated from English to other languages. These are unofficial translations and are only provided as convenience translations. They should therefore be interpreted in accordance with their English language versions which will prevail in the event of any discrepancy between the English version and the translation. Cybot assumes no liability for any errors, omissions or ambiguities in the translations. Any person or entity choosing to rely on the translated content does so at their own risk. When in doubt, please always refer to the official English language version.' %}</p>
+		</div>
+		<div class="item">
+			<div class="title">2. {% trans 'The Services We Deliver – and What You Need to Dot' %}</div>
+
+
+
+
+
+			<p><span>2.1.</span> {% trans 'EU’s General Data Protection Regulation (GDPR) and EU’s ePrivacy Directive 2009/136/EC (ePR) test' %}
+			</p>
+			<p><span>2.1.1.</span> {% trans 'Cybot offers a free GDPR/ePR test which analyzes your website to give you an indication of whether or not your website is compliant with the rules relating to online tracking set out in the GDPR and ePR.' %}
+				</p> 
+				<p>
+					<span>2.1.2. </span>
+			  {% trans 'The GDPR/ePR test is only based on some basic requirements in the GDPR and ePR and is furthermore only an analysis of up to 5 subpages of your website. It is therefore not a complete analysis of your website. Therefore, a positive test response must not be taken as a guarantee that your website fulfills all requirements set out in the GDPR and ePR.' %}
+ 
+			 </p>
+			 <p>
+			 	<span> 2.1.3.</span>
+			 {% trans 'The Disclaimer of Warranty as set out in clause 9 and the Limitation of Liability as set out in clause 10 also apply to the use of the GDPR/ePR test.' %}</p>
+			  <p>
+			 	<span>2.1.4. </span>
+			{% trans 'If you wish to perform a complete analysis of your website, you must sign up for a Cookiebot subscription, cf. clause 2.2' %}</p>
+			  <p>
+			 	<span>2.2.</span>
+			 {% trans 'Cookiebot Subscription' %}</p>
+			  <p>
+			 	<span>2.2.1.</span>
+			  Subject to the sign-up procedure on our website and payment of the Subscription Fee (as defined in clause 3.1 below), Cybot will deliver to you the services (“Cookiebot”) described on our website.
+			</p>
+			 <p>
+			 	<span>  2.2.2.</span>
+			   Cookiebot is designed as a service to facilitate compliance with EU regulations concerning the use of cookies on your website and to help you obtain the relevant consents to the use of cookies from the users of your website. Cybot is only the service provider of the IT infrastructure, and it is your own responsibility to ensure correct implementation and provide relevant input to the system, including drafting an appropriate wording of the request for consents and providing the necessary information to the users of your website in order to obtain an “informed”, “prior” and “implied” or “explicit” consent as appropriate. The relevant EU legislation is not necessarily implemented in the same way in all EU countries, and we cannot guarantee that using Cookiebot will automatically lead to compliance with all relevant rules and regulations concerning the use of cookies or the collection of consents to the use of cookies. e.
+			</p>
+			 <p>
+			 	<span>2.2.3. </span>
+			  
+If you own multiple websites, Cookiebot can ask your users for a consent that covers all your domains (a “Bulk Consent”) on the user’s first visit to any of your websites. You must guarantee that you are the rightful owner of all domains listed on Cookiebot’s “domain list” or that you otherwise have the necessary rights to include such websites on the “domain list”. The functionality of the Bulk Consent is dependent on the user’s acceptance of third-party cookies in the web browser used to access your website.
+			</p>
+			 <p>
+			 	<span>2.2.4.</span>
+			  
+
+ If you use Cookiebot to exempt specific strictly necessary cookies in case a user declines the use of cookies, it is your responsibility to ensure that such cookies are strictly necessary to enable the basic functionality that the user actively seeks on your website in accordance with current legislation.
+
+			</p>
+			 <p>
+			 	<span>2.2.5.</span>
+  Cookiebot itself automatically sets up to two cookies in the user’s web browser when the user visits your website: The first-party cookie “CookieConsent” which stores the user’s consent and – if you enable “Bulk Consent” in Cookiebot – the third-party cookie “CookieConsentBulkTicket” which stores an encrypted key to enable Bulk Consent across your domains as described in clause 2.2.3 above. Both cookies expire automatically for renewal after 12 months from the date of the user’s consent.
+			</p>
+			 <p>
+			 	<span>2.2.6.</span>
+  
+ A user may withdraw a consent at any time by deleting the two cookies mentioned in clause 2.2.5. Alternatively, a user can change a consent at any time by clicking a link that activates Cookiebot’s “renew” method as described at cookiebot.com/en/developer. This functionality requires that you insert a link to the method from your website, e.g. from your website privacy policy, or implement Cookiebot’s cookie declaration which contains the appropriate link for consent renewal.
+
+			</p>
+ <p>
+			 	<span>2.3.</span>
+  
+ 
+ Cybot is the data processor and acts only on instruction by you as the data controller. Cybot takes the appropriate technical and organizational security measures to protect data against accidental or unlawful destruction, loss or alteration and against unauthorized disclosure, misuse or illegal processing. Cybot is subject to the safeguards provided for in the legislation of Denmark, where the company is established.
+
+			</p>
+<p>
+			 	<span>2.4.</span>
+  
+ 
+ 
+Cybot organizes its resources to provide a high level of service with at least 99.9% uptime on the operation of the cloud service and a response time of less than 1 business day for critical support requests (blocking event) and 10 business days for non-critical support requests (non-blocking event).
+			</p>
+		</div>
+		<div class="item">
+			<div class="title">3. Prices</div>
+			<p><span>3.1. Cookiebot Subscription</span> 
+			</p>
+			<p><span>3.1.1. </span>All the following subscriptions will include monthly website scans, consent banner and cookie declaration on your website as well as a consent log and tracking reports for documentation and frontend API for easy implementation.
+				</p> 
+				<p>
+					<span>3.1.2. </span>
+			Current prices can be found at cookiebot.com/en/pricing.
+
+			 </p>
+			 <p>
+			 	<span>3.1.3.</span>
+			The prices may be changed by Cybot at any time subject to 90 days’ notice which will be sent to you by email if you have registered a user account on our website.</p>
+			<p>
+			 	<span>3.1.4.</span>
+			
+ Premium</p>
+ <p class="sub-item">
+			 	<span>3.1.4.1. </span>
+			
+ In addition to the functions mentioned in clause 3.1.1, the Premium plan includes customizable banner, customizable declaration, multiple languages, email reports, data export, geolocation, Bulk Consent, consent statistics and internal domain alias.</p>
+ <p class="sub-item">
+			 	<span> 3.1.4.2. </span>
+			
+ The function “internal domain alias”, as mentioned in clause 3.1.4.1, may only be used for non-production domains, e.g. domains for development, testing and staging. The delivered domain alias will only have limited functionality, e.g. consent will not be logged for these types of domains.</p>
+ <p class="sub-item">
+			 	<span> 3.1.4.3.</span>
+You can change the scan frequency for a domain from “monthly” to “daily” for an extra fee, as set out in clause 3.1.2.</p>
+<p>
+			 	<span>3.1.5. </span>
+			
+ Trial Version
+
+
+
+m</p>
+<p class="sub-item">
+			 	<span>3.1.5.1.</span>
+ If you sign up for a trial version of Cookiebot, you may use the service free of charge for 30 days. The trial version allows access to all functions of Cookiebot except manual domain scans. In addition, the number of domains is limited to 10, and the number of pages being scanned is limited to 100 per domain.
+
+
+
+.</p>
+
+		</div>
+<div class="item">
+			<div class="title">4. Contact Information</div>
+			<p>If you have any questions or comments about these Terms of Service as outlined above, you can contact us at:
+
+
+			</p>
+			
+
+
+			
+			<div class="adress">
+				<p>
+				Cybot A/S
+Havnegade 39
+1058 Copenhagen
+Denmark</p>
+			</div>
+			<div class="phone">
+				<p>	Phone: +45 50 333 777</p>
+				<p>Email: mail@cookiebot.com</p>
+				<p>Company reg. no.: DK34624607</p>
+			</div>
+		</div>
+	</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-md-6">
+		<h2>Нужна помощь?</h2>
+		<div class="text">
+		<p>Мы всегда готовы помочь! </p>
+		<a href="/contact/">Contact us</a>
+	</div>
+</div>
+
+	<div class="col-md-6">
+			<nav class="footer-menu">
+			
+			<ul>
+				<li><a href="/company/">Company</a></li>
+				{#<li><a href="/terms/">{% trans 'Terms' %}</a></li>#}
+				<li><a href="/policy/">Privacy Policy</a></li>
+				<li><a href="/contact/">Contact Us</a></li>
+			</ul>
+		</nav>
+</div>
+
+<div class="col-md-6 col-sm-6 col-6">
+	<div class="logo">
+				<a href="">
+					Pay2k
+				</a>
+			</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-6">
+                    <div class="follow-us">
+                        <span>{% trans 'Follow us' %}</span>
+                        <a href="https://www.facebook.com/pay2k/" class="facebook-link">
+                           
+                        </a>
+                        <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
+                           
+                        </a>
+                    </div>
+                </div>
+</div>
+
+	</div>
+	
+	
+</footer>
+{% include 'site/scripts.html' %}
+</body>
+</html>

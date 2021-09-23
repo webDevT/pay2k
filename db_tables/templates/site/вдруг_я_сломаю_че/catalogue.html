@@ -1,0 +1,1088 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% include "site/title.html" %}
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="/app-static/node_modules/ngDialog/css/ngDialog.min.css">
+    <link rel="stylesheet" href="/app-static/node_modules/selectize.js/dist/css/selectize.default.css">
+     <link rel="stylesheet" href="/app-static/node_modules/ngDialog/css/ngDialog-theme-default.min.css"> -->
+    <link rel="stylesheet" href="/app-static/static/crystals/css/style.min.css">
+
+
+    {#    <script src="/app-static/node_modules/jquery/dist/jquery.js"></script>#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/app-static/node_modules/howler/dist/howler.js"></script>
+    <script src="/app-static/node_modules/spin.js/spin.min.js"></script>
+
+    <script src="/app-static/node_modules/angular/angular.min.js"></script>
+    <script src="/app-static/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/app-static/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="/app-static/node_modules/@uirouter/angularjs/release/stateEvents.min.js"></script>
+    <script src="/app-static/node_modules/angular-spinner/dist/angular-spinner.min.js"></script>
+    <script src="/app-static/node_modules/angular-touch/angular-touch.min.js"></script>
+    <script src="/app-static/node_modules/webfontloader/webfontloader.js"></script>
+    <script src="/app-static/node_modules/ngDialog/js/ngDialog.min.js"></script>
+
+    <script src="/app-static/node_modules/ocLazyLoad/dist/ocLazyLoad.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+    <script src="/app-static/node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
+    <script src="/app-static/node_modules/selectize.js/dist/js/standalone/selectize.js"></script>
+    <script src="/app-static/node_modules/angular-selectize/dist/angular-selectize.js"></script>
+
+    <link rel="stylesheet" href="/app-static/fonts/fontawesome/css/all.css">
+    <link rel="icon"
+          type="image/png"
+          href="/static/img/favicon.png">
+</head>
+<body class="cryistals-body">
+<base href="/en/">
+<div class="cryistals-wrapper">
+
+
+    {#<script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>#}
+    <script async defer src="https://apis.google.com/js/api.js"></script>
+
+    <ui-view>
+        <div>
+
+
+            <ui-view>
+
+            </ui-view>
+            <script type="text/ng-template" id="crystals.play_earn.catalog.html">
+                <div class="cryistals-header cryistals-header--page">
+                    <div class="cryistals-container">
+                        <div class="cryistals-header__top">
+                            <a ui-sref="crystals.play_earn" class="cryistals-back">
+
+                                <img src="/app-static/static/crystals/img/back.svg" alt="">
+
+                                <text ng-bind="$resolve.$stateParams.preset?$resolve.$stateParams.source.toUpperCase():($resolve.$stateParams.search_results_title||'Search results')"></text>
+                            </a>
+                            <a href="javascript://" ng-click="set_filters()"><i style="color: #fff; font-size: 19px;"
+                                                                                class="fas fa-filter"></i></a>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="cryistals-container--game" when-scrolled="load_more()" scroll-listen=".cryistals-wrapper">
+                    <div class="cryistals-container">
+                        <div class="cryistals-play-earn-items cryistals-play-earn-items--popular">
+                            <a href="" class="openPaddingLink cryistals-play-earn-item" ng-repeat="app in catalog"
+                               ng-click="open_prelaunch_app_dialog(app)">
+                                <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+
+                                <span class="cryistals-play-earn__title" ng-bind="app.name">
+                </span>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </script>
+            <script type="text/ng-template" id="crystals.play_earn.html">
+                <div ng-mouseup="fade_out_autocomplete_wrapper($event)">
+                    <div class="cryistals-header cryistals-header--page">
+                        <div class="cryistals-container">
+                            <div class="cryistals__search-wrapper" ng-click="trigger_autocomplete()">
+
+                                <a class="cristals-search-arrow" href="javascript://" ng-click="handle_back_arrow_on_autocomplete($event)">
+
+                                    <img src="/app-static/static/crystals/img/back.svg" alt=""
+                                         class="cryistals__search-wrapper-arrow">
+
+                                </a>
+
+                                <div class="cryistals__search-container">
+                                    <div class="cryistals__search-left" ng-bind="'Find app in catalog'">
+
+                                    </div>
+
+                                    <img src="/app-static/static/crystals/img/search.svg" alt="">
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="cryistals-container cryistals-container--play-earn">
+                        <a href="" class="cryistals-block cryistals-block--info">
+
+                            <div class="cryistals-win-content cryistals-win-content--info">
+                                <div class="cryistals-win__text">
+                                    <div class="cryistals-text">
+                                        Play games, complete levels & earn
+                                    </div>
+                                    <span class="cryistals__title gradient-text">
+						More  Gems!
+					</span>
+
+                                </div>
+
+
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="cryistals-container">
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'popular'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Popular
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'popular'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in popular_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'new'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    New
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'new'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in new_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'music'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Music
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'music'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in music_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Trivia
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'TRIVIA'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in trivia_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'movie'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Movies
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'MOVIES'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in movies_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Cartoons
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'CARTOONS'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in cartoons_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cryistals-block">
+
+                            <div class="cryistals-block__header">
+                                <a ui-sref="crystals.play_earn.catalog({source: 'anime'})"
+                                   class="cryistals__text cryistals__block-title">
+                                    Anime
+                                </a>
+                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'ANIME'})" class="cryistals-more">
+                                    <div class="cryistals-more__text">
+                                        More
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryistals-play-earn-items">
+                                <a href="" ng-repeat="app in anime_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                   class="openPaddingLink cryistals-play-earn-item">
+                                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+                                    <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <style>
+                            .search-modal {
+                                opacity: 0;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: visibility 0.15s, opacity 0.15s linear;
+                                display: block;
+                                padding: 24px 0px;
+                            }
+
+                            .search-modal.active {
+                                display: block;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+
+                            .search-modal .close-modal {
+                                left: 12px;
+                            }
+
+                            .selectize-control {
+                                font-size: 0;
+                            }
+
+                            .selectize-input, .selectize-input.items.input-active, .selectize-input.items.focus {
+                                padding: 0 !important;
+                            }
+
+                            .selectize-input > input {
+                                height: 40px;
+                                padding: 0px 0px 0px 37px !important;
+                                font-size: 16px;
+                                width: 100%;
+                            }
+
+                            .selectize-dropdown.single {
+                                margin-top: 10px;
+                                /*border-radius: 5px !important;*/
+                            }
+
+                            .selectize-control.single .selectize-input input, .selectize-dropdown.single input {
+                                padding-left: 46px !important;
+                                width: 100% !important;
+                            }
+
+                            .selectize-dropdown, .selectize-dropdown.form-control {
+                                height: 60vh !important;
+                            }
+
+                            .selectize-dropdown-content {
+                                max-height: 100% !important;
+                                height: 100% !important;
+                            }
+                        </style>
+                        <div class="search-modal" ng-class="{'active': search_modal_active}">
+                            <div class="game-serch-wrapper">
+                                <div class="game-serch-wrapper-content">
+                                    <div class="close-modal">
+                                    </div>
+                                    <selectize id="select-game" class="game" config="apps_search_selectize_config"
+                                               ng-model="trigger_autocomplete.game_from_catalog"
+                                               api="trigger_autocomplete.autocomplete_api"></selectize>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </script>
+        </div>
+
+    </ui-view>
+    <script type="text/javascript">
+        window.onload = function () {
+            angular.bootstrap(document, ['game']);
+        };
+
+        var app = angular.module('game', ['ui.router', 'ui.router.state.events', 'ngAnimate', 'ngTouch', 'angularSpinner',
+            'oc.lazyLoad', 'ngDialog', 'ngclipboard', 'selectize'
+        ]).config(function ($stateProvider, $urlRouterProvider, $compileProvider, $locationProvider) {
+
+
+            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|javascript):/);
+
+            $stateProvider
+                .state("crystals", {
+                    abstract: true,
+                    controller: function ($scope, $timeout, ngDialog) {
+                        $scope.open_prelaunch_app_dialog = function (app) {
+                            ngDialog.open(
+                                {
+                                    templateUrl: '/app-static/templates/crystals/popup-app-launch.html',
+                                    className: 'ngdialog-theme-default',
+                                    data: {
+                                        app: app
+                                    },
+                                    controller: function ($scope, $timeout) {
+                                        $scope.app_link_copied = function () {
+                                            $scope.copy_was_succeed = true;
+                                            $timeout(function () {
+                                                // $('.cipboard-succ').fadeOut();
+                                                delete $scope.copy_was_succeed;
+                                            }, 2000);
+
+                                        }
+                                    }
+                                }
+                            );
+                        };
+
+                    }
+                })
+                .state("crystals.play_earn", {
+                    url: "/catalogue/",
+                    templateUrl: 'crystals.play_earn.html',
+                    resolve: {
+                        popular_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        },
+                        new_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3, order: 'new'}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        },
+                        music_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3, order: 'music'}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        },
+                        trivia_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3, q: 'trivia'}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        },
+                        movies_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3, q: 'movie'}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        },
+                        cartoons_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3, q: 'cartoons'}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        },
+                        anime_apps: function ($http, $q) {
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                {limit: 3, q: 'anime'}
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        }
+                    },
+                    controller: function ($scope, $http, $state, $timeout, popular_apps, new_apps, music_apps,
+                                          trivia_apps, movies_apps, cartoons_apps, anime_apps, ngDialog) {
+
+                        $scope.popular_apps = popular_apps.catalog;
+                        $scope.new_apps = new_apps.catalog;
+                        $scope.music_apps = music_apps.catalog;
+                        $scope.trivia_apps = trivia_apps.catalog;
+                        $scope.movies_apps = movies_apps.catalog;
+                        $scope.cartoons_apps = cartoons_apps.catalog;
+                        $scope.anime_apps = anime_apps.catalog;
+
+                        $scope.trigger_autocomplete = function () {
+                            $scope.search_modal_active = true;
+
+                            $timeout(function () {
+                                if ($scope.trigger_autocomplete.autocomplete_api) {
+                                    $scope.trigger_autocomplete.autocomplete_api.open();
+                                }
+                                // $scope.trigger_autocomplete.autocomplete_api.focus();
+                            }, 10);
+                        };
+
+                        $scope.fade_out_autocomplete_wrapper = function ($event) {
+
+                            var div = $(".search-modal");
+                            var div2 = $(".game");
+                            if (!div2.is($event.target)
+                                && div2.has($event.target).length === 0) {
+                                $scope.search_modal_active = false;
+                            }
+                        };
+
+                        $scope.apps_search_selectize_config = {
+                            create: false,
+                            valueField: 'uid',
+                            labelField: 'name',
+                            searchField: ['fallback_search_string'],
+                            options: [],
+                            diacritics: true,
+                            // preload: true,
+                            openOnFocus: false,
+                            placeholder: 'Find app in catalog',
+                            maxItems: 1,
+                            maxOptions: 10, render: {
+                                option: function (item, escape) {
+                                    return '<div>' +
+                                        '<div class="search__game-item">' + '<img src="' + item.icon + '" alt="" class="cryistals__search-wrapper-arrow">' +
+                                        '<div class="search__game-info">' +
+                                        '<div class="search-name">' + escape(item.name) + '</div>' +
+                                        '<div class="search-by">' + escape(item.devname) + '</div>' +
+                                        '</div></div></div>';
+                                }
+                            },
+                            score: function () {
+                                return (score) => {
+                                    return 1;
+                                };
+                            },
+                            onInitialize: function (component) {
+                                component.$control_input.on({
+                                    keydown: function (e) {
+                                        var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                                        if (keyCode == 13) {
+                                            e.stopImmediatePropagation();
+                                            e.preventDefault();
+                                            $state.go('crystals.play_earn.catalog', {
+                                                source: component.$control_input.val(),
+                                                preset: false
+                                            });
+                                            $scope.search_modal_active = false;
+                                            return false;
+                                        }
+                                    }
+                                });
+                            },
+                            onChange: function (item) {
+
+                                ngDialog.open(
+                                    {
+                                        templateUrl: '/app-static/templates/crystals/popup-app-launch.html',
+                                        className: 'ngdialog-theme-default',
+                                        data: {
+                                            app: $scope.trigger_autocomplete.autocomplete_api.options[item]
+                                        },
+                                        controller: function ($scope, $timeout) {
+                                            $scope.app_link_copied = function () {
+                                                $scope.copy_was_succeed = true;
+                                                $timeout(function () {
+                                                    // $('.cipboard-succ').fadeOut();
+                                                    delete $scope.copy_was_succeed;
+                                                }, 2000);
+
+                                            };
+                                        }
+                                    }
+                                );
+                                $scope.trigger_autocomplete.game_from_catalog = null;
+                            },
+                            load: function (query, callback) {
+                                _this = this;
+                                if (query.length && query.length < 3) {
+                                    return;
+                                }
+                                let data = {limit: 10};
+                                if (query) data.q = query;
+                                $.ajax({
+                                    url: '/catalogue/find/',
+                                    type: 'POST',
+                                    data: JSON.stringify(data),
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: 'json',
+                                    error: function () {
+                                        callback();
+                                    },
+                                    success: function (res) {
+                                        _this.clearCache();
+                                        _this.clearOptions();
+                                        console.log(res)
+                                        var data = res.catalog.slice(0, 10);
+                                        for (k in data) {
+                                            data[k].fallback_search_string = query;
+                                        }
+                                        callback(data);
+                                    }
+                                });
+                            },
+                            onFocus: function (q, w, e) {
+                                _this = this;
+                                this.clearCache();
+                                this.clearOptions();
+                                $.ajax({
+                                    url: '/catalogue/find/',
+                                    type: 'POST',
+                                    dataType: 'json',
+                                    data: JSON.stringify({limit: 10}),
+                                    contentType: "application/json; charset=utf-8",
+                                    success: function (res) {
+                                        console.log(_this)
+                                        _this.addOption(res.catalog)
+                                        _this.refreshOptions(true);
+                                        _this.$control_input.focus();
+                                        // _this.focus();
+                                    }
+                                });
+                            }
+                        };
+
+                        $scope.handle_back_arrow_on_autocomplete = function ($event) {
+                            $event.preventDefault();
+                            $event.stopPropagation();
+                            location.href = '/'
+                        };
+                    }
+                })
+                .state('crystals.play_earn.catalog', {
+                    url: ':source/',
+                    params: {
+                        preset: true,
+                        languages_to_filter: null,
+                        search_results_title: null
+                    },
+                    resolve: {
+                        apps: function ($http, $q, $stateParams) {
+                            let req_data = {limit: 24};
+                            req_data[['new', 'popular', 'music'].indexOf($stateParams.source) !== -1 ? "order" : "q"] = $stateParams.source;
+                            req_data.languages = $stateParams.languages_to_filter;
+
+                            var deferred = $q.defer();
+                            $http.post(
+                                '/catalogue/find/',
+                                req_data
+                            ).then(
+                                function (data) {
+                                    deferred.resolve(data.data);
+                                }, function () {
+                                    deferred.resolve({catalog: []});
+                                }
+                            );
+                            return deferred.promise;
+                        }
+                    },
+                    views: {
+                        '@crystals': {
+                            templateUrl: 'crystals.play_earn.catalog.html',
+                            controller: function ($scope, $http, $stateParams, apps, ngDialog) {
+                                angular.element('.cryistals-wrapper').scrollTop(0);
+                                $scope.catalog = apps.catalog;
+                                $scope.load_more = function () {
+
+                                    let last_app = $scope.catalog[$scope.catalog.length - 1];
+                                    let req_data = {
+                                        limit: 24,
+                                        uid: [last_app.uid],
+                                        languages: $stateParams.languages_to_filter
+                                    };
+                                    if ($stateParams.preset) {
+                                        angular.extend(req_data, {
+                                            order: $stateParams.source,
+                                            p1: last_app.p1,
+                                            offset: $scope.catalog.length
+                                            {#p2: last_app.p2#}
+                                        })
+                                    } else {
+                                        req_data.q = $stateParams.source;
+                                        req_data.offset = $scope.catalog.length;
+                                    }
+
+
+                                    $http.post(
+                                        '/catalogue/find/',
+                                        req_data
+                                    ).then(
+                                        function (response) {
+                                            $scope.catalog = $scope.catalog.concat(response.data.catalog);
+                                        }
+                                    )
+                                };
+
+                                $scope.set_filters = function () {
+                                ngDialog.open(
+                                    {
+                                        templateUrl: '/app-static/templates/crystals/apply-filters.html',
+                                        className: 'ngdialog-theme-default',
+                                        data: {
+                                            state_params: $stateParams
+                                        },
+                                        controller: function ($scope, $state) {
+                                            $scope.languages  = {
+                                                'en': {value: 1, name: 'English', selected: true},
+                                                'ru': {value: 2, name: 'Russian', selected: true},
+                                                'it': {value: 3, name: 'Italian', selected: true},
+                                                'tr': {value: 4, name: 'Turkish', selected: true},
+                                                'de': {value: 5, name: 'German', selected: true},
+                                                'fr': {value: 6, name: 'French', selected: true},
+                                                'es': {value: 7, name: 'Spanish', selected: true},
+                                                'el': {value: 8, name: 'Greek', selected: true},
+                                                'ro': {value: 9, name: 'Romanian', selected: true},
+                                                'pt': {value: 10, name: 'Português', selected: true},
+                                                'cs': {value: 11, name: 'Čeština', selected: true},
+                                                'uz': {value: 12, name: 'Uzbek', selected: true},
+                                                'sr1': {value: 13, name: 'Serbian (Mix)', selected: true},
+                                                'sr2': {value: 30, name: 'Serbian (Latin)', selected: true},
+                                                'sr3': {value: 31, name: 'Serbian (Cyrillic)', selected: true},
+                                                'bs': {value: 32, name: 'Bosnian (Latin)', selected: true},
+                                                'cr': {value: 33, name: 'Croatian (Latin)', selected: true},
+                                                'id': {value: 14, name: 'Indonesian', selected: true},
+                                                'da': {value: 15, name: 'Dansk', selected: true},
+                                                'kk': {value: 16, name: 'Kazakh', selected: true},
+                                                'hu': {value: 17, name: 'Hungarian', selected: true},
+                                                'pl': {value: 18, name: 'Polish', selected: true},
+                                                'ar': {value: 19, name: 'Arabic', selected: true},
+                                                'ky': {value: 20, name: 'Kyrgyz', selected: true},
+                                                'nn': {value: 21, name: 'Norwegian', selected: true},
+                                                'az': {value: 22, name: 'Azerbaijani', selected: true},
+                                                'he': {value: 23, name: 'Hebrew', selected: true},
+                                                'ge': {value: 24, name: 'Georgian', selected: true},
+                                                'sq': {value: 25, name: 'Albanian', selected: true},
+                                                'uk': {value: 26, name: 'Ukrainian', selected: true},
+                                                'sw': {value: 27, name: 'Swahili', selected: true},
+                                                'bg': {value: 28, name: 'Bulgarian', selected: true},
+                                                'et': {value: 29, name: 'Estonian', selected: true},
+                                                'nl': {value: 34, name: 'Dutch', selected: true},
+                                                'vi': {value: 35, name: 'Vietnamese', selected: true},
+                                                'sv': {value: 36, name: 'Svenska', selected: true}
+                                            };
+                                            $scope.languages = Object.keys($scope.languages).map((el, index) => {
+                                                let tmp = $scope.languages[el];
+                                                if ($scope.ngDialogData.state_params.languages_to_filter && $scope.ngDialogData.state_params.languages_to_filter.indexOf(tmp.value) == -1) {
+                                                    tmp.selected = false;
+                                                }
+                                                return tmp;
+                                            });
+                                            $scope.$watch('languages', (n, o) => {
+                                                $scope.languages_to_filter = [];
+                                                Object.keys(n).map((el, index) => {
+                                                    $scope.languages[el].selected ? $scope.languages_to_filter.push($scope.languages[el].value) : null;
+                                                });
+                                            }, true);
+
+                                            $scope.apply = function () {
+                                                if ($scope.languages_to_filter.length == 36 && $scope.ngDialogData.state_params.languages_to_filter === null) return;
+                                                if (angular.isArray($scope.ngDialogData.languages_to_filter) && angular.equals($scope.ngDialogData.state_params.languages_to_filter.sort(), $scope.languages_to_filter.sort())) {
+                                                    return
+                                                }
+                                                if ($scope.languages_to_filter.length == 36) $scope.languages_to_filter = null;
+                                                $scope.closeThisDialog();
+                                                $state.go('crystals.play_earn.catalog', {
+                                                    source: $scope.ngDialogData.state_params.source,
+                                                    preset: $scope.ngDialogData.state_params.preset,
+                                                    languages_to_filter: $scope.languages_to_filter
+                                                });
+                                            };
+
+                                            $scope.accents_comparator = function (v1, v2) {
+                                                return v1.value == [v1.value, v2.value].sort(Intl.Collator().compare)[0] ? -1 : 1;
+                                            };
+
+                                            $scope.toggle_languages = function () {
+                                                    Object.keys($scope.languages).map((el, index) => {
+                                                    $scope.languages_to_filter.length == 36?(()=>{$scope.languages[el].selected=false})():(()=>{$scope.languages[el].selected=true})();
+                                                });
+                                            };
+                                        }
+                                    }
+                                );
+                            };
+                            }
+                        }
+                    }
+
+                });
+            $locationProvider.html5Mode(true);
+            $urlRouterProvider.otherwise('/catalogue/');
+        }).controller('CatalogueController', function ($scope, $http, $q) {
+
+            //return deferred.promise;
+        }).directive('lazyImg', function ($rootScope, $q) {
+            return {
+                restrict: 'E',
+                replace: true,
+                priority: 0,
+                terminal: true,
+                template: '<span class="cryistals-play-earn__img">\n' +
+                '<img src="/app-static/static/crystals/img/img.png" alt="" class="cryistals-play-earn__icon">\n' +
+                '<div style="display: none;" id="circularG" class="cryistals-spinner">\n' +
+                '<div id="circularG_1" class="circularG"></div>\n' +
+                '<div id="circularG_2" class="circularG"></div>\n' +
+                '<div id="circularG_3" class="circularG"></div>\n' +
+                '<div id="circularG_4" class="circularG"></div>\n' +
+                '<div id="circularG_5" class="circularG"></div>\n' +
+                '<div id="circularG_6" class="circularG"></div>\n' +
+                '<div id="circularG_7" class="circularG"></div>\n' +
+                '<div id="circularG_8" class="circularG"></div>\n' +
+                '</div>' +
+                '</span>',
+                scope: {
+                    image: '=',
+                    altName: '='
+                },
+                link: function (scope, el, attrs) {
+                    scope.loaded = false;
+
+                    var load = function () {
+                        var img = new Image();
+                        var _url_with_ts = scope.image + '?q=' + (new Date().getTime());
+
+                        img.onload = function () {
+                            angular.element(el).find('.cryistals-spinner').hide();
+                            angular.element(el).find('img').attr('src', _url_with_ts);
+                        };
+                        angular.element(el).find('.cryistals-spinner').show();
+                        img.src = _url_with_ts;
+                    };
+
+                    scope.$watch('image', function (n, o) {
+                        if (scope.image && n !== o) {
+                            angular.element(el).find('.cryistals-spinner').show();
+                            load();
+                        }
+                    });
+                    load();
+                }
+            }
+        }).directive('whenScrolled', function ($timeout) {
+            return function (scope, element, attr) {
+                scope.throttled = false;
+                let containerNode = element[0];
+                let _element = element;
+                if (attr.scrollListen) {
+                    _element = angular.element(attr.scrollListen);
+                    containerNode = _element[0];
+                }
+                _element.bind('scroll', function () {
+                    if (scope.throttled) return;
+                    if (containerNode.scrollTop + containerNode.offsetHeight >= containerNode.scrollHeight) {
+                        scope.$apply(attr.whenScrolled);
+                        scope.throttled = true;
+                        scope.$apply($timeout(function () {
+                            scope.throttled = false;
+                        }, 300));
+                    }
+                });
+            };
+        });
+    </script>
+
+
+    <style>
+        .cryistals-spinner {
+            width: 58px;
+            height: 58px;
+            margin: auto;
+        }
+
+        .circularG {
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            width: 14px;
+            height: 14px;
+            border-radius: 9px;
+            -o-border-radius: 9px;
+            -ms-border-radius: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            animation-name: bounce_circularG;
+            -o-animation-name: bounce_circularG;
+            -ms-animation-name: bounce_circularG;
+            -webkit-animation-name: bounce_circularG;
+            -moz-animation-name: bounce_circularG;
+            animation-duration: 0.668s;
+            -o-animation-duration: 0.668s;
+            -ms-animation-duration: 0.668s;
+            -webkit-animation-duration: 0.668s;
+            -moz-animation-duration: 0.668s;
+            animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            -ms-animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            animation-direction: normal;
+            -o-animation-direction: normal;
+            -ms-animation-direction: normal;
+            -webkit-animation-direction: normal;
+            -moz-animation-direction: normal;
+        }
+
+        #circularG_1 {
+            left: 0;
+            top: 23px;
+            animation-delay: 0.248s;
+            -o-animation-delay: 0.248s;
+            -ms-animation-delay: 0.248s;
+            -webkit-animation-delay: 0.248s;
+            -moz-animation-delay: 0.248s;
+        }
+
+        #circularG_2 {
+            left: 6px;
+            top: 6px;
+            animation-delay: 0.334s;
+            -o-animation-delay: 0.334s;
+            -ms-animation-delay: 0.334s;
+            -webkit-animation-delay: 0.334s;
+            -moz-animation-delay: 0.334s;
+        }
+
+        #circularG_3 {
+            top: 0;
+            left: 23px;
+            animation-delay: 0.42s;
+            -o-animation-delay: 0.42s;
+            -ms-animation-delay: 0.42s;
+            -webkit-animation-delay: 0.42s;
+            -moz-animation-delay: 0.42s;
+        }
+
+        #circularG_4 {
+            right: 6px;
+            top: 6px;
+            animation-delay: 0.506s;
+            -o-animation-delay: 0.506s;
+            -ms-animation-delay: 0.506s;
+            -webkit-animation-delay: 0.506s;
+            -moz-animation-delay: 0.506s;
+        }
+
+        #circularG_5 {
+            right: 0;
+            top: 23px;
+            animation-delay: 0.592s;
+            -o-animation-delay: 0.592s;
+            -ms-animation-delay: 0.592s;
+            -webkit-animation-delay: 0.592s;
+            -moz-animation-delay: 0.592s;
+        }
+
+        #circularG_6 {
+            right: 6px;
+            bottom: 6px;
+            animation-delay: 0.668s;
+            -o-animation-delay: 0.668s;
+            -ms-animation-delay: 0.668s;
+            -webkit-animation-delay: 0.668s;
+            -moz-animation-delay: 0.668s;
+        }
+
+        #circularG_7 {
+            left: 23px;
+            bottom: 0;
+            animation-delay: 0.754s;
+            -o-animation-delay: 0.754s;
+            -ms-animation-delay: 0.754s;
+            -webkit-animation-delay: 0.754s;
+            -moz-animation-delay: 0.754s;
+        }
+
+        #circularG_8 {
+            left: 6px;
+            bottom: 6px;
+            animation-delay: 0.84s;
+            -o-animation-delay: 0.84s;
+            -ms-animation-delay: 0.84s;
+            -webkit-animation-delay: 0.84s;
+            -moz-animation-delay: 0.84s;
+        }
+
+        @keyframes bounce_circularG {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(.3);
+            }
+        }
+
+        @-o-keyframes bounce_circularG {
+            0% {
+                -o-transform: scale(1);
+            }
+
+            100% {
+                -o-transform: scale(.3);
+            }
+        }
+
+        @-ms-keyframes bounce_circularG {
+            0% {
+                -ms-transform: scale(1);
+            }
+
+            100% {
+                -ms-transform: scale(.3);
+            }
+        }
+
+        @-webkit-keyframes bounce_circularG {
+            0% {
+                -webkit-transform: scale(1);
+            }
+
+            100% {
+                -webkit-transform: scale(.3);
+            }
+        }
+
+        @-moz-keyframes bounce_circularG {
+            0% {
+                -moz-transform: scale(1);
+            }
+
+            100% {
+                -moz-transform: scale(.3);
+            }
+        }
+    </style>
+</div>
+
+</body>
+</html>

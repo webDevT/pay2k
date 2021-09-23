@@ -1,0 +1,38 @@
+<div>
+    <div class="cryistals-header cryistals-header--page">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ui-sref="crystals.play_earn" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">
+                    <text ng-bind="$resolve.$stateParams.preset?$resolve.$stateParams.source.toUpperCase():($resolve.$stateParams.search_results_title||'Search results')"></text>
+                </a>
+                <a href="javascript://" ng-click="set_filters()"><i style="color: #fff; font-size: 19px;" class="fas fa-filter"></i></a>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="cryistals-container--game" when-scrolled="load_more()" scroll-listen=".cryistals-wrapper">
+        <div class="cryistals-container">
+            <div class="cryistals-play-earn-items cryistals-play-earn-items--popular">
+                <a href="" class="openPaddingLink cryistals-play-earn-item" ng-repeat="app in catalog"
+                   ng-click="open_prelaunch_app_dialog(app)">
+                    <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
+
+                    <span class="cryistals-play-earn__title" ng-bind="app.name">
+                </span>
+
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+	
+
+
+

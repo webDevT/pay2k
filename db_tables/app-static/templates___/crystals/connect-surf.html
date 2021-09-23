@@ -1,0 +1,71 @@
+<div>
+    <div class="cryistals-header cryistals-header--page">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ng-if="from_state != 'index'"
+                   ui-sref="crystals.rewards({page: null, all_users: false, profile: profile})" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">Connect Wallet
+                </a>
+                <a ng-if="from_state == 'index'" ui-sref="crystals.index({silent: true})" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt="">Connect Wallet
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- end header section -->
+
+
+    <section class="cryistals-profile">
+
+	<div class="cryistals-container">
+	<div class="cash-out-title cash-out-title--wallet">
+		All payments will be processed <br>
+in crypto called "TON Crystal".
+        </div>
+	<div class="cash-out-sub-title text-left cash-out-sub-title--margin">
+		You get paid in TON Crystals in the equivalent to US dollars. You can easily sell TON Crystals on a crypto exchange.
+        </div>
+        </div>
+
+        <div ng-if="profile.is_surf_linked" class="cryistals-container">
+                <img src="/app-static/static/crystals/img/succ.svg" alt="" class="succ-icon">
+                <div class="cash-out-title">
+                    TON Surf is connected
+                </div>
+            </div>
+
+        <div class="cryistals-container" ng-if="!profile.is_surf_linked">
+            <div class="cash-out-title text-left">
+                Follow instruction:
+            </div>
+
+	<div class="cash-out-sub-title text-left  cash-out-sub-title--item">
+		1. Install TON Crystal wallet called "TON Surf": <a target="_blank" href="https://ton.surf/main">https://ton.surf/main</a>
+            </div>
+
+	<div class="cash-out-sub-title text-left cash-out-sub-title--item">
+                2. Launch TON Surf and finish the registration process
+            </div>
+
+	<div class="cash-out-sub-title text-left cash-out-sub-title--item">
+                3. Press the button below to connect the wallet to Pay2K
+            </div>
+
+
+            <a style="position: relative;" ng-if="!link_surf.requested" href="javascript://" ng-click="link_surf()"
+               class="popup-button connect-walet-btn">
+                <span>CONNECT WALLET</span> <span style="margin-left: 20px;" ng-if="link_surf.requesting" us-spinner="{radius:8, width:4, length: 8, lines: 12, color: '#fff', position: 'relative'}"></span>
+            </a>
+
+            <div class="cash-out-sub-title text-left cash-out-sub-title--item" ng-if="link_surf.requested && app_config.check_link_surf_ws">
+                <span style="margin-left: 20px;" us-spinner="{radius:8, width:4, length: 8, lines: 12, color: '#333', position: 'relative'}"></span>
+            </div>
+
+        </div>
+    </section>
+</div>

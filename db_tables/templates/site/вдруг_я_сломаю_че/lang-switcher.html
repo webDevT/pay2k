@@ -1,0 +1,16 @@
+{% load i18n %}
+<form id="lang-form" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+    <input name="next" id="redirect" type="hidden">
+    <input name="language" id="language" type="hidden">
+</form>
+<div class="language">
+
+    <select id="leng-select" name="language">
+        {% for language in languages %}
+            <option {% if language.code == LANGUAGE_CODE %}selected{% endif %} value="{{ language.code }}">{{ language.code|upper }}</option>
+        {% endfor %}
+    </select>
+</div>

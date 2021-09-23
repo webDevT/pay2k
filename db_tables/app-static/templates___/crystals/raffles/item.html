@@ -1,0 +1,111 @@
+<div>
+
+    <div class="cryistals-header">
+        <div class="cryistals-container">
+            <div class="cryistals-header__top">
+                <a ui-sref="crystals.raffle" class="cryistals-back">
+                    <img src="/app-static/static/crystals/img/back.svg" alt=""> My Gems
+                </a>
+
+            </div>
+            <div class="cryistals-header__contetn">
+                <div class="cryistals-header__contetn-left raffle-lottery__header">
+					<span class="cryistals-header__user-info">
+						<span class="cryistals__title">
+						Raffle
+					</span>
+
+					<span class="raffle-header__text">
+						Win up to $100 each week<br>Winner guaranteed!
+					</span>
+					</span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <section class="lottery-content lottery-content-all">
+
+        <div class="cryistals-container">
+
+
+            <a href="javascript://" class="lottery-item lottery-item--yellow">
+                <div class="lottery-item__content">
+                    <div class="lottery-left">
+                        <div class="lottery-iten__name" ng-bind="raffle.name">
+                        </div>
+                        <div class="lottery-item__text" ng-bind="raffle.short_description"></div>
+                        <timer end-time="raffle.local_ends_by" max-time-unit="'day'" interval="1000">
+                            <div class="lottery-item__timer">
+                            <span ng-show="days > 0" ng-bind="days"></span><span ng-show="days > 0">d.</span>
+                            <span ng-bind="hhours"></span>:<span ng-bind="mminutes"></span>:<span ng-bind="sseconds"></span>
+                        </div>
+                        </timer>
+                    </div>
+                    <div class="lottery-right">
+                        <div class="lottery-price" ng-bind="raffle.cost">
+                        </div>
+                    </div>
+                </div>
+
+            </a>
+
+            <div class="openlottery__content">
+                <div class="openlottery-title">
+                    Details:
+                </div>
+
+                <div class="openlottery-text" ng-bind="raffle.description">
+                </div>
+
+
+                <div class="openlottery-title">
+                    Your Tickets
+                </div>
+
+                <div class="tickets-num-wrapper">
+                    <div class="openlottery-title">
+                        Amount: <span class="tickets-num">1</span>
+                    </div>
+
+                    <div class="tickets-calc">
+                        <div class="tickets-minus tickets-calc__button">
+                            –
+                        </div>
+                        <div class="tickets-plus tickets-calc__button">
+                            +
+                        </div>
+                    </div>
+                </div>
+
+                <div class="openlottery-text openlottery-tickets-namber">
+
+
+                    <div ng-repeat="ticket_row in tickets" class="openlottery-tickets__row">
+                        <span ng-show="ticket_row[0]" ng-bind="ticket_row[0]"></span>
+                        <span ng-if="ticket_row[1]">:</span>
+                        <span ng-show="ticket_row[1]" ng-bind="ticket_row[1]"></span>
+                        <span ng-if="ticket_row[2]">:</span>
+                        <span ng-show="ticket_row[2]" ng-bind="ticket_row[2]"></span>
+                        <span ng-if="ticket_row[3]">:</span>
+                        <span ng-show="ticket_row[3]" ng-bind="ticket_row[3]"></span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <a class="popup-button connect-walet-btn" ng-click="buy_ticket()">
+                <span>Buy Ticket</span>
+                <span ng-if="buy_ticket.started" style="margin-left: 20px;" us-spinner="{radius:8, width:4, length: 8, lines: 12, color: '#fff', position: 'relative'}"></span>
+            </a>
+
+
+        </div>
+    </section>
+</div>

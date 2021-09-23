@@ -1,0 +1,231 @@
+<div class="quiz-popup">
+    <div class="cryistals-container--quiz">
+        <div class="cryistals-container">
+            <ng-form name="personal_data_form">
+
+            <div class="cristals__page-title">
+                Анкета игрока
+            </div>
+            <div class="cristals__sub-title">
+                Чтобы начать зарабатывать деньги в игре, пожалуйста заполните следующие поля
+            </div>
+
+            <div class="cryistals-profile__form">
+
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Your gender
+                    </div>
+
+                    <select ng-required="true" name="gender" id="" class="cryistals__input" ng-model="_profile.gender">
+                        <option value="2">MALE</option>
+                        <option value="1">FEMALE</option>
+                        <option value="3">OTHER</option>
+                    </select>
+
+                </div>
+
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Year of birth
+                    </div>
+
+                    <div class="cryistals__form-row">
+
+                        <div class="input-group"
+                             moment-picker="_profile.birthday"
+                             format="YYYY-MM-DD">
+    <span class="input-group-addon">
+        <i class="octicon octicon-calendar"></i>
+    </span>
+                            <input ng-required="true" id="birthday" class="form-control cryistals__input"
+                                   placeholder="Дата рождения"
+                                   ng-model="_profile.birthday"
+                                   ng-model-options="{ updateOn: 'blur' }">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="cryistals__form-row">
+
+                    <div class="cryistals__label">
+                        Marital status
+                    </div>
+
+                    <select ng-required="true" name="marital_status" id="" class="cryistals__input" ng-model="_profile.marital_status">
+
+                        <option value="0">SINGLE</option>
+                        <option value="1">MARRIED</option>
+                        <option value="2">DIVORCED</option>
+                        <option value="3">LIVING_WITH_PARTNER</option>
+                        <option value="4">SEPARATED</option>
+                        <option value="5">WIDOWED</option>
+                        <option value="6">PREFER_NOT_TO_SAY</option>
+                    </select>
+
+                </div>
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Have kids?
+                    </div>
+
+                    <select ng-required="true" name="kids" id="" class="cryistals__input" ng-model="_profile.kids">
+
+                        <option value="0">ZERO</option>
+                        <option value="1">ONE</option>
+                        <option value="2">TWO</option>
+                        <option value="3">THREE</option>
+                        <option value="4">FOUR</option>
+                        <option value="5">FIVE</option>
+                        <option value="6">SIX OR MORE</option>
+                        <option value="7">PREFER NOT TO SAY</option>
+                    </select>
+
+                </div>
+                <div class="cryistals__form-row">
+
+                    <div class="cryistals__label">
+                        Education
+                    </div>
+
+                    <select ng-required="true" name="education" id="" class="cryistals__input" ng-model="_profile.education">
+
+                        <option value="0">ELEMENTARY SCHOOL</option>
+                        <option value="1">MIDDLE SCHOOL</option>
+                        <option value="2">HIGH SCHOOL</option>
+                        <option value="3">VOCATIONAL TECHNICAL COLLEGE</option>
+                        <option value="4">UNIVERSITY</option>
+                        <option value="5">POST GRADUATE</option>
+                    </select>
+
+                </div>
+
+
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Employment
+                    </div>
+
+                    <select ng-required="true" name="employment" id="" class="cryistals__input" ng-model="_profile.employment">
+
+                        <option value="0">EMPLOYED FOR WAGES</option>
+                        <option value="1">SELF EMPLOYED</option>
+                        <option value="2">UNEMPLOYED LOOKING</option>
+                        <option value="3">UNEMPLOYED NOT LOOKING</option>
+                        <option value="4">
+                            HOMEMAKER
+                        </option>
+                        <option value="5">STUDENT</option>
+                        <option value="6">MILITARY</option>
+                        <option value="7">RETIRED</option>
+                        <option value="8">UNABLE TO WORK</option>
+                        <option value="9">OTHER</option>
+                    </select>
+
+                </div>
+
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Carrer
+                    </div>
+
+                    <select ng-required="true" name="career" id="" class="cryistals__input" ng-model="_profile.career">
+                       <option value="0">agriculture forestry fishing or hunting</option>
+                        <option value="1">arts entertainment or recreation</option>
+                        <option value="2">broadcasting</option>
+                        <option value="3">construction</option>
+                        <option value="4">education</option>
+                        <option value="5">finance and insurance</option>
+                        <option value="6">government and public administration</option>
+                        <option value="7">health care and social assistance</option>
+                        <option value="8">homemaker</option>
+                        <option value="9">hotel and food services</option>
+                        <option value="10">information other</option>
+                        <option value="11">information services and data</option>
+                        <option value="12">legal services</option>
+                        <option value="13">manufacturing computer and electronics</option>
+                        <option value="14">manufacturing other</option>
+                        <option value="15">military</option>
+                        <option value="16">mining</option>
+                        <option value="17">processing</option>
+                        <option value="18">publishing</option>
+                        <option value="19">real estate rental or leasing</option>
+                        <option value="20">religious</option>
+                        <option value="21">retail</option>
+                        <option value="22">retired</option>
+                        <option value="23">scientific or technical services</option>
+                        <option value="24">software</option>
+                        <option value="25">student</option>
+                        <option value="26">telecommunications</option>
+                        <option value="27">transportation and warehousing</option>
+                        <option value="28">unemployed</option>
+                        <option value="29">energy utilities oil and gas</option>
+                        <option value="30">wholesale</option>
+                        <option value="31">other</option>
+                        <option value="32">advertising</option>
+                        <option value="33">automotive</option>
+                        <option value="34">consulting</option>
+                        <option value="35">fashion apparel</option>
+                        <option value="36">human resources</option>
+                        <option value="37">market research</option>
+                        <option value="38">marketing sales</option>
+                        <option value="39">shipping distribution</option>
+                        <option value="40">personal services</option>
+                        <option value="41">security</option>
+                    </select>
+                </div>
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Race
+                    </div>
+
+                    <select ng-required="true" name="race" id="" class="cryistals__input" ng-model="_profile.race">
+
+                        <option value="0">ARAB</option>
+                        <option value="1">ASIAN</option>
+                        <option value="2">BLACK</option>
+                        <option value="3">WHITE</option>
+                        <option value="4">HISPANIC</option>
+                        <option value="5">LATINO</option>
+                        <option value="6">MULTIRACIAL</option>
+                        <option value="7">OTHER</option>
+                        <option value="8">PREFER NOT TO SAY</option>
+                    </select>
+
+                </div>
+
+                <div class="cryistals__form-row">
+                    <div class="cryistals__label">
+                        Income
+                    </div>
+
+                    <select ng-required="true" name="income" id="" class="cryistals__input" ng-model="_profile.income">
+
+                        <option value="0">LOWER 1</option>
+                        <option value="1">LOWER 2</option>
+                        <option value="2">MIDDLE I</option>
+                        <option value="3">MIDDLE II</option>
+                        <option value="4">HIGH I</option>
+                        <option value="5">HIGH II</option>
+                        <option value="6">HIGH III</option>
+                        <option value="7">PREFER NOT TO SAY</option>
+                    </select>
+
+                </div>
+
+
+                <div class="quiz-footer">
+                    <div class="popup-button" ng-click="confirm_personal_data()">
+                        Отправить
+                    </div>
+
+                    <a href="javascript://" ng-click="closeThisDialog()">Позже</a>
+                </div>
+            </div>
+
+        </ng-form>
+        </div>
+    </div>
+</div>
