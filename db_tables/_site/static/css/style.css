@@ -723,6 +723,8 @@ footer .follow-us {
 
 footer .follow-us a {
     margin-left: 16px;
+    display: flex;
+    justify-content: center;
 }
 .facebook-link {
     position: relative;
@@ -732,6 +734,19 @@ footer .follow-us a {
 }
 .instagram-link:before {
     content: url("/static/img/instagram.svg");
+}
+.telegram-link:before {
+    content: url("/static/img/telegram.svg");
+}
+.footer__link {
+    line-height: 1;
+}
+.twitter-link:before {
+    content: url("/static/img/twitter.svg");
+}
+
+footer .follow-us a.telegram-link {
+    margin-left: 9px;
 }
 .follow-us {
     white-space: nowrap;
@@ -1231,6 +1246,7 @@ footer .follow-us a {
     position: absolute;
     left: 0;
     top: -150px;
+    z-index: -1;
 }
 .download-section .download-text-wrapper,
 .download-links__wrapper {
@@ -1429,8 +1445,7 @@ footer .follow-us a {
     margin-bottom: 30px;
     position: relative;
     line-height: 1.6;
-    display: flex;
-    align-items: center;
+    
 }
 .download-page-description ul li:last-child {
     margin-bottom: 0;
@@ -1505,8 +1520,33 @@ footer .follow-us {
 .list-item {
 
 }
+.download-page-description ul li {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 7%;
+}
 
-.download-page-description .list-item li:before {
+.download-page-description ul li:before {
+    content: '';
+    background: #827CDC;
+    height: 6px;
+    width: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+.download-page-description ul.list-item--money li {
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+.download-page-description .list-item.list-item--money li:before {
     position: static;
     background: -webkit-linear-gradient(
             269.88deg, #985ADD 2.89%, #F36580 97.11%);
@@ -1523,9 +1563,13 @@ footer .follow-us {
     font-family: "MuseoSansCyrl", sans-serif;
      line-height: 1.4;
      margin-right: 28px;
+     width: auto;
+     height: auto;
 
 }
-
+.free-ton-link {
+    margin: 0 5px;
+}
 .download-page-description .list-item li:first-child:before {
     content: '1';
     
@@ -1975,6 +2019,10 @@ header .container-fluid .wrapper {
 .download-link__item-text {
     margin-bottom: 0;
 }
+footer .follow-us {
+    align-items: flex-end;
+}
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 /*==========  Desktop First  ==========*/
@@ -3461,6 +3509,8 @@ header .container-fluid .wrapper {
 
     footer .logo a {
         font-size: 16px;
+        position: relative;
+        top: 2px;
     }
 
     footer .text {
@@ -4979,10 +5029,13 @@ body {
     }
 
     .follow-us span {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     footer .follow-us a {
+        margin-left: 10px;
+    }
+    footer .follow-us a.telegram-link {
         margin-left: 4px;
     }
 

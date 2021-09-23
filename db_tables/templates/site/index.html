@@ -77,8 +77,8 @@
                     <li>{% trans 'Weekly raffle - winner get $100 (Winner guaranteed)' %}</li>
                     <li>{% trans 'Monthly raffle - winner get $300 (Winner guaranteed)' %}</li>
                     <li>
-                        {% blocktrans with ton_link='<a href="https://freeton.org/" target="_blank">Free TON</a>' %}
-                            All payments are 100% real and recorded in the {{ ton_link }} blockchain!
+                        {% blocktrans with ton_link=' <a class="free-ton-link" href="https://freeton.org/" target="_blank">Free TON</a>' %}
+                             All payments are 100% real and recorded in the {{ ton_link }} blockchain!
                         {% endblocktrans %}
                     </li>
                 </ul>
@@ -150,7 +150,7 @@
               {% trans 'Why Pay2K can pay money?' %}
             </div>
 
-                <ul class="list-item">
+                <ul class="list-item list-item--money">
                     <li>{% trans 'QuickAppNinja users are very interested that gamers play their created games, because game developers are making money from ads inside the games.' %}</li>
                     <li>{% trans 'You play games and watch ads inside it.' %}</li>
                     <li>{% trans 'Pay2K pay you money and earn revenue from promoting QuickAppNinja service' %}</li>
@@ -520,12 +520,24 @@
                 <div class="col-md-6 col-sm-6 col-6">
                     <div class="follow-us">
                         <span>{% trans 'Follow us' %}</span>
-                        <a href="https://www.facebook.com/pay2k/" class="facebook-link">
+                        <a target="_blank" href="https://www.facebook.com/pay2k/" class="facebook-link footer__link">
 
                         </a>
-                        <a href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link">
+
+                        <a target="_blank" href="https://t.me/pay2k_channel" class="telegram-link footer__link">
 
                         </a>
+
+                        <a target="_blank" href="https://twitter.com/Pay2kOfficial" class="twitter-link footer__link">
+
+                        </a>
+                        <a target="_blank" href="{% trans 'https://www.instagram.com/pay2k.mobile/' %}" class="instagram-link footer__link">
+
+
+
+                        </a>
+
+
                     </div>
                 </div>
             </div>
