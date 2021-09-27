@@ -193,10 +193,11 @@ header .container-fluid .wrapper {
 
 .btn_menu .btn_row {
     display: block;
-    width: 16px;
-    height: 2px;
+    width: 30px;
+    height: 3px;
     background: #fff;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    transition: all 0.3s;
 }
 
 .btn_menu.active {
@@ -211,7 +212,7 @@ header .container-fluid .wrapper {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    margin-bottom: -2px;
+    margin-bottom: -3px;
 }
 
 .btn_menu.active .btn_row:last-child {
@@ -634,6 +635,7 @@ footer .text {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+   
     font-weight: 300;
     font-family: "MuseoSansCyrlLight";
 }
@@ -642,6 +644,7 @@ footer .text p {
     font-size: 14px;
     line-height: 20px;
     padding-right: 4px;
+
 }
 
 footer .text a {
@@ -4732,7 +4735,12 @@ body {
     margin-right: 15px;
     font-size: 28px;
 }
-
+footer .text  {padding-left: ;
+    flex-direction: column;
+}
+footer .text  p{
+   margin-bottom: 5px;
+}
 
 
 
