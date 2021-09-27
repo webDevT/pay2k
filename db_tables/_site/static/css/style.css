@@ -1235,6 +1235,7 @@ footer .follow-us a.telegram-link {
     position: absolute;
     right: 0;
     bottom: -300px;
+    z-index: -1;
 }
 .download__left-background {
     height: 70vw;
