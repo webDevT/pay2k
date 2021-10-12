@@ -22,6 +22,7 @@ body {
     font-size: 14px;
     font-weight: 900;
     font-family: sans-serif;
+
 }
 
 ul {
@@ -4499,7 +4500,7 @@ body {
     }
 
     .about .col-md-3:nth-child(4) h3 {
-        max-width: 226px;
+       /* max-width: 226px;*/
     }
 
     .service .container-fluid {
@@ -4913,11 +4914,15 @@ footer .text  p{
         margin: 0 auto;
         margin-top: 24vw;
         line-height: 1.5;
+        max-height: 3000em;
+
+
 
     }
 
     .header-content {
         width: 100vw;
+       
     }
 
     header .container-fluid {
@@ -4939,6 +4944,8 @@ footer .text  p{
         max-width: 100%;
         line-height: 1.4;
         margin-top: 5vw;
+        max-height: 3000em;
+
     }
 
     header {
